@@ -1,0 +1,41 @@
+# Первый проверяемый эффект: тематические подборки из существующих категорий.
+# Данные не модифицируются; все свойства вычисляются в Obsidian Bases.
+filters:
+  and:
+    - file.inFolder("knowledge/entries")
+    - file.ext == "md"
+    - type == "knowledge"
+formulas:
+  category_name: 'list(categories)[0].asFile().properties.name'
+  category_link: 'list(categories)[0].asFile().asLink(list(categories)[0].asFile().properties.name)'
+properties:
+  formula.category_name:
+    displayName: "Предметная категория"
+  formula.category_link:
+    displayName: "Перейти к категории"
+  name:
+    displayName: "Знание"
+views:
+  - type: table
+    name: "По категориям"
+    groupBy:
+      property: formula.category_name
+      direction: ASC
+    order:
+      - file.name
+      - name
+      - formula.category_link
+    sort:
+      - property: name
+        direction: ASC
+  - type: table
+    name: "Текущая категория"
+    filters:
+      and:
+        - 'list(categories).contains(this.file)'
+    order:
+      - file.name
+      - name
+    sort:
+      - property: name
+        direction: ASC
