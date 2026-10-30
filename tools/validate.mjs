@@ -36,7 +36,7 @@ function parseNote(content) {
     if (!line.trim() || /^\s*#/.test(line)) continue;
     const key = /^([a-z_]+):(?:\s*(.*))?$/.exec(line);
     if (key) {
-      const name = key[1], raw = key[2].trim();
+      const name = key[1], raw = key[2]?.trim() ?? "";
       if (!SCALARS.has(name) && !LISTS.has(name)) throw Error("unknown field " + name);
       if (Object.hasOwn(props, name)) throw Error("duplicate field " + name);
       if (LISTS.has(name)) {
