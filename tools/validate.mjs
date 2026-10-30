@@ -148,7 +148,7 @@ export function validateVault(root) {
   };
 }
 if (process.argv[1] && resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
-  const root = resolve(process.argv[2] ?? ".");
+  const root = resolve(process.argv[2] ?? "vault");
   const result = validateVault(root);
   for (const issue of result.issues) console.error("ERROR: " + issue);
   for (const warning of result.warnings) console.warn("WARN: " + warning);

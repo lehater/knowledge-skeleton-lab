@@ -2,9 +2,9 @@
 
 Работай в корне репозитория `knowledge-skeleton-lab`. **Источник истины — Git и файлы**, не предыдущие чаты.
 
-1. Прочитай `AGENTS.md`, все документы из `rules/`, `knowledge/AGENTS.md` и `experiments/asynchronous-programming/brief.md`.
+1. Прочитай `AGENTS.md`, все документы из `rules/`, `rules/knowledge.md` и `experiments/asynchronous-programming/brief.md`.
 2. Проведи ограниченный Knowledge Skeleton Discovery по `Asynchronous Programming`. Сначала собери независимый baseline тем по опорным источникам; не принимай заданный перечень за исчерпывающий.
-3. Переиспользуй существующие узлы; создай максимум **30 Knowledge** и минимально необходимые категории с устойчивыми UUIDv7.
+3. Графовые данные создавай только в `vault/knowledge/entries/` и `vault/taxonomy/categories/`; YAML wikilinks записывай относительно `vault/` без префикса. Переиспользуй существующие узлы; создай максимум **30 Knowledge** и минимально необходимые категории с устойчивыми UUIDv7.
 4. У каждого файла — **только YAML frontmatter и H1**. Используй существующие словари и полные quoted wikilinks. Новые узлы помечай `proposed`.
 5. Добавляй `broader`, `categories` и K–K связи только при явно проверяемой семантике; неоднозначное фиксируй в отчёте, не утверждай как факт.
 6. Запусти `node tools/validate.mjs` и `node --test tools/validate.test.mjs`. Устрани структурные ошибки.

@@ -1,8 +1,8 @@
 .DS_Store
 Thumbs.db
 node_modules/
-.obsidian/workspace.json
-.obsidian/workspace-mobile.json
-.obsidian/cache/
-.obsidian/plugins/
+vault/.obsidian/workspace.json
+vault/.obsidian/workspace-mobile.json
+vault/.obsidian/cache/
+vault/.obsidian/plugins/
 
