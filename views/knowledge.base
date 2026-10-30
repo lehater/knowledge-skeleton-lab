@@ -1,0 +1,24 @@
+filters:
+  and:
+    - file.inFolder("knowledge/entries")
+    - file.ext == "md"
+    - type == "knowledge"
+views:
+  - type: table
+    name: Knowledge skeletons
+    order:
+      - file.name
+      - name
+      - kind
+      - lifecycle
+      - review_status
+      - categories
+  - type: table
+    name: Proposed knowledge
+    filters:
+      - 'review_status == "proposed"'
+    order:
+      - file.name
+      - categories
+      - kind
+

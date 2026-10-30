@@ -1,0 +1,42 @@
+# Контракт данных v0
+
+## Узлы
+
+- `type: category` — навигационный узел предметной таксономии в `taxonomy/categories/<slug>.md`.
+- `type: knowledge` — самостоятельный предмет знания в `knowledge/entries/<slug>.md`.
+- Иные типы (`instruction`, `implementation` и т. п.) — **не входят** в первый пилот.
+
+Обязательны для обоих: `id` (канонический UUIDv7), `type`, `name`, `review_status: proposed | accepted | rejected` и H1, дословно совпадающий с `name`. Пути — стабильные lowercase kebab-case slugs; ID не зависит от пути. `aliases` — необязательный список строк.
+
+Для Knowledge обязательно `lifecycle: skeleton | enriched`. В `skeleton` тело после H1 пусто. `kind` — необязательная предметная форма (не тип документа): `artifact`, `construct`, `mechanism`, `model`, `pattern`, `practice`, `problem`, `property`, `result`, `structure`, `technology`.
+
+## Связи
+
+- У категории: `broader` — список ссылок на более широкие **category**.
+- У Knowledge: `categories` — список ссылок на **category**; `specializes`, `part_of`, `realizes` — списки ссылок на **knowledge**.
+- `sources` — необязательные конкретные HTTP(S) URL, а не ссылки на документы-сущности.
+
+Все списки могут отсутствовать или быть `[]`. Если содержат ссылки, применять только **quoted wikilinks**, полный путь относительно корня Vault и без `.md`:
+
+~~~yaml
+---
+id: 019a0000-0000-7000-8000-000000000001
+type: knowledge
+name: "Coroutine"
+kind: construct
+lifecycle: skeleton
+review_status: proposed
+categories:
+  - "[[taxonomy/categories/asynchronous-programming]]"
+sources:
+  - "https://docs.python.org/3/library/asyncio-task.html"
+---
+# Coroutine
+~~~
+
+`review_status` оценивает **подтверждённость предметного узла**, `lifecycle` — **готовность его объяснительного содержания**. Это независимые оси: принятый каркас может оставаться пустым.
+
+## Структурная дисциплина
+
+На первом этапе YAML — только простые строки и списки строк. Без вложенных объектов, YAML anchors, custom tags и inline-карт. Все ссылки на существующие узлы. Имя — однозначный предметный референт, не учебное задание и не произвольный термин. Источники и аргументация к неоднозначным узлам дополнительно фиксируются в отчёте, не в теле каркаса.
+

@@ -1,0 +1,14 @@
+filters:
+  and:
+    - file.inFolder("taxonomy/categories")
+    - file.ext == "md"
+    - type == "category"
+views:
+  - type: table
+    name: Category hierarchy
+    order:
+      - file.name
+      - name
+      - broader
+      - review_status
+
