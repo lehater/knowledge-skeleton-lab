@@ -1,0 +1,31 @@
+filters:
+  and:
+    - file.inFolder("knowledge/entries")
+    - file.ext == "md"
+    - type == "knowledge"
+    - or:
+        - 'file.name == "python-asyncio-event-loop"'
+        - 'file.name == "python-asyncio-task"'
+        - 'file.name == "python-coroutine-object"'
+        - 'file.name == "python-asyncio-task-group"'
+properties:
+  name:
+    displayName: "Сущность Python asyncio"
+  realizes:
+    displayName: "Реализует"
+  schedules:
+    displayName: "Планирует"
+  executes:
+    displayName: "Исполняет"
+  manages:
+    displayName: "Управляет"
+views:
+  - type: table
+    name: "Функциональные связи asyncio"
+    order:
+      - file.name
+      - name
+      - schedules
+      - executes
+      - manages
+      - realizes

@@ -11,5 +11,7 @@ sources:
   - "https://docs.python.org/3/library/asyncio-task.html"
 realizes:
   - "[[knowledge/entries/structured-concurrency]]"
+manages:
+  - "[[knowledge/entries/python-asyncio-task]]"
 ---
 # Python asyncio.TaskGroup

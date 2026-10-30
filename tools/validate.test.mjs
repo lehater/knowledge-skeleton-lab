@@ -58,3 +58,34 @@ test("detect cycles in category DAG", () => {
   } finally { f.clean(); }
 });
 
+
+const withRelation = (note, predicate, target) => {
+  const out = note.replace(/\n---\n# /, `\n${predicate}:\n  - "[[${target}]]"\n---\n# `);
+  assert.notEqual(out, note);
+  return out;
+};
+
+test("python asyncio functional predicates validate and count", () => {
+  const f = fixture();
+  try {
+    f.write("taxonomy/categories/async.md", cat(1, "Async"));
+    f.write("knowledge/entries/loop.md", withRelation(know(2, "Loop", "taxonomy/categories/async"), "schedules", "knowledge/entries/task"));
+    f.write("knowledge/entries/task.md", withRelation(know(3, "Task", "taxonomy/categories/async"), "executes", "knowledge/entries/coro"));
+    f.write("knowledge/entries/coro.md", know(4, "Coro", "taxonomy/categories/async"));
+    f.write("knowledge/entries/group.md", withRelation(know(5, "Group", "taxonomy/categories/async"), "manages", "knowledge/entries/task"));
+    const r = validateVault(f.dir);
+    assert.equal(r.ok, true, r.issues.join("\n"));
+    assert.equal(r.counts.links, 7);
+  } finally { f.clean(); }
+});
+
+test("reject functional relation pointing to category", () => {
+  const f = fixture();
+  try {
+    f.write("taxonomy/categories/async.md", cat(1, "Async"));
+    f.write("knowledge/entries/task.md", withRelation(know(2, "Task", "taxonomy/categories/async"), "executes", "taxonomy/categories/async"));
+    const r = validateVault(f.dir);
+    assert.equal(r.ok, false);
+    assert.ok(r.issues.some((s) => s.includes("wrong target type for executes")));
+  } finally { f.clean(); }
+});

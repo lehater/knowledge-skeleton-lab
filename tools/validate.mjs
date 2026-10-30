@@ -4,9 +4,9 @@ import { fileURLToPath } from "node:url";
 
 const KINDS = new Set(["artifact", "construct", "mechanism", "model", "pattern", "practice", "problem", "property", "result", "structure", "technology"]);
 const STATUSES = new Set(["proposed", "accepted", "rejected"]);
-const RELATIONS = { broader: "category", categories: "category", specializes: "knowledge", part_of: "knowledge", realizes: "knowledge" };
+const RELATIONS = { broader: "category", categories: "category", specializes: "knowledge", part_of: "knowledge", realizes: "knowledge", schedules: "knowledge", executes: "knowledge", manages: "knowledge" };
 const SCALARS = new Set(["id", "type", "name", "kind", "lifecycle", "review_status"]);
-const LISTS = new Set(["aliases", "broader", "categories", "specializes", "part_of", "realizes", "sources"]);
+const LISTS = new Set(["aliases", "broader", "categories", "specializes", "part_of", "realizes", "schedules", "executes", "manages", "sources"]);
 const UUID_V7 = /^[0-9a-f]{8}-[0-9a-f]{4}-7[0-9a-f]{3}-[89ab][0-9a-f]{3}-[0-9a-f]{12}$/;
 
 function collect(dir) {
@@ -113,7 +113,7 @@ export function validateVault(root) {
       if (p.broader !== undefined) issues.push(key + ": broader reserved for category");
       if (p.lifecycle === "skeleton" && h1 && body.slice(h1[0].length).trim()) issues.push(key + ": skeleton must contain only H1");
     } else {
-      for (const field of ["lifecycle", "kind", "categories", "specializes", "part_of", "realizes"]) {
+      for (const field of ["lifecycle", "kind", "categories", "specializes", "part_of", "realizes", "schedules", "executes", "manages"]) {
         if (p[field] !== undefined) issues.push(key + ": " + field + " not allowed for category");
       }
       if (h1 && body.slice(h1[0].length).trim()) issues.push(key + ": category must contain only H1 in pilot");
