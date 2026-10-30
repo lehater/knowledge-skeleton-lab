@@ -1,6 +1,15 @@
 {
   "nodes": [
     {
+      "id": "view-switcher",
+      "type": "text",
+      "x": 0,
+      "y": -205,
+      "width": 1230,
+      "height": 142,
+      "text": "### Python asyncio — Все связи\n\nПереключить точку зрения: [[views/python-asyncio-functional.canvas|Все связи]]  ·  [[views/python-asyncio-functioning.canvas|Функционирование]]  ·  [[views/python-asyncio-realization.canvas|Реализация]]\n\n**Функциональные связи** — голубые · **Реализационные** — фиолетовые\n\n*Все представления используют одни Knowledge; YAML не изменяется.*"
+    },
+    {
       "id": "general-loop",
       "type": "file",
       "x": 0,
@@ -81,7 +90,8 @@
       "label": "realizes",
       "fromSide": "top",
       "toSide": "bottom",
-      "toEnd": "arrow"
+      "toEnd": "arrow",
+      "color": "6"
     },
     {
       "id": "edge-2",
@@ -90,7 +100,8 @@
       "label": "realizes",
       "fromSide": "top",
       "toSide": "bottom",
-      "toEnd": "arrow"
+      "toEnd": "arrow",
+      "color": "6"
     },
     {
       "id": "edge-3",
@@ -99,7 +110,8 @@
       "label": "realizes",
       "fromSide": "top",
       "toSide": "bottom",
-      "toEnd": "arrow"
+      "toEnd": "arrow",
+      "color": "6"
     },
     {
       "id": "edge-4",
@@ -108,7 +120,8 @@
       "label": "schedules",
       "fromSide": "right",
       "toSide": "left",
-      "toEnd": "arrow"
+      "toEnd": "arrow",
+      "color": "5"
     },
     {
       "id": "edge-5",
@@ -117,7 +130,8 @@
       "label": "executes",
       "fromSide": "right",
       "toSide": "left",
-      "toEnd": "arrow"
+      "toEnd": "arrow",
+      "color": "5"
     },
     {
       "id": "edge-6",
@@ -126,7 +140,8 @@
       "label": "manages",
       "fromSide": "top",
       "toSide": "bottom",
-      "toEnd": "arrow"
+      "toEnd": "arrow",
+      "color": "5"
     },
     {
       "id": "edge-7",
@@ -135,7 +150,8 @@
       "label": "realizes",
       "fromSide": "right",
       "toSide": "left",
-      "toEnd": "arrow"
+      "toEnd": "arrow",
+      "color": "6"
     }
   ]
 }
