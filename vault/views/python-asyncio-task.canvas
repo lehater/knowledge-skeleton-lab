@@ -1,0 +1,81 @@
+{
+  "nodes": [
+    {
+      "id": "task-home",
+      "type": "text",
+      "x": 0,
+      "y": -260,
+      "width": 830,
+      "height": 140,
+      "text": "## Python asyncio.Task — устройство и связи\n\n[[views/python-asyncio-navigation-pilot.canvas|← Вернуться к Python asyncio]]\n\n[[knowledge/entries/python-asyncio-task|Открыть Knowledge задачи]]"
+    },
+    {
+      "id": "task-concept",
+      "type": "file",
+      "x": 0,
+      "y": 0,
+      "width": 290,
+      "height": 130,
+      "file": "knowledge/entries/asynchronous-task.md"
+    },
+    {
+      "id": "task-core",
+      "type": "file",
+      "x": 0,
+      "y": 260,
+      "width": 290,
+      "height": 130,
+      "file": "knowledge/entries/python-asyncio-task.md"
+    },
+    {
+      "id": "task-coroutine",
+      "type": "file",
+      "x": 480,
+      "y": 260,
+      "width": 290,
+      "height": 130,
+      "file": "knowledge/entries/python-coroutine-object.md"
+    },
+    {
+      "id": "task-group",
+      "type": "file",
+      "x": 0,
+      "y": 520,
+      "width": 290,
+      "height": 130,
+      "file": "knowledge/entries/python-asyncio-task-group.md"
+    }
+  ],
+  "edges": [
+    {
+      "id": "task-realizes",
+      "fromNode": "task-core",
+      "fromSide": "top",
+      "toNode": "task-concept",
+      "toSide": "bottom",
+      "toEnd": "arrow",
+      "label": "realizes",
+      "color": "6"
+    },
+    {
+      "id": "task-executes",
+      "fromNode": "task-core",
+      "fromSide": "right",
+      "toNode": "task-coroutine",
+      "toSide": "left",
+      "toEnd": "arrow",
+      "label": "executes",
+      "color": "5"
+    },
+    {
+      "id": "task-manages",
+      "fromNode": "task-group",
+      "fromSide": "top",
+      "toNode": "task-core",
+      "toSide": "bottom",
+      "toEnd": "arrow",
+      "label": "manages",
+      "color": "5"
+    }
+  ]
+}
