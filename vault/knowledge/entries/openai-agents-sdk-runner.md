@@ -6,7 +6,7 @@ kind: construct
 lifecycle: skeleton
 review_status: proposed
 realizes:
-  - "[[knowledge/entries/single-agent-inner-loop]"
+  - "[[knowledge/entries/single-agent-inner-loop]]"
 sources:
   - "https://openai.github.io/openai-agents-python/running_agents/"
   - "https://openai.github.io/openai-agents-python/ref/run/"
