@@ -4,9 +4,9 @@ type: knowledge
 name: "Prometheus"
 lifecycle: enriched
 review_status: proposed
-kind: technology
-specializes:
+in_topic:
   - "[[knowledge/entries/tracing-and-monitoring-platforms]]"
+kind: technology
 executes:
   - "[[knowledge/entries/prometheus-alerting-rule]]"
 sources:
