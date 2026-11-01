@@ -1,0 +1,21 @@
+filters:
+  and:
+    - file.inFolder("knowledge/entries")
+    - file.ext == "md"
+    - type == "knowledge"
+views:
+  - type: table
+    name: Current topic
+    filters:
+      and:
+        - list(in_topic).contains(this.file)
+    order:
+      - file.name
+      - name
+      - in_topic
+  - type: table
+    name: Direct topics
+    order:
+      - file.name
+      - name
+      - in_topic

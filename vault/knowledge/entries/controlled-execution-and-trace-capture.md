@@ -4,6 +4,8 @@ type: knowledge
 name: "Controlled Execution and Trace Capture"
 lifecycle: skeleton
 review_status: proposed
+in_topic:
+  - "[[knowledge/entries/verification-evaluation]]"
 sources:
   - "https://picrew.github.io/LLM-Harness/main.pdf#page=8"
 ---

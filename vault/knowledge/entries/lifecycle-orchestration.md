@@ -4,6 +4,8 @@ type: knowledge
 name: "Lifecycle & Orchestration"
 lifecycle: skeleton
 review_status: proposed
+in_topic:
+  - "[[knowledge/entries/harness-engineering]]"
 sources:
   - "https://picrew.github.io/LLM-Harness/main.pdf#page=8"
 ---

@@ -5,8 +5,8 @@ name: "I/O-bound Work"
 review_status: proposed
 kind: property
 lifecycle: skeleton
-categories:
-  - "[[taxonomy/categories/asynchronous-programming]]"
+in_topic:
+  - "[[knowledge/entries/asynchronous-programming]]"
 sources:
   - "https://doc.rust-lang.org/book/ch17-00-async-await.html"
 ---

@@ -4,6 +4,8 @@ type: knowledge
 name: "Single-Agent Inner Loop"
 lifecycle: skeleton
 review_status: proposed
+in_topic:
+  - "[[knowledge/entries/lifecycle-orchestration]]"
 sources:
   - "https://picrew.github.io/LLM-Harness/main.pdf#page=8"
 ---

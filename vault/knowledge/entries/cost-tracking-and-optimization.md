@@ -4,6 +4,8 @@ type: knowledge
 name: "Cost Tracking and Optimization"
 lifecycle: skeleton
 review_status: proposed
+in_topic:
+  - "[[knowledge/entries/observability-operations]]"
 sources:
   - "https://picrew.github.io/LLM-Harness/main.pdf#page=8"
 ---

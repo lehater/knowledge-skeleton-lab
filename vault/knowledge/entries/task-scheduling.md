@@ -5,8 +5,8 @@ name: "Task Scheduling"
 review_status: proposed
 kind: mechanism
 lifecycle: skeleton
-categories:
-  - "[[taxonomy/categories/asynchronous-execution]]"
+in_topic:
+  - "[[knowledge/entries/asynchronous-execution]]"
 sources:
   - "https://docs.python.org/3/library/asyncio-eventloop.html"
 ---

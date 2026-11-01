@@ -1,11 +1,13 @@
 ---
 id: 01a195fd-0cba-7416-b93e-762316f0a7f5
-type: category
+type: knowledge
+lifecycle: skeleton
 name: "Agentic Software Engineering"
 review_status: proposed
 broader:
-  - "[[taxonomy/categories/software-engineering]]"
+  - "[[knowledge/entries/software-engineering]]"
 sources:
+  - "https://aisel.aisnet.org/amcis2026/conftheme/conftheme/22/"
   - "https://openai.com/index/harness-engineering/"
   - "https://www.anthropic.com/research/effective-harnesses-for-long-running-agents"
 ---

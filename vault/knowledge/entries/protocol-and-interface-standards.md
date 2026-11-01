@@ -4,6 +4,8 @@ type: knowledge
 name: "Protocol and Interface Standards"
 lifecycle: skeleton
 review_status: proposed
+in_topic:
+  - "[[knowledge/entries/tool-interface-protocol]]"
 sources:
   - "https://picrew.github.io/LLM-Harness/main.pdf#page=8"
 ---

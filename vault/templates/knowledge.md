@@ -4,8 +4,7 @@ type: knowledge
 name: "{{title}}"
 lifecycle: skeleton
 review_status: proposed
-categories: []
+sources:
+  - "REPLACE_WITH_VERIFIED_HTTPS_SOURCE"
 ---
-
 # {{title}}
-

@@ -4,6 +4,8 @@ type: knowledge
 name: "Short-Term Active Context Window"
 lifecycle: skeleton
 review_status: proposed
+in_topic:
+  - "[[knowledge/entries/context-memory-management]]"
 sources:
   - "https://picrew.github.io/LLM-Harness/main.pdf#page=8"
 ---

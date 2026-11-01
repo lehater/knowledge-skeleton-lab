@@ -12,13 +12,13 @@ views:
       - kind
       - lifecycle
       - review_status
-      - categories
+      - in_topic
+      - broader
   - type: table
     name: Proposed knowledge
     filters:
       - 'review_status == "proposed"'
     order:
       - file.name
-      - categories
+      - in_topic
       - kind
-

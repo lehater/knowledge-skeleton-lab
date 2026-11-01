@@ -4,6 +4,8 @@ type: knowledge
 name: "Code-Specialized Sandboxes"
 lifecycle: skeleton
 review_status: proposed
+in_topic:
+  - "[[knowledge/entries/execution-environment-sandbox]]"
 sources:
   - "https://picrew.github.io/LLM-Harness/main.pdf#page=8"
 ---

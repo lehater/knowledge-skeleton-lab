@@ -5,8 +5,8 @@ name: "Future"
 review_status: proposed
 kind: construct
 lifecycle: skeleton
-categories:
-  - "[[taxonomy/categories/asynchronous-execution]]"
+in_topic:
+  - "[[knowledge/entries/asynchronous-execution]]"
 sources:
   - "https://doc.rust-lang.org/book/ch17-00-async-await.html"
   - "https://docs.python.org/3/library/asyncio-task.html"

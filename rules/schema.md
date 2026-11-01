@@ -1,62 +1,34 @@
-# Контракт данных v0
+# Контракт данных v1 — единый Knowledge
 
 ## Узлы
 
-Все пути ниже **относительны корню `vault/`**. Нормативные правила и инструменты хранятся вне Vault в корне Git-репозитория.
+**Единственный тип узла:** `type: knowledge`, путь `vault/knowledge/entries/<slug>.md`. Отдельного `type: category` и каталога `vault/taxonomy/categories/` больше нет. Все ссылки — пути от корня `vault/`.
 
-- `type: category` — навигационный узел предметной таксономии в `taxonomy/categories/<slug>.md`.
-- `type: knowledge` — самостоятельный предмет знания в `knowledge/entries/<slug>.md`.
-- Иные типы (`instruction`, `implementation` и т. п.) — **не входят** в первый пилот.
+Обязательные поля: `id` (UUIDv7, устойчивый), `type`, `name`, `lifecycle: skeleton|enriched`, `review_status: proposed|accepted|rejected`, непустой `sources` (HTTP(S) URL). H1 точно равен `name`. Для `skeleton` тело после H1 пусто.
 
-Обязательны для обоих: `id` (канонический UUIDv7), `type`, `name`, `review_status: proposed | accepted | rejected` и H1, дословно совпадающий с `name`. Пути — стабильные lowercase kebab-case slugs; ID не зависит от пути. `aliases` — необязательный список строк.
-
-Для Knowledge обязательно `lifecycle: skeleton | enriched`. В `skeleton` тело после H1 пусто. `kind` — необязательная предметная форма (не тип документа): `artifact`, `construct`, `mechanism`, `model`, `pattern`, `practice`, `problem`, `property`, `result`, `structure`, `technology`.
+Необязательные поля: `aliases`, `kind` (`artifact`, `construct`, `mechanism`, `model`, `pattern`, `practice`, `problem`, `property`, `result`, `structure`, `technology`).
 
 ## Связи
 
-- У категории: `broader` — список ссылок на более широкие **category**.
-- У Knowledge: `categories` — список ссылок на **category**; `specializes`, `part_of`, `realizes`, `schedules`, `executes`, `manages` — списки ссылок на **knowledge**.
-- `sources` — **обязательный непустой список HTTP(S) URL у каждого Knowledge**. Для legacy Category поле необязательное. Машинная проверка проверяет формат и наличие ссылки; фактическое употребление названия в источнике проверяется при Discovery.
+У Knowledge допустимы `in_topic`, `broader`, `specializes`, `part_of`, `realizes`, `schedules`, `executes`, `manages`. Все направлены Knowledge → Knowledge; могут отсутствовать. Подробнее: [relations.md](relations.md).
 
-Все списки могут отсутствовать или быть `[]`. Если содержат ссылки, применять только **quoted wikilinks**, полный путь относительно корня Vault и без `.md`:
+Формат полей — только простые строки и списки строк YAML; ссылку записывать как quoted wikilink без расширения `.md`:
 
-~~~yaml
+```yaml
 ---
 id: 019a0000-0000-7000-8000-000000000001
 type: knowledge
-name: "Coroutine"
-kind: construct
+name: "Single-Agent Inner Loop"
 lifecycle: skeleton
 review_status: proposed
-categories:
-  - "[[taxonomy/categories/asynchronous-programming]]"
+in_topic:
+  - "[[knowledge/entries/lifecycle-orchestration]]"
 sources:
-  - "https://docs.python.org/3/library/asyncio-task.html"
+  - "https://picrew.github.io/LLM-Harness/main.pdf#page=8"
 ---
-# Coroutine
-~~~
+# Single-Agent Inner Loop
+```
 
-`review_status` оценивает **подтверждённость предметного узла**, `lifecycle` — **готовность его объяснительного содержания**. Это независимые оси: принятый каркас может оставаться пустым.
+**Evidence-first:** наличие и употребление названия проверяется чтением источника, а не только форматом URL. Допустим Knowledge без любых отношений. Семантический статус подтверждения имени и семантического ревью хранятся в реестре Discovery, **не** являются новыми полями YAML.
 
-## Структурная дисциплина
-
-На первом этапе YAML — только простые строки и списки строк. Без вложенных объектов, YAML anchors, custom tags и inline-карт. Все ссылки на существующие узлы. Имя — однозначный предметный референт, не учебное задание и не произвольный термин. Источники и аргументация к неоднозначным узлам дополнительно фиксируются в отчёте, не в теле каркаса.
-
-
-## Узкий срез Python asyncio (кандидатная модель)
-
-В первом функциональном срезе уточнены отношения между **конкретными** сущностями Python `asyncio`:
-
-- `schedules`: управляющая сущность планирует исполнение целевой задачи;
-- `executes`: исполняющая сущность обеспечивает исполнение целевого вычисления;
-- `manages`: владеющая сущность управляет временем жизни / завершением связанных задач.
-
-Направление: `source → predicate → target`. Это прямые предметные факты, ссылки между Knowledge. В первом срезе факты относятся к явно названным Python-сущностям, **не** наследуются общими `Event Loop`, `Coroutine`, `Asynchronous Task`. Разбор утверждений — `reports/python-asyncio-functional-slice.md`.
-
-## Evidence-first Discovery
-
-- Для минимального нового Knowledge достаточно обязательных полей, `sources` и H1. Отношения и `categories` необязательны; изолированный подтверждённый узел допустим.
-- Имя должно встречаться в доступном внешнем источнике или иметь там однозначный эквивалент. Составные термины не делить автоматически; прежде проверять существующие имена и `aliases`.
-- Проверка названия (`source_verified`) и проверка смысла/отношений (`semantic_review_status`) — **независимые этапы**. При объёмном Discovery их статусы сохраняются в отдельном реестре, а не добавляются как новые поля YAML v0. `review_status: proposed` до предметной приёмки не меняется.
-- Авторская иерархия разделов в публикации — не автоматическое доказательство `part_of`, `specializes` или `broader`. Её можно оставить как метаданные реестра до подтверждения конкретного отношения.
-- Миграция двух legacy типов (Category/Knowledge) к единому Knowledge остаётся отдельным проектным решением; evidence-first срез не переопределяет типы ранее созданных узлов.
+Точечные изменения схемы — отдельное решение с миграцией и тестами. Не путать `broader` (тематически более широкое) и `specializes` (частный вид), `part_of` (часть целого).

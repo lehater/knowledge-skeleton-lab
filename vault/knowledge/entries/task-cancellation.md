@@ -5,8 +5,8 @@ name: "Task Cancellation"
 review_status: proposed
 kind: mechanism
 lifecycle: skeleton
-categories:
-  - "[[taxonomy/categories/asynchronous-lifecycle]]"
+in_topic:
+  - "[[knowledge/entries/asynchronous-lifecycle]]"
 sources:
   - "https://docs.python.org/3/library/asyncio-task.html"
 ---

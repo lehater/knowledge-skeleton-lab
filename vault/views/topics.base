@@ -1,14 +1,14 @@
 filters:
   and:
-    - file.inFolder("taxonomy/categories")
+    - file.inFolder("knowledge/entries")
     - file.ext == "md"
-    - type == "category"
+    - type == "knowledge"
 views:
   - type: table
-    name: Category hierarchy
+    name: Topics and membership
     order:
       - file.name
       - name
+      - in_topic
       - broader
       - review_status
-

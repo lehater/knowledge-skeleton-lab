@@ -4,6 +4,8 @@ type: knowledge
 name: "Multi-Agent Orchestration Patterns"
 lifecycle: skeleton
 review_status: proposed
+in_topic:
+  - "[[knowledge/entries/lifecycle-orchestration]]"
 sources:
   - "https://picrew.github.io/LLM-Harness/main.pdf#page=8"
 ---

@@ -5,8 +5,8 @@ name: "Long-running Agent Harness"
 kind: mechanism
 lifecycle: skeleton
 review_status: proposed
-categories:
-  - "[[taxonomy/categories/agent-harness-architecture]]"
+in_topic:
+  - "[[knowledge/entries/agent-harness-architecture]]"
 specializes:
   - "[[knowledge/entries/agent-harness]]"
 sources:

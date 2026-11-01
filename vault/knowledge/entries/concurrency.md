@@ -5,8 +5,8 @@ name: "Concurrency"
 review_status: proposed
 kind: model
 lifecycle: skeleton
-categories:
-  - "[[taxonomy/categories/concurrent-programming]]"
+in_topic:
+  - "[[knowledge/entries/concurrent-programming]]"
 sources:
   - "https://doc.rust-lang.org/book/ch17-00-async-await.html"
 ---

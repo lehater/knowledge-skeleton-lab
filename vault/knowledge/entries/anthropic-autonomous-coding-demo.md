@@ -5,8 +5,8 @@ name: "Anthropic Autonomous Coding Agent Demo"
 kind: artifact
 lifecycle: skeleton
 review_status: proposed
-categories:
-  - "[[taxonomy/categories/agent-harness-architecture]]"
+in_topic:
+  - "[[knowledge/entries/agent-harness-architecture]]"
 realizes:
   - "[[knowledge/entries/long-running-agent-harness]]"
   - "[[knowledge/entries/initializer-coding-agent-pattern]]"

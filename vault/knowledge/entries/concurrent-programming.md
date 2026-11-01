@@ -1,6 +1,7 @@
 ---
 id: 01a18e44-0873-7181-bacc-8ee298dfa5b6
-type: category
+type: knowledge
+lifecycle: skeleton
 name: "Concurrent Programming"
 review_status: proposed
 sources:

@@ -5,8 +5,8 @@ name: "Python Coroutine Object"
 review_status: proposed
 kind: construct
 lifecycle: skeleton
-categories:
-  - "[[taxonomy/categories/asynchronous-execution]]"
+in_topic:
+  - "[[knowledge/entries/asynchronous-execution]]"
 sources:
   - "https://docs.python.org/3/library/asyncio-task.html"
   - "https://docs.python.org/3/reference/datamodel.html"

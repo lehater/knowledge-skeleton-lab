@@ -5,8 +5,8 @@ name: "Asynchronous Programming"
 review_status: proposed
 kind: model
 lifecycle: skeleton
-categories:
-  - "[[taxonomy/categories/asynchronous-programming]]"
+broader:
+  - "[[knowledge/entries/concurrent-programming]]"
 sources:
   - "https://doc.rust-lang.org/book/ch17-00-async-await.html"
   - "https://learn.microsoft.com/en-us/dotnet/csharp/asynchronous-programming/"

@@ -4,6 +4,8 @@ type: knowledge
 name: "Full Lifecycle Task Pipelines"
 lifecycle: skeleton
 review_status: proposed
+in_topic:
+  - "[[knowledge/entries/lifecycle-orchestration]]"
 sources:
   - "https://picrew.github.io/LLM-Harness/main.pdf#page=8"
 ---

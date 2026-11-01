@@ -7,8 +7,6 @@ lifecycle: skeleton
 review_status: proposed
 aliases:
   - "Agent Harness Engineering"
-categories:
-  - "[[taxonomy/categories/agent-harness-engineering]]"
 sources:
   - "https://openai.com/index/harness-engineering/"
   - "https://picrew.github.io/LLM-Harness/main.pdf#page=8"

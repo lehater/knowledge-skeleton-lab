@@ -5,8 +5,8 @@ name: "Backpressure"
 review_status: proposed
 kind: mechanism
 lifecycle: skeleton
-categories:
-  - "[[taxonomy/categories/asynchronous-flow-control]]"
+in_topic:
+  - "[[knowledge/entries/asynchronous-flow-control]]"
 sources:
   - "https://docs.python.org/3/library/asyncio-queue.html"
 ---

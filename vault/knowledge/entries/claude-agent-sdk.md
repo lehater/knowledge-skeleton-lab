@@ -5,8 +5,8 @@ name: "Claude Agent SDK"
 kind: technology
 lifecycle: skeleton
 review_status: proposed
-categories:
-  - "[[taxonomy/categories/agent-development-tooling]]"
+in_topic:
+  - "[[knowledge/entries/agent-development-tooling]]"
 realizes:
   - "[[knowledge/entries/agent-harness]]"
 sources:
