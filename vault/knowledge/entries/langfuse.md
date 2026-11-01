@@ -4,7 +4,7 @@ type: knowledge
 name: "Langfuse"
 lifecycle: enriched
 review_status: proposed
-specializes:
+in_topic:
   - "[[knowledge/entries/tracing-and-monitoring-platforms]]"
 sources:
   - "https://langfuse.com/docs/observability/features/queuing-batching"
