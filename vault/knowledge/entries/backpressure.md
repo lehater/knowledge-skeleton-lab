@@ -6,6 +6,6 @@ review_status: proposed
 kind: mechanism
 lifecycle: skeleton
 sources:
-  - "https://docs.python.org/3/library/asyncio-queue.html"
+  - "https://docs.python.org/3/library/asyncio-queue.html"  - "https://nodejs.org/learn/modules/backpressuring-in-streams"
 ---
 # Backpressure
