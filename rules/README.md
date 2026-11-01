@@ -1,13 +1,13 @@
-# Действующий Harness: модель Knowledge Graph v1
+# Действующая модель Knowledge Graph v1
 
-**Нормативные источники (без дублирующих словарей):**
+- [schema.md](schema.md) — формат единого Knowledge, без отдельных типов Category.
+- [knowledge.md](knowledge.md) — выбор источника, идентичность и заполнение заметки.
+- [relations.md](relations.md) — допустимые предикаты и их смысл.
+- [discovery.md](discovery.md) — короткий Source-First Discovery.
+- [validation.md](validation.md) — автоматическая проверка целостности.
 
-1. [schema.md](schema.md) — один Knowledge, YAML-контракт, идентичность.
-2. [knowledge.md](knowledge.md) — evidence, источники и узлы.
-3. [relations.md](relations.md) — **все разрешённые предикаты** и их смысл.
-4. [discovery.md](discovery.md) — последовательность «узлы → отношения» для очистки и инкрементальное Discovery.
-5. [validation.md](validation.md) — четыре разные проверки: static / source / semantic / GUI.
+[AGENTS.md](../AGENTS.md) определяет рабочий процесс, [Skill](../.agents/skills/knowledge-graph-discovery/SKILL.md) его исполняет.
 
-[AGENTS.md](../AGENTS.md) задаёт порядок этапов. [Skill](../.agents/skills/knowledge-graph-discovery/SKILL.md) применяет эти правила. Изменение схемы или предикатов оформляется явным решением, тестами и отдельной итерацией.
+**Правило:** выбирай общеизвестный надёжный источник, корректно переноси утверждение, помещай URL в `sources`. Отдельные evidence-реестры, рейтинги и обязательные независимые ревью не ведутся.
 
-**Не является контрактом:** старые отчёты, эксперименты, учебные задания, Canvas пилотов или комментарии PR. Их существование не подтверждает актуальность узлов.
+Исторические CSV/отчёты и прежние требования к аудиту не являются актуальным контрактом. Схема и словарь предикатов не изменяются автоматически в ходе Discovery.
