@@ -5,8 +5,6 @@ name: "Python asyncio.Task"
 review_status: proposed
 kind: construct
 lifecycle: skeleton
-in_topic:
-  - "[[knowledge/entries/asynchronous-execution]]"
 sources:
   - "https://docs.python.org/3/library/asyncio-task.html"
 realizes:

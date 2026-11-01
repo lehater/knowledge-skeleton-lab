@@ -5,8 +5,6 @@ name: "Coroutine"
 review_status: proposed
 kind: construct
 lifecycle: skeleton
-in_topic:
-  - "[[knowledge/entries/asynchronous-execution]]"
 sources:
   - "https://kotlinlang.org/docs/coroutines-basics.html"
 ---

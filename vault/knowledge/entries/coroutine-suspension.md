@@ -5,8 +5,6 @@ name: "Coroutine Suspension and Resumption"
 review_status: proposed
 kind: mechanism
 lifecycle: skeleton
-in_topic:
-  - "[[knowledge/entries/asynchronous-execution]]"
 sources:
   - "https://kotlinlang.org/docs/coroutines-basics.html"
 ---

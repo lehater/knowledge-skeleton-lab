@@ -5,8 +5,6 @@ name: "Bounded Asynchronous Queue"
 review_status: proposed
 kind: structure
 lifecycle: skeleton
-in_topic:
-  - "[[knowledge/entries/asynchronous-flow-control]]"
 sources:
   - "https://docs.python.org/3/library/asyncio-queue.html"
 ---

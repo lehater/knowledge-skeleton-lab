@@ -5,8 +5,6 @@ name: "Structured Concurrency"
 review_status: proposed
 kind: pattern
 lifecycle: skeleton
-in_topic:
-  - "[[knowledge/entries/asynchronous-lifecycle]]"
 sources:
   - "https://kotlinlang.org/docs/coroutines-basics.html"
 ---

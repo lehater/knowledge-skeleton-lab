@@ -5,8 +5,6 @@ name: "Task Lifecycle"
 review_status: proposed
 kind: model
 lifecycle: skeleton
-in_topic:
-  - "[[knowledge/entries/asynchronous-lifecycle]]"
 sources:
   - "https://kotlinlang.org/docs/coroutines-basics.html"
 ---
