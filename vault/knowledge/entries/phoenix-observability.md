@@ -4,10 +4,9 @@ type: knowledge
 name: "Phoenix Observability"
 lifecycle: enriched
 review_status: proposed
-specializes:
-  - "[[knowledge/entries/tracing-and-monitoring-platforms]]"
 in_topic:
   - "[[knowledge/entries/otlp]]"
+  - "[[knowledge/entries/tracing-and-monitoring-platforms]]"
 sources:
   - "https://arize.com/docs/phoenix/tracing/llm-traces"
   - "https://arize.com/docs/phoenix/tracing/llm-traces/sessions"
