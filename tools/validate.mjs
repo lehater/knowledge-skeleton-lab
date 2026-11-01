@@ -87,6 +87,13 @@ function cycleCheck(nodes, field, issues) {
 }
 export function validateVault(root) {
   const issues = [], warnings = [], nodes = new Map(), ids = new Map();
+  const entriesDir = join(root, "knowledge", "entries");
+  if (existsSync(entriesDir)) {
+    for (const entry of readdirSync(entriesDir, { withFileTypes: true })) {
+      if (entry.isFile() && entry.name !== ".gitkeep" && !entry.name.endsWith(".md"))
+        issues.push("unexpected file in Knowledge entries: " + entry.name);
+    }
+  }
   const oldCategories = collect(join(root, "taxonomy", "categories"));
   for (const full of oldCategories) issues.push("legacy Category not migrated: " + nodeKey(root, full));
   for (const full of collect(join(root, "knowledge", "entries"))) {

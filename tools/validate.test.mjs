@@ -116,3 +116,11 @@ test("all eight current predicates resolve between Knowledge", () => {
     assert.equal(result.counts.links, relations.length);
   } finally { f.clean(); }
 });
+
+test("reject stray Canvas or other non-Knowledge file in entries", () => {
+  const f = fixture();
+  try {
+    f.write("knowledge/entries/old-pilot.canvas", '{"nodes":[],"edges":[]}');
+    assert.ok(validateVault(f.dir).issues.some(s => s.includes("unexpected file in Knowledge entries")));
+  } finally { f.clean(); }
+});

@@ -1,28 +1,34 @@
 # Knowledge Skeleton Lab
 
-**Цель:** минимальный проверяемый Knowledge Graph в Obsidian. Единственный тип узла — Knowledge. Источники подтверждают **названия и референты**, отношения добавляются и проверяются отдельно.
+**Назначение:** единый проверяемый Knowledge Graph (Markdown + YAML) в Obsidian. В активных данных один тип узлов — `Knowledge`; все разрешённые отношения определены в [rules/relations.md](rules/relations.md). Git — источник истины.
 
-## Текущая работа
+## Актуальный срез
 
-Ведётся упорядоченная очистка графа:
-1. **Контракт Harness** — инструкции, типы, правила и проверки (текущая итерация; без изменения данных).
-2. **Audit Knowledge** — каждый существующий узел: подтверждённый / неразрешённый / неподтверждённый; удалить только после проверки и анализа ссылок.
-3. **Audit Relations** — проверить каждую связь, удалить или заменить только обоснованно.
-4. **Presentation cleanup** — убрать устаревшие Canvas, Bases и пилотные данные из рабочего Vault.
+- **77 Knowledge, 62 связи** после [аудита источников](reports/source-audit-stage1c-2026-11-01.md) и [проверки 69 исходных отношений](reports/relation-audit-stage2-2026-11-01.md).
+- **Harness Engineering / ETCLOVG:** 1 корень, 7 направлений, 35 подразделов, **42 `in_topic`** по Figure 4 одного научного обзора. Это подтверждённая *авторская рубрикация*, не гарантия полноты всей области.
+- Проверенные ссылки/названия есть у оставшихся Knowledge; `review_status: proposed` сохраняется. CI проверяет формат и целостность, а не предметную истинность.
+- **Stage 3: устаревшие учебные Canvas, специализированная Base и задания пилотов удалены из активного дерева.** Их копии не создаются; Git хранит прежние версии.
 
-[AGENTS.md](AGENTS.md) — порядок работы. [Правила](rules/README.md) — актуальный контракт. [Discovery Skill](.agents/skills/knowledge-graph-discovery/SKILL.md) — процесс агента.
+## Работа с графом
 
-## Уже проверенный срез
+Открой `vault/` как Obsidian Vault; для K-Plex выбери `Harness Engineering` (файл `knowledge/entries/harness-engineering.md`), линзу по связи `in_topic`. Вокруг корня ожидаются **7 направлений**; при переходе на `Lifecycle & Orchestration` — **3 подраздела**. Полная проверка второго уровня: **7 / 4 / 5 / 3 / 5 / 5 / 6** подразделов по направлениям. Инструкция и вердикт по обновлённому дереву: [Stage 3 GUI-checklist](reports/presentation-cleanup-stage3-2026-11-01.md).
 
-[ETCLOVG: Harness Engineering](reports/harness-engineering/etclovg-registry-v0.2.md) — 43 исходных названия, 42 тематических `in_topic`, ручная GUI-проверка 7 направлений и 35 подразделов. Источник: Figure 4 обзора, а **не** универсальный стандарт Harness Engineering.
+Оставлены общие представления:
+- `vault/views/knowledge.base` — Knowledge и статусы;
+- `vault/views/topics.base` — тематические связи всех Knowledge;
+- `vault/views/topic-explorer.base` — контекстная панель для активной заметки (использовать **как sidebar/embedded**, отдельно открытый .base не имеет активного Knowledge-контекста).
 
-## Как открыть
+В K-Plex следует настроить фильтр по `in_topic`, а не использовать старые категории. Сохранённые локальные настройки плагина могут быть вне Git (`vault/.obsidian/plugins/` игнорируется).
 
-В Obsidian открой только `vault/`, в VS Code — корень Git-репозитория.
+## Нормативная методика
+
+[AGENTS.md](AGENTS.md) · [Правила](rules/README.md) · [Discovery Skill](.agents/skills/knowledge-graph-discovery/SKILL.md) · [ADR представлений](docs/decisions/0001-graph-projections.md).
+
+Проверка из корня репозитория:
 
 ```bash
 node tools/validate.mjs
 node --test tools/validate.test.mjs
 ```
 
-**Границы проверки:** CI проверяет синтаксис и целостность, source/semantic — отдельные ревью. Старые эксперименты будут убраны **из текущих данных** после завершения source/edge audit; их копии не создаются.
+**Статусы:** статическая проверка подтверждается CI; обновлённый Obsidian/K-Plex требует отдельной ручной GUI-проверки после получения текущей ветки.

@@ -1,3 +1,5 @@
+# Контекстная таблица: открывать в sidebar рядом с активной Knowledge или встраивать в заметку.
+# В обычной вкладке this указывает на сам .base, поэтому список может быть пуст.
 filters:
   and:
     - file.inFolder("knowledge/entries")
@@ -5,17 +7,9 @@ filters:
     - type == "knowledge"
 views:
   - type: table
-    name: Current topic
+    name: Связаны через in_topic с активной Knowledge
     filters:
-      and:
-        - list(in_topic).contains(this.file)
+      - 'list(in_topic).contains(this)'
     order:
-      - file.name
-      - name
-      - in_topic
-  - type: table
-    name: Direct topics
-    order:
-      - file.name
       - name
       - in_topic
