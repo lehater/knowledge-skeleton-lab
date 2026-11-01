@@ -4,7 +4,7 @@ type: knowledge
 name: "LangSmith Observability"
 lifecycle: enriched
 review_status: proposed
-specializes:
+in_topic:
   - "[[knowledge/entries/tracing-and-monitoring-platforms]]"
   - "[[knowledge/entries/agent-specific-operations-platforms]]"
 sources:
