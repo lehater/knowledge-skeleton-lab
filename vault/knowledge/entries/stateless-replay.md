@@ -1,0 +1,14 @@
+---
+id: 01a197aa-87d1-79cb-bbd7-61ed936102a7
+type: knowledge
+name: "Stateless Replay"
+kind: model
+lifecycle: skeleton
+review_status: proposed
+in_topic:
+  - "[[knowledge/entries/single-agent-inner-loop]"
+sources:
+  - "https://picrew.github.io/LLM-Harness/main.pdf#page=27"
+  - "https://openai.com/index/unrolling-the-codex-agent-loop/"
+---
+# Stateless Replay
