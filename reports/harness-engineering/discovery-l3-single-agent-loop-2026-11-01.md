@@ -1,6 +1,6 @@
 # Harness Engineering — следующий слой исследования
 
-**Срез:** `Lifecycle & Orchestration → Single-Agent Inner Loop`.  
+**Срез:** `Lifecycle & Orchestration → Single-Agent Inner Loop`.
 **Основание:** [Agent Harness Engineering: A Survey, §6.2](https://picrew.github.io/LLM-Harness/main.pdf#page=27), [OpenAI Agents SDK](https://openai.github.io/openai-agents-python/running_agents/), [Anthropic Tool Use](https://platform.claude.com/docs/en/agents-and-tools/tool-use/how-tool-use-works).
 
 ## Куда углублять семь направлений
