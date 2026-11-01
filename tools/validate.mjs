@@ -52,7 +52,10 @@ function parseNote(content) {
     }
     const item = /^  - (.+)$/.exec(line);
     if (item && current) {
-      props[current].push(parseValue(item[1].trim()));
+      const raw = item[1].trim();
+      if (RELATIONS.includes(current) && !raw.startsWith('"'))
+        throw Error("relation must be a quoted wikilink in " + current);
+      props[current].push(parseValue(raw));
       continue;
     }
     throw Error("unsupported YAML syntax: " + line);

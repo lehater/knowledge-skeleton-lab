@@ -1,18 +1,23 @@
-# Контракт данных v1 — единый Knowledge
+# Schema v1 — единый Knowledge
 
-## Узлы
+## Узел
 
-**Единственный тип узла:** `type: knowledge`, путь `vault/knowledge/entries/<slug>.md`. Отдельного `type: category` и каталога `vault/taxonomy/categories/` больше нет. Все ссылки — пути от корня `vault/`.
+**Единственный доменный тип:** `type: knowledge`. Путь: `vault/knowledge/entries/<slug>.md`. Категории, самостоятельные типы Domain/Area и файловые иерархии тем не требуются.
 
-Обязательные поля: `id` (UUIDv7, устойчивый), `type`, `name`, `lifecycle: skeleton|enriched`, `review_status: proposed|accepted|rejected`, непустой `sources` (HTTP(S) URL). H1 точно равен `name`. Для `skeleton` тело после H1 пусто.
+Обязательные YAML-поля:
+- `id`: уникальный **UUIDv7**, постоянный на протяжении жизни идентичности;
+- `type: knowledge`;
+- `name`: название, соответствующее H1;
+- `lifecycle: skeleton | enriched`;
+- `review_status: proposed | accepted | rejected`;
+- `sources`: непустой список HTTP(S)-URL (технический минимум).
 
-Необязательные поля: `aliases`, `kind` (`artifact`, `construct`, `mechanism`, `model`, `pattern`, `practice`, `problem`, `property`, `result`, `structure`, `technology`).
+Необязательные поля:
+- `aliases`: список альтернативных названий **того же референта**;
+- `kind`: `artifact | construct | mechanism | model | pattern | practice | problem | property | result | structure | technology`;
+- поля отношений из [relations.md](relations.md): `in_topic`, `broader`, `specializes`, `part_of`, `realizes`, `schedules`, `executes`, `manages`.
 
-## Связи
-
-У Knowledge допустимы `in_topic`, `broader`, `specializes`, `part_of`, `realizes`, `schedules`, `executes`, `manages`. Все направлены Knowledge → Knowledge; могут отсутствовать. Подробнее: [relations.md](relations.md).
-
-Формат полей — только простые строки и списки строк YAML; ссылку записывать как quoted wikilink без расширения `.md`:
+Каждое поле-отношение — список quoted wikilink в формате `"[[knowledge/entries/slug]]"` (путь от `vault/`, без `.md`). Обратные ссылки вычисляются. Для `skeleton` тело содержит только заголовок `# name`; контент добавляется позже.
 
 ```yaml
 ---
@@ -29,6 +34,11 @@ sources:
 # Single-Agent Inner Loop
 ```
 
-**Evidence-first:** наличие и употребление названия проверяется чтением источника, а не только форматом URL. Допустим Knowledge без любых отношений. Семантический статус подтверждения имени и семантического ревью хранятся в реестре Discovery, **не** являются новыми полями YAML.
+## Важное различие
 
-Точечные изменения схемы — отдельное решение с миграцией и тестами. Не путать `broader` (тематически более широкое) и `specializes` (частный вид), `part_of` (часть целого).
+- `sources` заполнено = **формально есть указатель**, но не подтверждено наличие термина.
+- `source_verified` = результат **ручной/агентной проверки источника**; регистрируется в отчёте аудита, а не в этом YAML.
+- `review_status` = решение о принятии **самого Knowledge**; не повышается автоматически при успешном анализе URL или CI.
+- `semantic_review_status` = независимый статус оценки смысла и отношений, в evidence-реестре, не в YAML.
+
+Ни одно поле `categories` и никакой узел `type: category` не действуют. Присутствующие legacy-данные подлежат отдельному evidence-аудиту, а не получают подтверждение автоматически от этого документа.

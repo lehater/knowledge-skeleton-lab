@@ -95,3 +95,24 @@ test("reject legacy category files still present", () => {
     assert.ok(validateVault(f.dir).issues.some(s => s.includes("legacy Category")));
   } finally { f.clean(); }
 });
+
+test("reject unquoted relationship wikilink", () => {
+  const f = fixture();
+  try {
+    f.write("knowledge/entries/a.md", note(1, "A", 'in_topic:\n  - [[knowledge/entries/b]]'));
+    f.write("knowledge/entries/b.md", note(2, "B"));
+    assert.ok(validateVault(f.dir).issues.some(s => s.includes("relation must be a quoted wikilink")));
+  } finally { f.clean(); }
+});
+test("all eight current predicates resolve between Knowledge", () => {
+  const f = fixture();
+  try {
+    const relations = ["in_topic","broader","specializes","part_of","realizes","schedules","executes","manages"];
+    const fields = relations.map(r => r + ':\n  - "[[knowledge/entries/b]]"').join('\n');
+    f.write("knowledge/entries/a.md", note(1, "A", fields));
+    f.write("knowledge/entries/b.md", note(2, "B"));
+    const result = validateVault(f.dir);
+    assert.equal(result.ok, true, result.issues.join("\n"));
+    assert.equal(result.counts.links, relations.length);
+  } finally { f.clean(); }
+});
