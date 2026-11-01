@@ -4,24 +4,24 @@ filters:
     - file.ext == "md"
     - type == "knowledge"
     - or:
-        - 'file.name == "python-asyncio-event-loop"'
-        - 'file.name == "python-asyncio-task"'
-        - 'file.name == "python-coroutine-object"'
-        - 'file.name == "python-asyncio-task-group"'
+        - file.name == "python-asyncio-event-loop"
+        - file.name == "python-asyncio-task"
+        - file.name == "python-coroutine-object"
+        - file.name == "python-asyncio-task-group"
 properties:
   name:
-    displayName: "Сущность Python asyncio"
+    displayName: Сущность Python asyncio
   realizes:
-    displayName: "Реализует"
+    displayName: Реализует
   schedules:
-    displayName: "Планирует"
+    displayName: Планирует
   executes:
-    displayName: "Исполняет"
+    displayName: Исполняет
   manages:
-    displayName: "Управляет"
+    displayName: Управляет
 views:
   - type: table
-    name: "Функциональные связи asyncio"
+    name: Функциональные связи asyncio
     order:
       - file.name
       - name

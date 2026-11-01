@@ -1,176 +1,24 @@
 {
-  "nodes": [
-    {
-      "id": "general-loop",
-      "type": "file",
-      "x": 0,
-      "y": 0,
-      "width": 290,
-      "height": 120,
-      "file": "knowledge/entries/event-loop.md"
-    },
-    {
-      "id": "general-task",
-      "type": "file",
-      "x": 470,
-      "y": 0,
-      "width": 290,
-      "height": 120,
-      "file": "knowledge/entries/asynchronous-task.md"
-    },
-    {
-      "id": "general-coro",
-      "type": "file",
-      "x": 940,
-      "y": 0,
-      "width": 290,
-      "height": 120,
-      "file": "knowledge/entries/coroutine.md"
-    },
-    {
-      "id": "python-loop",
-      "type": "file",
-      "x": 0,
-      "y": 320,
-      "width": 290,
-      "height": 120,
-      "text": "### Python asyncio Event Loop\n\n[[knowledge/entries/python-asyncio-event-loop|Открыть Knowledge]]\n\n[[views/python-asyncio-event-loop.canvas|Открыть Canvas компонента]]\n\n*Вариант Б: карточка с двумя ссылками*",
-      "file": "knowledge/entries/python-asyncio-event-loop.md"
-    },
-    {
-      "id": "python-task",
-      "type": "file",
-      "x": 470,
-      "y": 320,
-      "width": 290,
-      "height": 120,
-      "file": "knowledge/entries/python-asyncio-task.md"
-    },
-    {
-      "id": "python-coro",
-      "type": "file",
-      "x": 940,
-      "y": 320,
-      "width": 290,
-      "height": 120,
-      "file": "knowledge/entries/python-coroutine-object.md"
-    },
-    {
-      "id": "python-group",
-      "type": "file",
-      "x": 0,
-      "y": 845,
-      "width": 290,
-      "height": 120,
-      "file": "knowledge/entries/python-asyncio-task-group.md"
-    },
-    {
-      "id": "general-structured",
-      "type": "file",
-      "x": 470,
-      "y": 845,
-      "width": 290,
-      "height": 120,
-      "file": "knowledge/entries/structured-concurrency.md"
-    },
-    {
-      "id": "pilot-header",
-      "type": "text",
-      "x": 0,
-      "y": -220,
-      "width": 1230,
-      "height": 170,
-      "text": "## Python asyncio — сравнение способов углубления\n\n**Task:** обычная карточка Knowledge + вложенный Canvas ниже (вариант А).\n\n**Event Loop:** обычная карточка Knowledge + ссылки на Knowledge и дочерний Canvas (вариант Б).\n\n[[views/python-asyncio-functional.canvas|Открыть исходную полную схему]]\n\n*Предметные стрелки остаются прикреплены к карточкам Knowledge. Превью и ссылки — навигационные представления.*"
-    },
-    {
-      "id": "task-canvas-preview",
-      "type": "file",
-      "x": 470,
-      "y": 510,
-      "width": 350,
-      "height": 250,
-      "file": "views/python-asyncio-task.canvas"
-    },
-    {
-      "id": "loop-canvas-navigation",
-      "type": "text",
-      "x": 0,
-      "y": 505,
-      "width": 330,
-      "height": 145,
-      "text": "**Python asyncio Event Loop — переходы**\n\n[[knowledge/entries/python-asyncio-event-loop|Knowledge: Event Loop]]\n\n[[views/python-asyncio-event-loop.canvas|Canvas: устройство Event Loop]]\n\n*Вариант Б: читаемая карточка + ссылки*"
-    }
-  ],
-  "edges": [
-    {
-      "id": "edge-1",
-      "fromNode": "python-loop",
-      "toNode": "general-loop",
-      "label": "realizes",
-      "fromSide": "top",
-      "toSide": "bottom",
-      "toEnd": "arrow",
-      "color": "6"
-    },
-    {
-      "id": "edge-2",
-      "fromNode": "python-task",
-      "toNode": "general-task",
-      "label": "realizes",
-      "fromSide": "top",
-      "toSide": "bottom",
-      "toEnd": "arrow",
-      "color": "6"
-    },
-    {
-      "id": "edge-3",
-      "fromNode": "python-coro",
-      "toNode": "general-coro",
-      "label": "realizes",
-      "fromSide": "top",
-      "toSide": "bottom",
-      "toEnd": "arrow",
-      "color": "6"
-    },
-    {
-      "id": "edge-4",
-      "fromNode": "python-loop",
-      "toNode": "python-task",
-      "label": "schedules",
-      "fromSide": "right",
-      "toSide": "left",
-      "toEnd": "arrow",
-      "color": "5"
-    },
-    {
-      "id": "edge-5",
-      "fromNode": "python-task",
-      "toNode": "python-coro",
-      "label": "executes",
-      "fromSide": "right",
-      "toSide": "left",
-      "toEnd": "arrow",
-      "color": "5"
-    },
-    {
-      "id": "edge-6",
-      "fromNode": "python-group",
-      "toNode": "python-task",
-      "label": "manages",
-      "fromSide": "top",
-      "toSide": "bottom",
-      "toEnd": "arrow",
-      "color": "5"
-    },
-    {
-      "id": "edge-7",
-      "fromNode": "python-group",
-      "toNode": "general-structured",
-      "label": "realizes",
-      "fromSide": "right",
-      "toSide": "left",
-      "toEnd": "arrow",
-      "color": "6"
-    }
-  ]
+	"nodes":[
+		{"id":"general-loop","type":"file","file":"knowledge/entries/event-loop.md","x":0,"y":0,"width":290,"height":120},
+		{"id":"general-task","type":"file","file":"knowledge/entries/asynchronous-task.md","x":470,"y":0,"width":290,"height":120},
+		{"id":"general-coro","type":"file","file":"knowledge/entries/coroutine.md","x":940,"y":0,"width":290,"height":120},
+		{"id":"python-loop","type":"file","text":"### Python asyncio Event Loop\n\n[[knowledge/entries/python-asyncio-event-loop|Открыть Knowledge]]\n\n[[views/python-asyncio-event-loop.canvas|Открыть Canvas компонента]]\n\n*Вариант Б: карточка с двумя ссылками*","file":"knowledge/entries/python-asyncio-event-loop.md","x":0,"y":320,"width":290,"height":120},
+		{"id":"python-task","type":"file","file":"knowledge/entries/python-asyncio-task.md","x":470,"y":320,"width":290,"height":160},
+		{"id":"python-coro","type":"file","file":"knowledge/entries/python-coroutine-object.md","x":940,"y":320,"width":290,"height":120},
+		{"id":"python-group","type":"file","file":"knowledge/entries/python-asyncio-task-group.md","x":0,"y":845,"width":290,"height":120},
+		{"id":"general-structured","type":"file","file":"knowledge/entries/structured-concurrency.md","x":470,"y":845,"width":290,"height":120},
+		{"id":"pilot-header","type":"text","text":"## Python asyncio — сравнение способов углубления\n\n**Task:** обычная карточка Knowledge + вложенный Canvas ниже (вариант А).\n\n**Event Loop:** обычная карточка Knowledge + ссылки на Knowledge и дочерний Canvas (вариант Б).\n\n[[views/python-asyncio-functional.canvas|Открыть исходную полную схему]]\n\n*Предметные стрелки остаются прикреплены к карточкам Knowledge. Превью и ссылки — навигационные представления.*","x":0,"y":-220,"width":1230,"height":170},
+		{"id":"loop-canvas-navigation","type":"text","text":"**Python asyncio Event Loop — переходы**\n\n[[knowledge/entries/python-asyncio-event-loop|Knowledge: Event Loop]]\n\n[[views/python-asyncio-event-loop.canvas|Canvas: устройство Event Loop]]\n\n*Вариант Б: читаемая карточка + ссылки*","x":0,"y":505,"width":330,"height":255},
+		{"id":"task-canvas-preview","type":"file","file":"views/python-asyncio-task.canvas","x":470,"y":560,"width":350,"height":250}
+	],
+	"edges":[
+		{"id":"edge-1","fromNode":"python-loop","fromSide":"top","toNode":"general-loop","toSide":"bottom","color":"6","label":"realizes"},
+		{"id":"edge-2","fromNode":"python-task","fromSide":"top","toNode":"general-task","toSide":"bottom","color":"6","label":"realizes"},
+		{"id":"edge-3","fromNode":"python-coro","fromSide":"top","toNode":"general-coro","toSide":"bottom","color":"6","label":"realizes"},
+		{"id":"edge-4","fromNode":"python-loop","fromSide":"right","toNode":"python-task","toSide":"left","color":"5","label":"schedules"},
+		{"id":"edge-5","fromNode":"python-task","fromSide":"right","toNode":"python-coro","toSide":"left","color":"5","label":"executes"},
+		{"id":"edge-6","fromNode":"python-group","fromSide":"top","toNode":"python-task","toSide":"bottom","color":"5","label":"manages"},
+		{"id":"edge-7","fromNode":"python-group","fromSide":"right","toNode":"general-structured","toSide":"left","color":"6","label":"realizes"}
+	]
 }

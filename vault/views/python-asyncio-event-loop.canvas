@@ -1,62 +1,12 @@
 {
-  "nodes": [
-    {
-      "id": "loop-home",
-      "type": "text",
-      "x": 0,
-      "y": -260,
-      "width": 850,
-      "height": 140,
-      "text": "## Python asyncio Event Loop — устройство и связи\n\n[[views/python-asyncio-navigation-pilot.canvas|← Вернуться к Python asyncio]]\n\n[[knowledge/entries/python-asyncio-event-loop|Открыть Knowledge Event Loop]]"
-    },
-    {
-      "id": "loop-concept",
-      "type": "file",
-      "x": 0,
-      "y": 0,
-      "width": 290,
-      "height": 130,
-      "file": "knowledge/entries/event-loop.md"
-    },
-    {
-      "id": "loop-core",
-      "type": "file",
-      "x": 0,
-      "y": 260,
-      "width": 290,
-      "height": 130,
-      "file": "knowledge/entries/python-asyncio-event-loop.md"
-    },
-    {
-      "id": "loop-task",
-      "type": "file",
-      "x": 480,
-      "y": 260,
-      "width": 290,
-      "height": 130,
-      "file": "knowledge/entries/python-asyncio-task.md"
-    }
-  ],
-  "edges": [
-    {
-      "id": "loop-realizes",
-      "fromNode": "loop-core",
-      "fromSide": "top",
-      "toNode": "loop-concept",
-      "toSide": "bottom",
-      "toEnd": "arrow",
-      "label": "realizes",
-      "color": "6"
-    },
-    {
-      "id": "loop-schedules",
-      "fromNode": "loop-core",
-      "fromSide": "right",
-      "toNode": "loop-task",
-      "toSide": "left",
-      "toEnd": "arrow",
-      "label": "schedules",
-      "color": "5"
-    }
-  ]
+	"nodes":[
+		{"id":"loop-home","type":"text","x":0,"y":-260,"width":850,"height":140,"text":"## Python asyncio Event Loop — устройство и связи\n\n[[views/python-asyncio-navigation-pilot.canvas|← Вернуться к Python asyncio]]\n\n[[knowledge/entries/python-asyncio-event-loop|Открыть Knowledge Event Loop]]"},
+		{"id":"loop-concept","type":"file","x":0,"y":0,"width":290,"height":130,"file":"knowledge/entries/event-loop.md"},
+		{"id":"loop-core","type":"file","x":0,"y":260,"width":290,"height":130,"file":"knowledge/entries/python-asyncio-event-loop.md"},
+		{"id":"loop-task","type":"file","x":480,"y":260,"width":290,"height":130,"file":"knowledge/entries/python-asyncio-task.md"}
+	],
+	"edges":[
+		{"id":"loop-realizes","fromNode":"loop-core","fromSide":"top","toNode":"loop-concept","toSide":"bottom","toEnd":"arrow","label":"realizes","color":"6"},
+		{"id":"loop-schedules","fromNode":"loop-core","fromSide":"right","toNode":"loop-task","toSide":"left","toEnd":"arrow","label":"schedules","color":"5"}
+	]
 }
