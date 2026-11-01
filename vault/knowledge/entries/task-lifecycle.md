@@ -6,6 +6,7 @@ review_status: proposed
 kind: model
 lifecycle: skeleton
 sources:
-  - "https://kotlinlang.org/docs/coroutines-basics.html"  - "https://learn.microsoft.com/en-us/dotnet/maui/deployment/performance"
+  - "https://kotlinlang.org/docs/coroutines-basics.html"
+  - "https://learn.microsoft.com/en-us/dotnet/maui/deployment/performance"
 ---
 # Task Lifecycle
