@@ -6,7 +6,7 @@ kind: pattern
 lifecycle: skeleton
 review_status: proposed
 in_topic:
-  - "[[knowledge/entries/single-agent-inner-loop]"
+  - "[[knowledge/entries/single-agent-inner-loop]]"
 sources:
   - "https://arxiv.org/abs/2210.03629"
   - "https://picrew.github.io/LLM-Harness/main.pdf#page=27"
