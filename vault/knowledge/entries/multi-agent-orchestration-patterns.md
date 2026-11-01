@@ -2,11 +2,16 @@
 id: 01a196ec-2a78-769e-8967-0f316279c773
 type: knowledge
 name: "Multi-Agent Orchestration Patterns"
-lifecycle: skeleton
+lifecycle: enriched
 review_status: proposed
 in_topic:
   - "[[knowledge/entries/lifecycle-orchestration]]"
 sources:
   - "https://picrew.github.io/LLM-Harness/main.pdf#page=8"
+  - "https://www.anthropic.com/research/building-effective-agents"
 ---
 # Multi-Agent Orchestration Patterns
+
+Многоагентная оркестрация распределяет работу между исполнителями и соединяет их результаты. Значимые интерфейсы — постановка подзадачи, передаваемый контекст и возвращаемый результат. При parallelization независимые части выполняются одновременно и агрегируются; voting объединяет несколько попыток одной задачи. В схеме orchestrator-workers координатор динамически выделяет подзадачи и синтезирует ответы исполнителей.
+
+Выбор схемы зависит от делимости задачи и предсказуемости её структуры. Несколько вызовов LLM сами по себе не означают автономных агентов: источник описывает также заранее заданные workflows. Координатор отвечает за распределение и интеграцию, а качество результата проверяется отдельно. Дополнительные исполнители увеличивают стоимость и сложность координации и не гарантируют улучшения.
