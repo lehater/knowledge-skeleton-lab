@@ -6,7 +6,7 @@ kind: construct
 lifecycle: skeleton
 review_status: proposed
 categories:
-  - "[[taxonomy/categories/agentic-software-engineering]]"
+  - "[[taxonomy/categories/agent-harness-engineering]]"
 part_of:
   - "[[knowledge/entries/initializer-coding-agent-pattern]]"
 sources:

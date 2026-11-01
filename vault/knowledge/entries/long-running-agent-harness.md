@@ -6,7 +6,7 @@ kind: mechanism
 lifecycle: skeleton
 review_status: proposed
 categories:
-  - "[[taxonomy/categories/agentic-software-engineering]]"
+  - "[[taxonomy/categories/agent-harness-engineering]]"
 specializes:
   - "[[knowledge/entries/agent-harness]]"
 sources:

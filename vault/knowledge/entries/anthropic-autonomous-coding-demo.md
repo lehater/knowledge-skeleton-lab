@@ -6,7 +6,7 @@ kind: artifact
 lifecycle: skeleton
 review_status: proposed
 categories:
-  - "[[taxonomy/categories/agentic-software-engineering]]"
+  - "[[taxonomy/categories/agent-harness-engineering]]"
 realizes:
   - "[[knowledge/entries/long-running-agent-harness]]"
   - "[[knowledge/entries/initializer-coding-agent-pattern]]"

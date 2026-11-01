@@ -8,7 +8,7 @@ review_status: proposed
 aliases:
   - "AI Agent Harness"
 categories:
-  - "[[taxonomy/categories/agentic-software-engineering]]"
+  - "[[taxonomy/categories/agent-harness-engineering]]"
 sources:
   - "https://www.anthropic.com/research/managed-agents"
 ---

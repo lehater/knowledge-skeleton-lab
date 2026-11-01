@@ -6,7 +6,7 @@ kind: practice
 lifecycle: skeleton
 review_status: proposed
 categories:
-  - "[[taxonomy/categories/agentic-software-engineering]]"
+  - "[[taxonomy/categories/agent-harness-engineering]]"
 sources:
   - "https://openai.com/index/harness-engineering/"
 ---
