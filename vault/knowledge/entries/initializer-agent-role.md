@@ -5,8 +5,6 @@ name: "Initializer Agent Role in the Initializer and Coding Agent Pattern"
 kind: construct
 lifecycle: skeleton
 review_status: proposed
-in_topic:
-  - "[[knowledge/entries/agent-workflow-design]]"
 part_of:
   - "[[knowledge/entries/initializer-coding-agent-pattern]]"
 sources:

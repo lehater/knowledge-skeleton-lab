@@ -4,8 +4,6 @@ type: knowledge
 lifecycle: skeleton
 name: "Agent Workflow Design"
 review_status: proposed
-broader:
-  - "[[knowledge/entries/harness-engineering]]"
 sources:
   - "https://www.anthropic.com/research/effective-harnesses-for-long-running-agents"
   - "https://learn.microsoft.com/en-us/agents/architecture/map-agent-flows"

@@ -4,8 +4,6 @@ type: knowledge
 lifecycle: skeleton
 name: "Agent Harness Architecture"
 review_status: proposed
-broader:
-  - "[[knowledge/entries/harness-engineering]]"
 sources:
   - "https://wiki.kevinliu.studio/wiki/architecture/agent-harness-architecture"
   - "https://openai.com/index/harness-engineering/"

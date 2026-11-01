@@ -5,8 +5,6 @@ name: "Initializer and Coding Agent Pattern"
 kind: pattern
 lifecycle: skeleton
 review_status: proposed
-in_topic:
-  - "[[knowledge/entries/agent-workflow-design]]"
 sources:
   - "https://github.com/anthropics/claude-quickstarts/tree/main/autonomous-coding"
   - "https://www.anthropic.com/research/effective-harnesses-for-long-running-agents"
