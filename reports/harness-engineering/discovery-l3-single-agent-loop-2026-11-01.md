@@ -1,9 +1,9 @@
 # Harness Engineering — Discovery Level 3: Single-Agent Inner Loop
 
-**Date:** 2026-11-01  
-**Mode:** `discover` from `.agents/skills/knowledge-graph-discovery/SKILL.md`  
-**Base:** `main` at `f38c431e3b46d62ef9bf1929f8529c9d296d9000`  
-**Branch:** `experiment/harness-discovery-l3-single-agent-loop`  
+**Date:** 2026-11-01
+**Mode:** `discover` from `.agents/skills/knowledge-graph-discovery/SKILL.md`
+**Base:** `main` at `f38c431e3b46d62ef9bf1929f8529c9d296d9000`
+**Branch:** `experiment/harness-discovery-l3-single-agent-loop`
 **Node/edge evidence:** [CSV](discovery-l3-single-agent-loop-evidence-2026-11-01.csv)
 
 ## 1. Restored baseline and boundaries
@@ -56,7 +56,7 @@ This slice is foundational for multi-agent orchestration and full-lifecycle task
 
 | Gate | Result | Evidence / limitation |
 | --- | --- | --- |
-| Static | **PASS (GitHub Actions)** | [Run #41320428427](https://github.com/lehater/knowledge-skeleton-lab/actions/runs/41320428427): `node tools/validate.mjs` PASS (84 Knowledge, 69 links), `node --test tools/validate.test.mjs` PASS (12/12 tests). Report-only follow-up revision requires latest-head recheck |
+| Static | **PASS (GitHub Actions)** | [Run #41320428427](https://github.com/lehater/knowledge-skeleton-lab/actions/runs/41320428427): `node tools/validate.mjs` PASS (84 Knowledge, 69 links), `node --test tools/validate.test.mjs` PASS (12/12 tests). |
 | Source | **PASS (author inspection, 7/7 new nodes and 7/7 edges)** | Primary and official sources read; exact locations and identity/edge justifications in CSV. Independent source replay NOT_RUN |
 | Semantic | **NOT_RUN (independent)** | Author-proposed classifications and directional claims require reviewer validation; no acceptance of `review_status` |
 | GUI | **NOT_RUN (new slice)** | Prior K-Plex owner review applies only to ETCLOVG baseline; new notes not yet inspected in Obsidian |
