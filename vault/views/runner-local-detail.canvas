@@ -1,0 +1,111 @@
+{
+  "nodes": [
+    {
+      "id": "legend",
+      "type": "text",
+      "x": 0,
+      "y": -220,
+      "width": 1240,
+      "height": 170,
+      "text": "# Runner: граф и локальная детализация\nЛинии Canvas — существующие YAML-рёбра в исходном направлении. Карточки разделов — представления того же Runner, без новых Knowledge. Mermaid показывает локальное поведение; его трактовка предложена в docs/proposals/runner-local-detail-pilot.md и ещё не принята."
+    },
+    {
+      "id": "runner",
+      "type": "file",
+      "file": "knowledge/entries/openai-agents-sdk-runner.md",
+      "x": 0,
+      "y": 0,
+      "width": 440,
+      "height": 210
+    },
+    {
+      "id": "loop",
+      "type": "file",
+      "file": "knowledge/entries/single-agent-inner-loop.md",
+      "x": 650,
+      "y": 0,
+      "width": 550,
+      "height": 370
+    },
+    {
+      "id": "call",
+      "type": "file",
+      "file": "knowledge/entries/tool-call.md",
+      "x": 0,
+      "y": 520,
+      "width": 440,
+      "height": 300
+    },
+    {
+      "id": "result",
+      "type": "file",
+      "file": "knowledge/entries/tool-result.md",
+      "x": 650,
+      "y": 520,
+      "width": 550,
+      "height": 300
+    },
+    {
+      "id": "interface",
+      "type": "file",
+      "file": "knowledge/entries/openai-agents-sdk-runner.md",
+      "subpath": "#Ответственность и интерфейс",
+      "x": 1330,
+      "y": 0,
+      "width": 650,
+      "height": 500
+    },
+    {
+      "id": "behavior",
+      "type": "file",
+      "file": "knowledge/entries/openai-agents-sdk-runner.md",
+      "subpath": "#Сценарий одного агента",
+      "x": 1330,
+      "y": 580,
+      "width": 650,
+      "height": 850
+    },
+    {
+      "id": "limits",
+      "type": "file",
+      "file": "knowledge/entries/openai-agents-sdk-runner.md",
+      "subpath": "#Условия завершения",
+      "x": 0,
+      "y": 950,
+      "width": 1200,
+      "height": 300
+    }
+  ],
+  "edges": [
+    {
+      "id": "realizes",
+      "fromNode": "runner",
+      "fromSide": "right",
+      "toNode": "loop",
+      "toSide": "left",
+      "fromEnd": "none",
+      "toEnd": "arrow",
+      "label": "realizes"
+    },
+    {
+      "id": "call-topic",
+      "fromNode": "call",
+      "fromSide": "top",
+      "toNode": "loop",
+      "toSide": "bottom",
+      "fromEnd": "none",
+      "toEnd": "arrow",
+      "label": "in_topic"
+    },
+    {
+      "id": "result-topic",
+      "fromNode": "result",
+      "fromSide": "top",
+      "toNode": "loop",
+      "toSide": "bottom",
+      "fromEnd": "none",
+      "toEnd": "arrow",
+      "label": "in_topic"
+    }
+  ]
+}
