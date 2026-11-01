@@ -1,0 +1,14 @@
+filters:
+  and:
+    - file.inFolder("knowledge/entries")
+    - file.ext == "md"
+    - type == "knowledge"
+views:
+  - type: table
+    name: Topics and membership
+    order:
+      - file.name
+      - name
+      - in_topic
+      - broader
+      - review_status

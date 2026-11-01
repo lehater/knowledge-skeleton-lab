@@ -1,44 +1,44 @@
-# Контракт данных v0
+# Schema v1 — единый Knowledge
 
-## Узлы
+## Узел
 
-Все пути ниже **относительны корню `vault/`**. Нормативные правила и инструменты хранятся вне Vault в корне Git-репозитория.
+**Единственный доменный тип:** `type: knowledge`. Путь: `vault/knowledge/entries/<slug>.md`. Категории, самостоятельные типы Domain/Area и файловые иерархии тем не требуются.
 
-- `type: category` — навигационный узел предметной таксономии в `taxonomy/categories/<slug>.md`.
-- `type: knowledge` — самостоятельный предмет знания в `knowledge/entries/<slug>.md`.
-- Иные типы (`instruction`, `implementation` и т. п.) — **не входят** в первый пилот.
+Обязательные YAML-поля:
+- `id`: уникальный **UUIDv7**, постоянный на протяжении жизни идентичности;
+- `type: knowledge`;
+- `name`: название, соответствующее H1;
+- `lifecycle: skeleton | enriched`;
+- `review_status: proposed | accepted | rejected`;
+- `sources`: непустой список HTTP(S)-URL (технический минимум).
 
-Обязательны для обоих: `id` (канонический UUIDv7), `type`, `name`, `review_status: proposed | accepted | rejected` и H1, дословно совпадающий с `name`. Пути — стабильные lowercase kebab-case slugs; ID не зависит от пути. `aliases` — необязательный список строк.
+Необязательные поля:
+- `aliases`: список альтернативных названий **того же референта**;
+- `kind`: `artifact | construct | mechanism | model | pattern | practice | problem | property | result | structure | technology`;
+- поля отношений из [relations.md](relations.md): `in_topic`, `broader`, `specializes`, `part_of`, `realizes`, `schedules`, `executes`, `manages`.
 
-Для Knowledge обязательно `lifecycle: skeleton | enriched`. В `skeleton` тело после H1 пусто. `kind` — необязательная предметная форма (не тип документа): `artifact`, `construct`, `mechanism`, `model`, `pattern`, `practice`, `problem`, `property`, `result`, `structure`, `technology`.
+Каждое поле-отношение — список quoted wikilink в формате `"[[knowledge/entries/slug]]"` (путь от `vault/`, без `.md`). Обратные ссылки вычисляются. Для `skeleton` тело содержит только заголовок `# name`; контент добавляется позже.
 
-## Связи
-
-- У категории: `broader` — список ссылок на более широкие **category**.
-- У Knowledge: `categories` — список ссылок на **category**; `specializes`, `part_of`, `realizes` — списки ссылок на **knowledge**.
-- `sources` — необязательные конкретные HTTP(S) URL, а не ссылки на документы-сущности.
-
-Все списки могут отсутствовать или быть `[]`. Если содержат ссылки, применять только **quoted wikilinks**, полный путь относительно корня Vault и без `.md`:
-
-~~~yaml
+```yaml
 ---
 id: 019a0000-0000-7000-8000-000000000001
 type: knowledge
-name: "Coroutine"
-kind: construct
+name: "Single-Agent Inner Loop"
 lifecycle: skeleton
 review_status: proposed
-categories:
-  - "[[taxonomy/categories/asynchronous-programming]]"
+in_topic:
+  - "[[knowledge/entries/lifecycle-orchestration]]"
 sources:
-  - "https://docs.python.org/3/library/asyncio-task.html"
+  - "https://picrew.github.io/LLM-Harness/main.pdf#page=8"
 ---
-# Coroutine
-~~~
+# Single-Agent Inner Loop
+```
 
-`review_status` оценивает **подтверждённость предметного узла**, `lifecycle` — **готовность его объяснительного содержания**. Это независимые оси: принятый каркас может оставаться пустым.
+## Важное различие
 
-## Структурная дисциплина
+- `sources` заполнено = **формально есть указатель**, но не подтверждено наличие термина.
+- `source_verified` = результат **ручной/агентной проверки источника**; регистрируется в отчёте аудита, а не в этом YAML.
+- `review_status` = решение о принятии **самого Knowledge**; не повышается автоматически при успешном анализе URL или CI.
+- `semantic_review_status` = независимый статус оценки смысла и отношений, в evidence-реестре, не в YAML.
 
-На первом этапе YAML — только простые строки и списки строк. Без вложенных объектов, YAML anchors, custom tags и inline-карт. Все ссылки на существующие узлы. Имя — однозначный предметный референт, не учебное задание и не произвольный термин. Источники и аргументация к неоднозначным узлам дополнительно фиксируются в отчёте, не в теле каркаса.
-
+Ни одно поле `categories` и никакой узел `type: category` не действуют. Присутствующие legacy-данные подлежат отдельному evidence-аудиту, а не получают подтверждение автоматически от этого документа.

@@ -1,0 +1,21 @@
+{
+  "types": {
+    "aliases": "aliases",
+    "tags": "tags",
+    "id": "text",
+    "type": "text",
+    "name": "text",
+    "kind": "text",
+    "lifecycle": "text",
+    "review_status": "text",
+    "sources": "multitext",
+    "in_topic": "multitext",
+    "broader": "multitext",
+    "specializes": "multitext",
+    "part_of": "multitext",
+    "realizes": "multitext",
+    "schedules": "multitext",
+    "executes": "multitext",
+    "manages": "multitext"
+  }
+}
