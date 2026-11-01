@@ -2,7 +2,7 @@
 id: 01a197aa-8823-7265-9f0c-eac1f66f995c
 type: knowledge
 name: "OpenAI Agents SDK Runner"
-kind: technology
+kind: construct
 lifecycle: skeleton
 review_status: proposed
 realizes:
