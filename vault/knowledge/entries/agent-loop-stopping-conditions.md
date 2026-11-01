@@ -6,7 +6,7 @@ kind: mechanism
 lifecycle: skeleton
 review_status: proposed
 in_topic:
-  - "[[knowledge/entries/single-agent-inner-loop]"
+  - "[[knowledge/entries/single-agent-inner-loop]]"
 sources:
   - "https://www.anthropic.com/research/building-effective-agents"
   - "https://openai.github.io/openai-agents-python/running_agents/"
