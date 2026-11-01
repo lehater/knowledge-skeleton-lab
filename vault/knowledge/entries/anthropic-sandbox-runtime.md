@@ -1,0 +1,16 @@
+---
+id: 01a197d9-e25f-7122-9590-59a5e815f634
+type: knowledge
+name: "Anthropic Sandbox Runtime"
+lifecycle: enriched
+review_status: proposed
+in_topic:
+  - "[[knowledge/entries/os-level-permission-sandboxes]]"
+sources:
+  - "https://github.com/anthropics/sandbox-runtime#readme"
+---
+# Anthropic Sandbox Runtime
+
+Anthropic Sandbox Runtime (srt) — CLI и библиотека для ограничения файлового и сетевого доступа произвольных процессов, включая команды агента и MCP-серверы. Ограничения применяются ко всему дереву процессов. Реализация сочетает механизмы ОС и фильтрацию сети через прокси; на Linux используется bubblewrap.
+
+Конфигурация задаёт разрешённые записи, запреты чтения и разрешённые сетевые назначения. Настройка прав является частью границы: доступ к чтению по умолчанию не ограничен, поэтому защита чувствительных файлов требует явных правил.
