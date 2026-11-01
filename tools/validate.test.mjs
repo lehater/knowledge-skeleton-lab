@@ -14,7 +14,7 @@ const cat = (n, name, broader = "") => [
 const know = (n, name, category) => [
   "---", "id: " + id(n), "type: knowledge", 'name: "' + name + '"',
   "lifecycle: skeleton", "review_status: proposed", "categories:",
-  '  - "[[' + category + ']]"', "---", "# " + name, ""
+  '  - "[[' + category + ']]"', "sources:", '  - "https://docs.python.org/3/library/asyncio-task.html"', "---", "# " + name, ""
 ].join("\n");
 function fixture() {
   const dir = mkdtempSync(join(tmpdir(), "knowledge-skeleton-"));
@@ -87,5 +87,31 @@ test("reject functional relation pointing to category", () => {
     const r = validateVault(f.dir);
     assert.equal(r.ok, false);
     assert.ok(r.issues.some((s) => s.includes("wrong target type for executes")));
+  } finally { f.clean(); }
+});
+
+
+test("reject Knowledge without sources", () => {
+  const f = fixture();
+  try {
+    f.write("taxonomy/categories/async.md", cat(1, "Async"));
+    const missing = know(2, "Coroutine", "taxonomy/categories/async")
+      .replace('sources:\n  - "https://docs.python.org/3/library/asyncio-task.html"\n', "");
+    f.write("knowledge/entries/coroutine.md", missing);
+    const result = validateVault(f.dir);
+    assert.equal(result.ok, false);
+    assert.ok(result.issues.some((msg) => msg.includes("missing required sources")));
+  } finally { f.clean(); }
+});
+
+test("accept source-backed isolated Knowledge with no category", () => {
+  const f = fixture();
+  try {
+    const note = know(2, "Coroutine", "taxonomy/categories/unused")
+      .replace('categories:\n  - "[[taxonomy/categories/unused]]"\n', "");
+    f.write("knowledge/entries/coroutine.md", note);
+    const result = validateVault(f.dir);
+    assert.equal(result.ok, true, result.issues.join("\n"));
+    assert.equal(result.counts.links, 0);
   } finally { f.clean(); }
 });

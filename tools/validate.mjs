@@ -121,8 +121,9 @@ export function validateVault(root) {
     for (const [field, value] of Object.entries(p)) {
       if (Array.isArray(value) && new Set(value).size !== value.length) issues.push(key + ": duplicate values in " + field);
     }
+    if (expected === "knowledge" && !(p.sources?.length)) issues.push(key + ": missing required sources");
     for (const url of p.sources ?? []) if (!/^https?:\/\/\S+$/.test(url)) issues.push(key + ": invalid source URL " + url);
-    if (expected === "knowledge" && !(p.categories?.length)) warnings.push(key + ": no direct category");
+    // No categories or outgoing edges are required for an evidence-first Knowledge.
   }
   for (const [key, { props: p }] of nodes) {
     for (const [field, targetType] of Object.entries(RELATIONS)) {
