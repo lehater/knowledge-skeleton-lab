@@ -4,7 +4,7 @@ type: knowledge
 name: "Java Record Class"
 lifecycle: enriched
 review_status: proposed
-kind: construct
+kind: program_construct
 sources:
   - "https://docs.oracle.com/javase/specs/jls/se27/html/jls-8.html#jls-8.10"
 specializes:

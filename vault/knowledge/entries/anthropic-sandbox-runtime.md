@@ -2,6 +2,7 @@
 id: 01a197d9-e25f-7122-9590-59a5e815f634
 type: knowledge
 name: "Anthropic Sandbox Runtime"
+kind: software
 lifecycle: enriched
 review_status: proposed
 in_topic:

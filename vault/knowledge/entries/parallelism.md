@@ -3,7 +3,7 @@ id: 01a18e44-0982-7137-be54-c7c797e37b04
 type: knowledge
 name: "Parallelism"
 review_status: proposed
-kind: model
+kind: property
 lifecycle: enriched
 in_topic:
   - "[[knowledge/entries/concurrent-programming]]"

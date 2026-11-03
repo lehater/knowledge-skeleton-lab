@@ -4,12 +4,14 @@ type: knowledge
 name: "Data Abstraction"
 lifecycle: enriched
 review_status: proposed
-kind: practice
+kind: principle
 sources:
   - "https://lucacardelli.name/Papers/OnUnderstanding.A4.pdf"
   - "https://www.cs.utexas.edu/~wcook/papers/InheritanceSubtyping90/CookPOPL90.pdf"
 ---
 # Data Abstraction
+
+Data Abstraction — правило отделения наблюдаемых операций данных от внутреннего представления.
 
 Абстракция данных задаёт доступные операции и наблюдаемое поведение, позволяя потребителю работать без знания внутреннего представления. Вход — обращения через интерфейс; выход — результаты и эффекты по контракту. Разделение интерфейса и реализации локализует зависимость клиента от устройства данных.
 

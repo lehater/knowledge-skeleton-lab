@@ -4,7 +4,7 @@ type: knowledge
 name: "OpenTelemetry Metric"
 lifecycle: enriched
 review_status: proposed
-kind: structure
+kind: data_structure
 in_topic:
   - "[[knowledge/entries/opentelemetry]]"
 sources:
@@ -13,6 +13,8 @@ sources:
   - "https://opentelemetry.io/docs/concepts/signals/metrics/"
 ---
 # OpenTelemetry Metric
+
+OpenTelemetry Metric — структура Metric в модели данных OpenTelemetry, описывающая поток измерений и соответствующие точки данных; инструменты и агрегирование рассматриваются отдельно.
 
 Метрики OpenTelemetry описывают измерения работающей системы и их агрегированную статистику. Инструмент задаётся именем, видом, единицей и описанием: Counter накапливает положительные приращения, UpDownCounter допускает уменьшение, Gauge отражает текущее значение, Histogram агрегирует распределение. SDK объединяет измерения в точки данных и экспортирует их потребителю.
 

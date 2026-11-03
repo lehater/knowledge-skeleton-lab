@@ -3,7 +3,7 @@ id: 01a18e44-0a93-7030-96bf-b0968ae2a18b
 type: knowledge
 name: "Asynchronous Task"
 review_status: proposed
-kind: construct
+kind: process
 lifecycle: enriched
 sources:
   - "https://docs.python.org/3/library/asyncio-task.html"
@@ -14,6 +14,8 @@ in_topic:
   - "[[knowledge/entries/task-lifecycle]]"
 ---
 # Asynchronous Task
+
+Asynchronous Task — тип управляемого асинхронного исполнения работы.
 
 Асинхронная задача — управляемая единица работы, чьё продвижение и завершение могут быть отделены от места запуска. Вход — вычисление и контекст исполнения; выход — состояние завершения, результат или отказ. Handles могут предоставлять ожидание и запрос отмены; конкретный контракт определяет доступные состояния.
 

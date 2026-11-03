@@ -4,7 +4,7 @@ type: knowledge
 name: "Python Code Block"
 lifecycle: enriched
 review_status: proposed
-kind: construct
+kind: program_construct
 sources:
   - "https://docs.python.org/3.15/reference/executionmodel.html#structure-of-a-program"
 in_topic:

@@ -4,7 +4,7 @@ type: knowledge
 name: "Python Abstract Syntax Tree"
 lifecycle: enriched
 review_status: proposed
-kind: artifact
+kind: data_structure
 sources:
   - "https://docs.python.org/3.15/library/ast.html"
   - "https://small.r7rs.org/attachment/r7rs.pdf"

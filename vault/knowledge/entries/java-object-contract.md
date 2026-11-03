@@ -4,7 +4,7 @@ type: knowledge
 name: "Java Object Equality and Hashing"
 lifecycle: enriched
 review_status: proposed
-kind: model
+kind: specification
 sources:
   - "https://docs.oracle.com/en/java/javase/27/docs/api/java.base/java/lang/Object.html"
 in_topic:

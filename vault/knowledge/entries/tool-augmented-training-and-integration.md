@@ -2,6 +2,7 @@
 id: 01a196ec-2a78-769a-9c66-988f16a22dae
 type: knowledge
 name: "Tool-Augmented Training and Integration"
+kind: topic
 lifecycle: enriched
 review_status: proposed
 in_topic:

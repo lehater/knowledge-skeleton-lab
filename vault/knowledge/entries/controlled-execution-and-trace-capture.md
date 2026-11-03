@@ -2,6 +2,7 @@
 id: 01a196ec-2a78-79b8-82e7-8b7c8cbf5950
 type: knowledge
 name: "Controlled Execution and Trace Capture"
+kind: process
 lifecycle: enriched
 review_status: proposed
 in_topic:

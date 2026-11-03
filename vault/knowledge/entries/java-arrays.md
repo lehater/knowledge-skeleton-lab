@@ -4,7 +4,7 @@ type: knowledge
 name: "Java Arrays"
 lifecycle: enriched
 review_status: proposed
-kind: structure
+kind: program_construct
 sources:
   - "https://docs.oracle.com/javase/specs/jls/se27/html/jls-10.html"
 in_topic:

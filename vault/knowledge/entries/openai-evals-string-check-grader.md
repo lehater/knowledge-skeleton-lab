@@ -4,7 +4,7 @@ type: knowledge
 name: "OpenAI Evals String Check Grader"
 lifecycle: enriched
 review_status: proposed
-kind: mechanism
+kind: specification
 in_topic:
   - "[[knowledge/entries/openai-evals-api-eval]]"
 sources:
@@ -12,6 +12,8 @@ sources:
   - "https://developers.openai.com/api/reference/resources/evals/methods/create"
 ---
 # OpenAI Evals String Check Grader
+
+OpenAI Evals String Check Grader — декларативный критерий StringCheckGrader.
 
 JSON-конфигурация grader с `type="string_check"` задаёт строковые `input`, `reference` и операцию сравнения. Операция `eq` возвращает 1 при полном совпадении с учётом регистра и 0 иначе; `like` проверяет вхождение, `ilike` — вхождение без учёта регистра.
 

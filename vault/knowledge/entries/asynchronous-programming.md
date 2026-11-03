@@ -3,7 +3,7 @@ id: 01a18e44-09af-7b7b-9588-dec954be27d3
 type: knowledge
 name: "Asynchronous Programming"
 review_status: proposed
-kind: model
+kind: practice
 lifecycle: enriched
 broader:
   - "[[knowledge/entries/concurrent-programming]]"

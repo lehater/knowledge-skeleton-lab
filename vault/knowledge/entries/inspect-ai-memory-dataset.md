@@ -4,7 +4,7 @@ type: knowledge
 name: "Inspect AI MemoryDataset"
 lifecycle: enriched
 review_status: proposed
-kind: structure
+kind: program_construct
 specializes:
   - "[[knowledge/entries/inspect-ai-dataset]]"
 sources:

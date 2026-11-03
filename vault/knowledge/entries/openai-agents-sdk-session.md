@@ -2,7 +2,7 @@
 id: 01a197d2-2236-79fb-b34c-395b84c1265f
 type: knowledge
 name: "OpenAI Agents SDK Session"
-kind: construct
+kind: program_construct
 lifecycle: enriched
 review_status: proposed
 in_topic:

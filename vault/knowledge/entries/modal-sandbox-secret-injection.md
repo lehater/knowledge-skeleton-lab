@@ -2,6 +2,7 @@
 id: 01a197e4-f835-72ba-a6e3-9c85a20f9fbc
 type: knowledge
 name: "Modal Sandbox Secret Injection"
+kind: mechanism
 lifecycle: enriched
 review_status: proposed
 in_topic:

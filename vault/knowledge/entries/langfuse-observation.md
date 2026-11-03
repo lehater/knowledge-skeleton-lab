@@ -2,6 +2,7 @@
 id: 01a197fa-7f4d-7900-88fa-e27e60f960b9
 type: knowledge
 name: "Langfuse Observation"
+kind: data_structure
 lifecycle: enriched
 review_status: proposed
 in_topic:

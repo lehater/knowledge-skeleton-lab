@@ -4,7 +4,7 @@ type: knowledge
 name: "CPython"
 lifecycle: enriched
 review_status: proposed
-kind: technology
+kind: software
 sources:
   - "https://docs.python.org/3.15/glossary.html#term-CPython"
   - "https://docs.python.org/3.15/library/dis.html"

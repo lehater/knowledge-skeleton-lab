@@ -4,7 +4,7 @@ type: knowledge
 name: "OpenTelemetry Collector"
 lifecycle: enriched
 review_status: proposed
-kind: technology
+kind: software
 part_of:
   - "[[knowledge/entries/opentelemetry]]"
 executes:

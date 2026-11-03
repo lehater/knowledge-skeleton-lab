@@ -2,6 +2,7 @@
 id: 01a196ec-2a78-7e27-b5f8-e35829799139
 type: knowledge
 name: "Computer-Use Agent Infrastructure"
+kind: component
 lifecycle: enriched
 review_status: proposed
 in_topic:

@@ -2,6 +2,7 @@
 id: 01a197e5-4a0a-7c57-a3c6-27156e286fcd
 type: knowledge
 name: "E2B Reboot on Resume"
+kind: mechanism
 lifecycle: enriched
 review_status: proposed
 in_topic:

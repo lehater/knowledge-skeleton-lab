@@ -2,6 +2,7 @@
 id: 01a197e4-f86e-7753-8c25-f85886b2ef70
 type: knowledge
 name: "Anthropic Sandbox Credential Masking"
+kind: mechanism
 lifecycle: enriched
 review_status: proposed
 part_of:

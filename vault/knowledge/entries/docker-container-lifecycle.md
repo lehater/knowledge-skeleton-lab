@@ -2,6 +2,7 @@
 id: 01a197e5-4b6d-7fbb-a65d-1912279e0e8b
 type: knowledge
 name: "Docker Container Lifecycle"
+kind: model
 lifecycle: enriched
 review_status: proposed
 sources:

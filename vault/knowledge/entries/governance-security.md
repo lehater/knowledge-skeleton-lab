@@ -2,6 +2,7 @@
 id: 01a196ec-2a78-730a-88f3-dda2d8bb5a0b
 type: knowledge
 name: "Governance & Security"
+kind: topic
 lifecycle: enriched
 review_status: proposed
 in_topic:

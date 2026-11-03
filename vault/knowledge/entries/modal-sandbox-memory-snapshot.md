@@ -2,6 +2,7 @@
 id: 01a197e5-4a8f-7f31-ac95-8fc983064516
 type: knowledge
 name: "Modal Sandbox Memory Snapshot"
+kind: artifact
 lifecycle: enriched
 review_status: proposed
 specializes:

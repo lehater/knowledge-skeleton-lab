@@ -2,7 +2,7 @@
 id: 01a195fd-0bfa-7aed-86bb-b3b7402d4581
 type: knowledge
 name: "Initializer and Coding Agent Pattern"
-kind: pattern
+kind: solution_pattern
 lifecycle: skeleton
 review_status: proposed
 sources:

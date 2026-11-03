@@ -2,7 +2,7 @@ import { existsSync, readFileSync, readdirSync } from "node:fs";
 import { join, relative, resolve, sep } from "node:path";
 import { fileURLToPath } from "node:url";
 
-const KINDS = new Set(["artifact", "construct", "mechanism", "model", "pattern", "practice", "problem", "property", "result", "structure", "technology"]);
+const KINDS = new Set(["topic","model","principle","property","constraint","requirement","goal","metric","practice","method","algorithm","process","solution_pattern","mechanism","program_construct","data_structure","software","language","component","resource","interface","protocol","specification","artifact","role","event","problem"]);
 const STATUSES = new Set(["proposed", "accepted", "rejected"]);
 const RELATIONS = ["in_topic", "broader", "specializes", "part_of", "realizes", "schedules", "executes", "manages"];
 const SCALARS = new Set(["id", "type", "name", "kind", "lifecycle", "review_status"]);

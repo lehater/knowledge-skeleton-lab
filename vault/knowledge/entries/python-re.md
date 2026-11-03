@@ -4,7 +4,7 @@ type: knowledge
 name: "Python re"
 lifecycle: enriched
 review_status: proposed
-kind: technology
+kind: software
 sources:
   - "https://docs.python.org/3.15/library/re.html"
 in_topic:

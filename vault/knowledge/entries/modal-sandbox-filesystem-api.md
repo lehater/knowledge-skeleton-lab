@@ -4,7 +4,7 @@ type: knowledge
 name: "Modal Sandbox Filesystem API"
 lifecycle: enriched
 review_status: proposed
-kind: mechanism
+kind: interface
 in_topic:
   - "[[knowledge/entries/modal-sandbox]]"
 sources:

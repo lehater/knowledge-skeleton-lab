@@ -4,7 +4,7 @@ type: knowledge
 name: "Python Native Extension Module"
 lifecycle: enriched
 review_status: proposed
-kind: construct
+kind: program_construct
 sources:
   - "https://docs.python.org/3.15/extending/extending.html"
   - "https://docs.python.org/3.15/c-api/"

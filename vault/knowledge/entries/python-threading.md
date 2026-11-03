@@ -4,7 +4,7 @@ type: knowledge
 name: "Python threading"
 lifecycle: enriched
 review_status: proposed
-kind: technology
+kind: software
 sources:
   - "https://docs.python.org/3.15/library/threading.html"
   - "https://docs.python.org/3.15/howto/free-threading-python.html"

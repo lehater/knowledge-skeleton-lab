@@ -2,6 +2,7 @@
 id: 01a197fa-8179-75fa-8b41-284402244ee4
 type: knowledge
 name: "LangSmith Feedback"
+kind: data_structure
 lifecycle: enriched
 review_status: proposed
 part_of:

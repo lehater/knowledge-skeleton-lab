@@ -2,6 +2,7 @@
 id: 01a197fa-d97a-74a6-ab5e-1086bf998a63
 type: knowledge
 name: "OpenTelemetry GenAI Token Metrics"
+kind: metric
 lifecycle: enriched
 review_status: proposed
 in_topic:

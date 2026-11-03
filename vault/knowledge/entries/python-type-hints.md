@@ -4,7 +4,7 @@ type: knowledge
 name: "Python Type Hints"
 lifecycle: enriched
 review_status: proposed
-kind: construct
+kind: program_construct
 sources:
   - "https://docs.python.org/3.15/library/typing.html"
   - "https://docs.python.org/3.15/reference/executionmodel.html#annotation-scopes"

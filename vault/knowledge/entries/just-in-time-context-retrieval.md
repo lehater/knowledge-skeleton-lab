@@ -2,7 +2,7 @@
 id: 01a197cb-406c-7169-9aef-6d3d0191daef
 type: knowledge
 name: "Just-in-Time Context Retrieval"
-kind: pattern
+kind: solution_pattern
 lifecycle: enriched
 review_status: proposed
 in_topic:

@@ -2,6 +2,7 @@
 id: 01a196ec-2a78-72dc-ad45-5b277223d58a
 type: knowledge
 name: "Verification & Evaluation"
+kind: topic
 lifecycle: enriched
 review_status: proposed
 in_topic:

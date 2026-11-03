@@ -4,7 +4,7 @@ type: knowledge
 name: "Parametric Polymorphism"
 lifecycle: enriched
 review_status: proposed
-kind: model
+kind: property
 sources:
   - "https://lucacardelli.name/Papers/OnUnderstanding.A4.pdf"
 specializes:
@@ -13,6 +13,8 @@ in_topic:
   - "[[knowledge/entries/generic-programming]]"
 ---
 # Parametric Polymorphism
+
+Parametric Polymorphism — способность определения работать с параметрами разных типов.
 
 Параметрический полиморфизм описывает единое определение через параметры типов, позволяя применять его к разным допустимым типам с сохранением типовых зависимостей. Вход — полиморфное определение и выбор типов; выход — согласованное использование определения в конкретном типовом контексте. Bounds могут ограничивать доступные операции.
 

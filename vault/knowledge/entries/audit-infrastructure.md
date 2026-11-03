@@ -2,6 +2,7 @@
 id: 01a196ec-2a78-7fa6-b02d-3d1a2651a7ed
 type: knowledge
 name: "Audit Infrastructure"
+kind: component
 lifecycle: enriched
 review_status: proposed
 in_topic:
@@ -11,6 +12,8 @@ sources:
   - "https://cheatsheetseries.owasp.org/cheatsheets/Logging_Cheat_Sheet.html"
 ---
 # Audit Infrastructure
+
+Audit Infrastructure — логическая подсистема ведения защищённого аудита.
 
 Инфраструктура аудита сохраняет записи действий для восстановления последовательности событий и подотчётности участников. В harness значимы вызов инструмента, субъект, затронутый ресурс и результат проверки доступа или действия. OWASP рекомендует записывать когда, где, кто и что сделал, а также action, object, result и идентификатор взаимодействия.
 

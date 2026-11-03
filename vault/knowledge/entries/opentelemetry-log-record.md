@@ -4,7 +4,7 @@ type: knowledge
 name: "OpenTelemetry LogRecord"
 lifecycle: enriched
 review_status: proposed
-kind: structure
+kind: data_structure
 aliases:
   - "OpenTelemetry Log Record"
 in_topic:

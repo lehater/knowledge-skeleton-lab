@@ -2,6 +2,7 @@
 id: 01a196ec-2a78-741a-908d-f2ea4c7a0bd3
 type: knowledge
 name: "Pre-Execution Readiness Validation"
+kind: practice
 lifecycle: enriched
 review_status: proposed
 in_topic:

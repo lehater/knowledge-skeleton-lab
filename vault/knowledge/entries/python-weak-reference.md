@@ -4,7 +4,7 @@ type: knowledge
 name: "Python Weak Reference"
 lifecycle: enriched
 review_status: proposed
-kind: construct
+kind: program_construct
 sources:
   - "https://docs.python.org/3.15/library/weakref.html"
 in_topic:

@@ -2,6 +2,7 @@
 id: 01a196ec-2a78-7f98-9b06-48bffd6282b1
 type: knowledge
 name: "OS-Level Permission Sandboxes"
+kind: resource
 lifecycle: enriched
 review_status: proposed
 in_topic:

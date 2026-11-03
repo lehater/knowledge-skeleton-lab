@@ -2,6 +2,7 @@
 id: 01a197fa-7f10-77ab-b060-d997448c51bf
 type: knowledge
 name: "Langfuse"
+kind: software
 lifecycle: enriched
 review_status: proposed
 in_topic:

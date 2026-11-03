@@ -4,7 +4,7 @@ type: knowledge
 name: "Python Import Finder"
 lifecycle: enriched
 review_status: proposed
-kind: construct
+kind: program_construct
 sources:
   - "https://docs.python.org/3.15/reference/import.html#finders-and-loaders"
   - "https://docs.python.org/3.15/library/importlib.html#importlib.abc.MetaPathFinder"

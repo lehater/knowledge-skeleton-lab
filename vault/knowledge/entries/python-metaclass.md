@@ -4,7 +4,7 @@ type: knowledge
 name: "Python Metaclass"
 lifecycle: enriched
 review_status: proposed
-kind: mechanism
+kind: program_construct
 sources:
   - "https://docs.python.org/3.15/reference/datamodel.html#metaclasses"
   - "https://small.r7rs.org/attachment/r7rs.pdf"

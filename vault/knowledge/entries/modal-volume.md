@@ -4,7 +4,7 @@ type: knowledge
 name: "Modal Volume"
 lifecycle: enriched
 review_status: proposed
-kind: technology
+kind: resource
 in_topic:
   - "[[knowledge/entries/modal-sandbox]]"
 sources:

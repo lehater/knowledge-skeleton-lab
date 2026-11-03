@@ -4,7 +4,7 @@ type: knowledge
 name: "OpenAI Evals API Test Data Item"
 lifecycle: enriched
 review_status: proposed
-kind: structure
+kind: data_structure
 in_topic:
   - "[[knowledge/entries/openai-evals-api-eval]]"
 sources:

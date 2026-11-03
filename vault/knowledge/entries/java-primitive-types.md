@@ -4,7 +4,7 @@ type: knowledge
 name: "Java Primitive Types"
 lifecycle: enriched
 review_status: proposed
-kind: construct
+kind: program_construct
 sources:
   - "https://docs.oracle.com/javase/specs/jls/se27/html/jls-4.html#jls-4.2"
 in_topic:

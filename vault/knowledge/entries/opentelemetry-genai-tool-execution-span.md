@@ -2,6 +2,7 @@
 id: 01a197fa-d939-76fd-8008-ce414b060a29
 type: knowledge
 name: "OpenTelemetry GenAI Tool Execution Span"
+kind: data_structure
 lifecycle: enriched
 review_status: proposed
 specializes:

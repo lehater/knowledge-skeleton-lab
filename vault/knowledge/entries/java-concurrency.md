@@ -4,7 +4,7 @@ type: knowledge
 name: "Java Concurrency"
 lifecycle: enriched
 review_status: proposed
-kind: model
+kind: topic
 sources:
   - "https://docs.oracle.com/javase/specs/jls/se27/html/jls-17.html"
   - "https://docs.oracle.com/en/java/javase/27/docs/api/java.base/java/lang/Thread.html"

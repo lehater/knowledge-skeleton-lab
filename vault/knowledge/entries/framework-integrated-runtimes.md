@@ -2,6 +2,7 @@
 id: 01a196ec-2a78-7c8c-ac1d-e9a88d6d30c3
 type: knowledge
 name: "Framework-Integrated Runtimes"
+kind: component
 lifecycle: enriched
 review_status: proposed
 in_topic:

@@ -4,7 +4,7 @@ type: knowledge
 name: "Java Patterns and Switch"
 lifecycle: enriched
 review_status: proposed
-kind: mechanism
+kind: program_construct
 sources:
   - "https://docs.oracle.com/javase/specs/jls/se27/html/jls-14.html#jls-14.30"
   - "https://docs.oracle.com/javase/specs/jls/se27/html/jls-6.html#jls-6.3"

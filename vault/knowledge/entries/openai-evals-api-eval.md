@@ -4,7 +4,7 @@ type: knowledge
 name: "OpenAI Evals API Eval Definition"
 lifecycle: enriched
 review_status: proposed
-kind: structure
+kind: artifact
 in_topic:
   - "[[knowledge/entries/task-and-benchmark-grounding]]"
 sources:
@@ -12,6 +12,8 @@ sources:
   - "https://developers.openai.com/api/docs/guides/evals"
 ---
 # OpenAI Evals API Eval Definition
+
+OpenAI Evals API Eval Definition — сохраняемое определение оценки Evals API.
 
 Объект `eval`, создаваемый через `POST /evals`, хранит определение оценки: конфигурацию схемы данных и список `testing_criteria` с graders. Полученный ID используется для отдельных runs с конкретными данными и настройками модели.
 

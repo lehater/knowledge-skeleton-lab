@@ -4,7 +4,7 @@ type: knowledge
 name: "Python Closure"
 lifecycle: enriched
 review_status: proposed
-kind: mechanism
+kind: program_construct
 sources:
   - "https://docs.python.org/3.15/reference/executionmodel.html#resolution-of-names"
   - "https://docs.python.org/3.15/reference/datamodel.html#user-defined-functions"

@@ -4,7 +4,7 @@ type: knowledge
 name: "OpenTelemetry Protocol (OTLP)"
 lifecycle: enriched
 review_status: proposed
-kind: model
+kind: protocol
 aliases:
   - "OTLP"
 part_of:

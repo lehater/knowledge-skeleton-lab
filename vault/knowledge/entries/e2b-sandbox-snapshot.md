@@ -2,6 +2,7 @@
 id: 01a197e5-4902-73f9-910c-c85414705974
 type: knowledge
 name: "E2B Sandbox Snapshot"
+kind: artifact
 lifecycle: enriched
 review_status: proposed
 in_topic:

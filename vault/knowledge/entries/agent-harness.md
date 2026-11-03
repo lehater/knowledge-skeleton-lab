@@ -2,7 +2,7 @@
 id: 01a195fd-0b70-7d93-b307-352ebbe81556
 type: knowledge
 name: "Agent Harness"
-kind: mechanism
+kind: component
 lifecycle: skeleton
 review_status: proposed
 aliases:

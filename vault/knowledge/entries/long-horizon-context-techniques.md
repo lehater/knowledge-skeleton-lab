@@ -2,6 +2,7 @@
 id: 01a196ec-2a78-7a82-b436-5e7e2157e0d8
 type: knowledge
 name: "Long-Horizon Context Techniques"
+kind: topic
 lifecycle: enriched
 review_status: proposed
 in_topic:

@@ -4,7 +4,7 @@ type: knowledge
 name: "Thread"
 lifecycle: enriched
 review_status: proposed
-kind: construct
+kind: process
 sources:
   - "https://doc.rust-lang.org/book/ch16-01-threads.html"
   - "https://docs.oracle.com/en/java/javase/27/docs/api/java.base/java/lang/Thread.html"

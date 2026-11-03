@@ -4,7 +4,7 @@ type: knowledge
 name: "Programming Interface"
 lifecycle: enriched
 review_status: proposed
-kind: model
+kind: interface
 sources:
   - "https://docs.oracle.com/javase/tutorial/java/concepts/interface.html"
   - "https://docs.python.org/3.15/library/typing.html#typing.Protocol"

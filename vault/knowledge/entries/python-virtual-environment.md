@@ -4,7 +4,7 @@ type: knowledge
 name: "Python Virtual Environment"
 lifecycle: enriched
 review_status: proposed
-kind: structure
+kind: resource
 sources:
   - "https://docs.python.org/3.15/library/venv.html"
 in_topic:

@@ -4,7 +4,7 @@ type: knowledge
 name: "Java Variables and Final"
 lifecycle: enriched
 review_status: proposed
-kind: construct
+kind: program_construct
 sources:
   - "https://docs.oracle.com/javase/specs/jls/se27/html/jls-4.html#jls-4.12"
   - "https://docs.oracle.com/javase/specs/jls/se27/html/jls-16.html"

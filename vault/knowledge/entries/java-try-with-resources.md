@@ -4,7 +4,7 @@ type: knowledge
 name: "Java Try-with-Resources"
 lifecycle: enriched
 review_status: proposed
-kind: construct
+kind: program_construct
 sources:
   - "https://docs.oracle.com/javase/specs/jls/se27/html/jls-14.html#jls-14.20.3"
   - "https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines#Rr-raii"

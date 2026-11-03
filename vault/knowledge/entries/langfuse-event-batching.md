@@ -2,6 +2,7 @@
 id: 01a197fa-8009-7d19-9061-16913f8ce043
 type: knowledge
 name: "Langfuse Event Queuing and Batching"
+kind: mechanism
 lifecycle: enriched
 review_status: proposed
 part_of:

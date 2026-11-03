@@ -2,6 +2,7 @@
 id: 01a196ec-2a78-76dd-9852-cc8a67e2d7ea
 type: knowledge
 name: "Scalability and Session Management"
+kind: topic
 lifecycle: enriched
 review_status: proposed
 in_topic:

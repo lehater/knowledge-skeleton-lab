@@ -4,7 +4,7 @@ type: knowledge
 name: "OpenAI Evals API Data Source Configuration"
 lifecycle: enriched
 review_status: proposed
-kind: structure
+kind: specification
 part_of:
   - "[[knowledge/entries/openai-evals-api-eval]]"
 sources:

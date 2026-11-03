@@ -4,7 +4,7 @@ type: knowledge
 name: "Python Generator"
 lifecycle: enriched
 review_status: proposed
-kind: construct
+kind: program_construct
 sources:
   - "https://docs.python.org/3.15/tutorial/classes.html#generators"
   - "https://docs.python.org/3.15/reference/expressions.html#yield-expressions"

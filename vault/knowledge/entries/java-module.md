@@ -4,7 +4,7 @@ type: knowledge
 name: "Java Module"
 lifecycle: enriched
 review_status: proposed
-kind: structure
+kind: program_construct
 sources:
   - "https://docs.oracle.com/javase/specs/jls/se27/html/jls-7.html#jls-7.7"
 in_topic:

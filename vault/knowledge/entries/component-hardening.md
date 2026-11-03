@@ -2,6 +2,7 @@
 id: 01a196ec-2a78-7bb7-8dff-5ddded26d3e6
 type: knowledge
 name: "Component Hardening"
+kind: practice
 lifecycle: enriched
 review_status: proposed
 in_topic:

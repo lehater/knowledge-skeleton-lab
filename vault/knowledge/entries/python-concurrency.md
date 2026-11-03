@@ -4,7 +4,7 @@ type: knowledge
 name: "Python Concurrency"
 lifecycle: enriched
 review_status: proposed
-kind: model
+kind: topic
 sources:
   - "https://docs.python.org/3.15/library/concurrency.html"
   - "https://docs.python.org/3.15/library/asyncio-task.html"

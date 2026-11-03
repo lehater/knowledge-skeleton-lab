@@ -4,7 +4,7 @@ type: knowledge
 name: "Java External Resource Lifetime"
 lifecycle: enriched
 review_status: proposed
-kind: mechanism
+kind: property
 sources:
   - "https://docs.oracle.com/en/java/javase/27/docs/api/java.base/java/lang/AutoCloseable.html"
 in_topic:
@@ -13,5 +13,7 @@ in_topic:
   - "[[knowledge/entries/resource-management]]"
 ---
 # Java External Resource Lifetime
+
+Java External Resource Lifetime — время владения внешним ресурсом Java.
 
 Файл, сокет или иной внешний ресурс требует собственного протокола завершения. AutoCloseable и try-with-resources связывают освобождение с областью использования. Время доступности объекта и время владения ресурсом различаются; GC не заменяет своевременный close при ограниченном числе дескрипторов.

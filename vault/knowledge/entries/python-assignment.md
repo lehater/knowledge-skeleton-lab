@@ -4,7 +4,7 @@ type: knowledge
 name: "Python Assignment"
 lifecycle: enriched
 review_status: proposed
-kind: construct
+kind: program_construct
 sources:
   - "https://docs.python.org/3.15/reference/simple_stmts.html#assignment-statements"
 in_topic:

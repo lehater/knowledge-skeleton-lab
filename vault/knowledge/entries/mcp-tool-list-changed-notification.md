@@ -2,7 +2,7 @@
 id: 01a197c2-324a-7122-9c81-0304f0d2bf8c
 type: knowledge
 name: "MCP Tool List Changed Notification"
-kind: mechanism
+kind: data_structure
 lifecycle: enriched
 review_status: proposed
 in_topic:

@@ -4,13 +4,15 @@ type: knowledge
 name: "LangSmith Pytest and Vitest Evaluation"
 lifecycle: enriched
 review_status: proposed
-kind: mechanism
+kind: software
 in_topic:
   - "[[knowledge/entries/continuous-regression-and-deployment-feedback]]"
 sources:
   - "https://docs.langchain.com/langsmith/test-react-agent-pytest"
 ---
 # LangSmith Pytest and Vitest Evaluation
+
+LangSmith Pytest and Vitest Evaluation — программные интеграции LangSmith с Pytest/Vitest.
 
 Интеграции LangSmith с Pytest/Vitest совмещают assertions тестового runner и запись inputs, reference outputs, outputs и feedback. Тест может проверять обязательный tool call, допустимую ошибку численного ответа или вердикт judge.
 

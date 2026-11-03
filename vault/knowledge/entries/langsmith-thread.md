@@ -2,6 +2,7 @@
 id: 01a197fa-80fa-7a5e-9cce-5353367d15fd
 type: knowledge
 name: "LangSmith Thread"
+kind: data_structure
 lifecycle: enriched
 review_status: proposed
 in_topic:

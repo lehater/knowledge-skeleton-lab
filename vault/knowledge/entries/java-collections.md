@@ -4,7 +4,7 @@ type: knowledge
 name: "Java Collections Framework"
 lifecycle: enriched
 review_status: proposed
-kind: technology
+kind: software
 sources:
   - "https://docs.oracle.com/en/java/javase/27/docs/api/java.base/java/util/package-summary.html"
 part_of:

@@ -4,7 +4,7 @@ type: knowledge
 name: "Python logging"
 lifecycle: enriched
 review_status: proposed
-kind: technology
+kind: software
 sources:
   - "https://docs.python.org/3.15/library/logging.html"
 in_topic:

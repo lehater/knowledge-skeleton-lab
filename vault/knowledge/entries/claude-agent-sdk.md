@@ -2,7 +2,7 @@
 id: 01a195fd-0bcc-76c2-a454-6aad609b6206
 type: knowledge
 name: "Claude Agent SDK"
-kind: technology
+kind: software
 lifecycle: skeleton
 review_status: proposed
 realizes:

@@ -4,7 +4,7 @@ type: knowledge
 name: "Python Module"
 lifecycle: enriched
 review_status: proposed
-kind: construct
+kind: program_construct
 sources:
   - "https://docs.python.org/3.15/reference/datamodel.html#modules"
   - "https://docs.python.org/3.15/tutorial/modules.html"

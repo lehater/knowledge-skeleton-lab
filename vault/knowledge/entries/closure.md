@@ -4,7 +4,7 @@ type: knowledge
 name: "Closure"
 lifecycle: enriched
 review_status: proposed
-kind: construct
+kind: program_construct
 sources:
   - "https://docs.python.org/3.15/glossary.html#term-closure-variable"
   - "https://docs.oracle.com/javase/specs/jls/se27/html/jls-15.html#jls-15.27"

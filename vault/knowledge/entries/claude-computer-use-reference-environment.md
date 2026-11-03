@@ -2,6 +2,7 @@
 id: 01a197da-2a5e-7d1d-bfea-753d2fdbb62b
 type: knowledge
 name: "Claude Computer Use Reference Environment"
+kind: software
 lifecycle: enriched
 review_status: proposed
 in_topic:

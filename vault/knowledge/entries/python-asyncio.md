@@ -4,7 +4,7 @@ type: knowledge
 name: "Python asyncio"
 lifecycle: enriched
 review_status: proposed
-kind: technology
+kind: software
 sources:
   - "https://docs.python.org/3.15/library/asyncio.html"
   - "https://doc.rust-lang.org/book/ch17-00-async-await.html"

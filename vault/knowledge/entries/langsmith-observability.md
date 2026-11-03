@@ -2,6 +2,7 @@
 id: 01a197fa-807f-787d-bd1a-640d9f6b6cad
 type: knowledge
 name: "LangSmith Observability"
+kind: software
 lifecycle: enriched
 review_status: proposed
 in_topic:

@@ -2,6 +2,7 @@
 id: 01a197fa-da39-7bbc-9ba4-fb1a096624a0
 type: knowledge
 name: "Langfuse Usage and Cost Accounting"
+kind: mechanism
 lifecycle: enriched
 review_status: proposed
 part_of:

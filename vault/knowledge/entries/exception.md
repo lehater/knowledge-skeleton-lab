@@ -4,7 +4,7 @@ type: knowledge
 name: "Exception"
 lifecycle: enriched
 review_status: proposed
-kind: construct
+kind: program_construct
 sources:
   - "https://small.r7rs.org/attachment/r7rs.pdf"
   - "https://docs.oracle.com/javase/specs/jls/se27/html/jls-11.html"

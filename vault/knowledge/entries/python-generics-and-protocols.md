@@ -4,7 +4,7 @@ type: knowledge
 name: "Python Generics and Typing Protocols"
 lifecycle: enriched
 review_status: proposed
-kind: construct
+kind: topic
 sources:
   - "https://docs.python.org/3.15/library/typing.html#building-generic-types-and-type-aliases"
   - "https://docs.python.org/3.15/library/typing.html#typing.Protocol"

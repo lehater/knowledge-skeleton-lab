@@ -2,6 +2,7 @@
 id: 01a197e5-4a4a-7ff4-acfd-f69a23827da4
 type: knowledge
 name: "Modal Sandbox Filesystem Snapshot"
+kind: artifact
 lifecycle: enriched
 review_status: proposed
 specializes:

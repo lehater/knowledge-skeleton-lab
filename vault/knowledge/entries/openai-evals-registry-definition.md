@@ -4,7 +4,7 @@ type: knowledge
 name: "OpenAI Evals Registry Definition"
 lifecycle: enriched
 review_status: proposed
-kind: structure
+kind: artifact
 in_topic:
   - "[[knowledge/entries/task-and-benchmark-grounding]]"
 sources:

@@ -4,7 +4,7 @@ type: knowledge
 name: "Object"
 lifecycle: enriched
 review_status: proposed
-kind: construct
+kind: program_construct
 sources:
   - "https://lucacardelli.name/Papers/OnUnderstanding.A4.pdf"
   - "https://small.r7rs.org/attachment/r7rs.pdf"

@@ -2,6 +2,7 @@
 id: 01a196ec-2a78-76ca-996e-5493e9cc26e1
 type: knowledge
 name: "Agent Security Landscape"
+kind: topic
 lifecycle: enriched
 review_status: proposed
 in_topic:

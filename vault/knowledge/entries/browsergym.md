@@ -2,6 +2,7 @@
 id: 01a197da-288c-75fa-ad54-b5bb9f25702b
 type: knowledge
 name: "BrowserGym"
+kind: software
 lifecycle: enriched
 review_status: proposed
 in_topic:

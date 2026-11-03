@@ -2,6 +2,7 @@
 id: 01a196ec-2a78-7ecf-95bb-477273e5f7fe
 type: knowledge
 name: "Single-Agent Inner Loop"
+kind: process
 lifecycle: enriched
 review_status: proposed
 in_topic:

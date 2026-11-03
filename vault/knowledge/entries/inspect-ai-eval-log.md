@@ -4,13 +4,15 @@ type: knowledge
 name: "Inspect AI EvalLog"
 lifecycle: enriched
 review_status: proposed
-kind: artifact
+kind: program_construct
 in_topic:
   - "[[knowledge/entries/controlled-execution-and-trace-capture]]"
 sources:
   - "https://inspect.aisi.org.uk/eval-logs.html"
 ---
 # Inspect AI EvalLog
+
+Inspect AI EvalLog — aPI-тип EvalLog, задающий структуру журнала Inspect.
 
 EvalLog — запись оценочного исполнения Inspect: task/model specification, solver plan, aggregate results, usage, ошибки и samples с входом, выходом, target и score. Поле status отделяет завершённый запуск от ошибочного. `read_eval_log` и чтение отдельных samples дают программный доступ.
 

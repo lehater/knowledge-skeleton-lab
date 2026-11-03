@@ -4,7 +4,7 @@ type: knowledge
 name: "Java Package"
 lifecycle: enriched
 review_status: proposed
-kind: structure
+kind: program_construct
 sources:
   - "https://docs.oracle.com/javase/specs/jls/se27/html/jls-7.html#jls-7.1"
   - "https://docs.oracle.com/javase/specs/jls/se27/html/jls-6.html#jls-6.6"

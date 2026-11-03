@@ -2,6 +2,7 @@
 id: 01a196ec-2a78-7622-a737-32534d60a078
 type: knowledge
 name: "Reliability Engineering"
+kind: practice
 lifecycle: enriched
 review_status: proposed
 in_topic:

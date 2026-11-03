@@ -2,6 +2,7 @@
 id: 01a197da-296b-7c4e-b1af-bd37dff7778f
 type: knowledge
 name: "OSWorld"
+kind: software
 lifecycle: enriched
 review_status: proposed
 in_topic:

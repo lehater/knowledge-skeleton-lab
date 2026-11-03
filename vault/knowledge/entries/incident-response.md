@@ -4,7 +4,7 @@ type: knowledge
 name: "Incident Response"
 lifecycle: enriched
 review_status: proposed
-kind: practice
+kind: process
 in_topic:
   - "[[knowledge/entries/reliability-engineering]]"
 sources:

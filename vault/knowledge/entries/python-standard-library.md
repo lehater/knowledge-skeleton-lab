@@ -4,7 +4,7 @@ type: knowledge
 name: "Python Standard Library"
 lifecycle: enriched
 review_status: proposed
-kind: technology
+kind: software
 sources:
   - "https://docs.python.org/3.15/library/"
   - "https://docs.python.org/3.15/library/io.html"

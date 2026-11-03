@@ -4,12 +4,14 @@ type: knowledge
 name: "Java Definite Assignment"
 lifecycle: enriched
 review_status: proposed
-kind: mechanism
+kind: algorithm
 sources:
   - "https://docs.oracle.com/javase/specs/jls/se27/html/jls-16.html"
 in_topic:
   - "[[knowledge/entries/java-syntax-and-semantics]]"
 ---
 # Java Definite Assignment
+
+Java Definite Assignment — формализованный анализ определённого присваивания по потоку программы.
 
 Анализ потока управления требует определённого присваивания перед чтением локальной переменной или blank final поля. Вход — пути выполнения; результат — допуск либо ошибка компиляции. Это статическая гарантия инициализации, отличная от default-значений полей и компонентов массива.

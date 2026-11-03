@@ -3,7 +3,7 @@ id: 01a18e44-0a64-75c8-8969-caebc0fb2551
 type: knowledge
 name: "Future"
 review_status: proposed
-kind: construct
+kind: program_construct
 lifecycle: enriched
 sources:
   - "https://doc.rust-lang.org/book/ch17-00-async-await.html"

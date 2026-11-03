@@ -4,7 +4,7 @@ type: knowledge
 name: "Python Import Loader"
 lifecycle: enriched
 review_status: proposed
-kind: construct
+kind: program_construct
 sources:
   - "https://docs.python.org/3.15/reference/import.html#loading"
   - "https://docs.python.org/3.15/library/importlib.html#importlib.abc.Loader"

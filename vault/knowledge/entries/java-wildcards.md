@@ -4,7 +4,7 @@ type: knowledge
 name: "Java Wildcards and Capture"
 lifecycle: enriched
 review_status: proposed
-kind: mechanism
+kind: program_construct
 sources:
   - "https://docs.oracle.com/javase/specs/jls/se27/html/jls-4.html#jls-4.5.1"
   - "https://docs.oracle.com/javase/specs/jls/se27/html/jls-5.html#jls-5.1.10"

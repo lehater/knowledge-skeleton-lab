@@ -2,6 +2,7 @@
 id: 01a196ec-2a78-769e-8967-0f316279c773
 type: knowledge
 name: "Multi-Agent Orchestration Patterns"
+kind: topic
 lifecycle: enriched
 review_status: proposed
 in_topic:

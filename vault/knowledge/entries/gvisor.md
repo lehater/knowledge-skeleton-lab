@@ -4,7 +4,7 @@ type: knowledge
 name: "gVisor"
 lifecycle: enriched
 review_status: proposed
-kind: technology
+kind: software
 in_topic:
   - "[[knowledge/entries/sandbox-abstraction-layers]]"
 sources:

@@ -2,6 +2,7 @@
 id: 01a196ec-2a78-792d-b758-9c5eba0e8d7a
 type: knowledge
 name: "Short-Term Active Context Window"
+kind: resource
 lifecycle: enriched
 review_status: proposed
 in_topic:
@@ -11,5 +12,7 @@ sources:
   - "https://picrew.github.io/LLM-Harness/main.pdf#page=8"
 ---
 # Short-Term Active Context Window
+
+Short-Term Active Context Window — ограниченный рабочий ресурс токенов модели в текущем обращении; его вместимость и отбор содержимого являются отдельными характеристиками.
 
 Активное контекстное окно ограничивает объём токенов, которые модель может обработать в текущем запросе. В него входят переданные сообщения и другой контекст, включая данные инструментов. Увеличение окна не делает автоматически полезным весь накопленный материал: для агента важно отбирать релевантные данные.

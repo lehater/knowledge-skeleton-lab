@@ -4,7 +4,7 @@ type: knowledge
 name: "Function"
 lifecycle: enriched
 review_status: proposed
-kind: construct
+kind: program_construct
 sources:
   - "https://small.r7rs.org/attachment/r7rs.pdf"
   - "https://www.cs.tufts.edu/comp/150FP/archive/peter-landin/mechanical-eval.pdf"

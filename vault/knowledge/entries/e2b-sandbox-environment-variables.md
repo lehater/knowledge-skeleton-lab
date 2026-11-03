@@ -2,6 +2,7 @@
 id: 01a197e4-f735-7601-af61-5dc39868b63c
 type: knowledge
 name: "E2B Sandbox Environment Variables"
+kind: mechanism
 lifecycle: enriched
 review_status: proposed
 in_topic:

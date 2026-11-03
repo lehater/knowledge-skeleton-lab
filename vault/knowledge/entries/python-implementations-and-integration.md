@@ -4,7 +4,7 @@ type: knowledge
 name: "Python Implementations and Integration"
 lifecycle: enriched
 review_status: proposed
-kind: model
+kind: topic
 sources:
   - "https://docs.python.org/3.15/glossary.html#term-CPython"
   - "https://docs.python.org/3.15/c-api/"

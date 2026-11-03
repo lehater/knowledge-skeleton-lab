@@ -4,7 +4,7 @@ type: knowledge
 name: "Python Import Package"
 lifecycle: enriched
 review_status: proposed
-kind: construct
+kind: program_construct
 sources:
   - "https://docs.python.org/3.15/reference/import.html#packages"
   - "https://docs.python.org/3.15/tutorial/modules.html#packages"

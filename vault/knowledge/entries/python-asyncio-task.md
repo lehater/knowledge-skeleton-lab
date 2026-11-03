@@ -3,7 +3,7 @@ id: 01a18e73-6cf5-778f-8eb4-934600af6a12
 type: knowledge
 name: "Python asyncio.Task"
 review_status: proposed
-kind: construct
+kind: program_construct
 lifecycle: enriched
 sources:
   - "https://docs.python.org/3/library/asyncio-task.html"

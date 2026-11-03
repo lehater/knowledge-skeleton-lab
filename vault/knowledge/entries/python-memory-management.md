@@ -4,7 +4,7 @@ type: knowledge
 name: "Python Memory Management"
 lifecycle: enriched
 review_status: proposed
-kind: model
+kind: mechanism
 sources:
   - "https://docs.python.org/3.15/reference/datamodel.html#objects-values-and-types"
   - "https://docs.python.org/3.15/c-api/memory.html"
