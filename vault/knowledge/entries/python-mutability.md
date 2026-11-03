@@ -10,6 +10,7 @@ sources:
   - "https://docs.python.org/3.15/tutorial/classes.html#a-word-about-names-and-objects"
 in_topic:
   - "[[knowledge/entries/python-data-and-types]]"
+  - "[[knowledge/entries/mutability]]"
 ---
 # Python Mutability and Aliasing
 

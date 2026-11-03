@@ -12,6 +12,8 @@ sources:
   - "https://docs.oracle.com/en/java/javase/27/docs/api/index.html"
 in_topic:
   - "[[knowledge/entries/java]]"
+specializes:
+  - "[[knowledge/entries/execution-model]]"
 ---
 # Java Execution Model
 

@@ -10,6 +10,7 @@ sources:
   - "https://docs.oracle.com/en/java/javase/27/docs/api/java.base/java/util/concurrent/atomic/package-summary.html"
 in_topic:
   - "[[knowledge/entries/java-concurrency]]"
+  - "[[knowledge/entries/synchronization]]"
 ---
 # Java Locks and Atomics
 

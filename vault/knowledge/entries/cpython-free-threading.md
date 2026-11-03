@@ -9,6 +9,7 @@ sources:
   - "https://docs.python.org/3.15/howto/free-threading-python.html"
 in_topic:
   - "[[knowledge/entries/python-implementations-and-integration]]"
+  - "[[knowledge/entries/parallelism]]"
 ---
 # CPython Free Threading
 

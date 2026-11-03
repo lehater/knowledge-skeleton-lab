@@ -10,6 +10,7 @@ sources:
   - "https://docs.oracle.com/javase/specs/jls/se27/html/jls-15.html#jls-15.12.4.5"
 in_topic:
   - "[[knowledge/entries/java-methods-and-functions]]"
+  - "[[knowledge/entries/function]]"
 ---
 # Java Methods and Argument Passing
 

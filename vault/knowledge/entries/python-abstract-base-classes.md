@@ -10,6 +10,8 @@ sources:
   - "https://docs.python.org/3.15/library/collections.abc.html"
 in_topic:
   - "[[knowledge/entries/python-classes-and-protocols]]"
+  - "[[knowledge/entries/programming-interface]]"
+  - "[[knowledge/entries/subtyping]]"
 ---
 # Python Abstract Base Classes
 

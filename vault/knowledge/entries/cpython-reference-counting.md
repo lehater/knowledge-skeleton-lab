@@ -10,6 +10,8 @@ sources:
   - "https://docs.python.org/3.15/reference/datamodel.html#objects-values-and-types"
 in_topic:
   - "[[knowledge/entries/python-memory-management]]"
+  - "[[knowledge/entries/automatic-memory-management]]"
+  - "[[knowledge/entries/garbage-collection]]"
 part_of:
   - "[[knowledge/entries/cpython]]"
 ---

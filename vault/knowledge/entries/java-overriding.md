@@ -10,6 +10,8 @@ sources:
   - "https://docs.oracle.com/javase/specs/jls/se27/html/jls-15.html#jls-15.12.4.4"
 in_topic:
   - "[[knowledge/entries/java-inheritance-and-dispatch]]"
+  - "[[knowledge/entries/dynamic-dispatch]]"
+  - "[[knowledge/entries/subtype-polymorphism]]"
 ---
 # Java Overriding and Dynamic Dispatch
 

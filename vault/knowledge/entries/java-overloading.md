@@ -8,8 +8,10 @@ kind: mechanism
 sources:
   - "https://docs.oracle.com/javase/specs/jls/se27/html/jls-8.html#jls-8.4.9"
   - "https://docs.oracle.com/javase/specs/jls/se27/html/jls-15.html#jls-15.12.2"
+  - "https://lucacardelli.name/Papers/OnUnderstanding.A4.pdf"
 in_topic:
   - "[[knowledge/entries/java-inheritance-and-dispatch]]"
+  - "[[knowledge/entries/polymorphism]]"
 ---
 # Java Overloading
 

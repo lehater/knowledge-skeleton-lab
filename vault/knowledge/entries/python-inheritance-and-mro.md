@@ -8,8 +8,14 @@ kind: mechanism
 sources:
   - "https://docs.python.org/3.15/tutorial/classes.html#inheritance"
   - "https://docs.python.org/3.15/reference/datamodel.html#custom-classes"
+  - "https://lucacardelli.name/Papers/OnUnderstanding.A4.pdf"
+  - "https://www.cs.utexas.edu/~wcook/papers/InheritanceSubtyping90/CookPOPL90.pdf"
 in_topic:
   - "[[knowledge/entries/python-classes-and-protocols]]"
+  - "[[knowledge/entries/inheritance]]"
+  - "[[knowledge/entries/subtyping]]"
+  - "[[knowledge/entries/dynamic-dispatch]]"
+  - "[[knowledge/entries/subtype-polymorphism]]"
 ---
 # Python Inheritance and MRO
 

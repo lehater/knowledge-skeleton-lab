@@ -11,6 +11,8 @@ part_of:
   - "[[knowledge/entries/java-se]]"
 in_topic:
   - "[[knowledge/entries/java-platform-and-library]]"
+realizes:
+  - "[[knowledge/entries/reflection]]"
 ---
 # Java Core Reflection
 

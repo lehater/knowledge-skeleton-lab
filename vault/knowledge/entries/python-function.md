@@ -12,6 +12,7 @@ in_topic:
   - "[[knowledge/entries/python-functions-and-iteration]]"
 specializes:
   - "[[knowledge/entries/python-callable]]"
+  - "[[knowledge/entries/function]]"
 ---
 # Python Function
 

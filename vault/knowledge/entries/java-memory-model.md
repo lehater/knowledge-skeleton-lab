@@ -9,6 +9,8 @@ sources:
   - "https://docs.oracle.com/javase/specs/jls/se27/html/jls-17.html#jls-17.4"
 in_topic:
   - "[[knowledge/entries/java-concurrency]]"
+specializes:
+  - "[[knowledge/entries/memory-model]]"
 ---
 # Java Memory Model
 

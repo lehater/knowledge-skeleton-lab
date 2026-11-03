@@ -7,8 +7,11 @@ review_status: proposed
 kind: construct
 sources:
   - "https://docs.oracle.com/en/java/javase/27/docs/api/java.base/java/lang/Thread.html"
+  - "https://doc.rust-lang.org/book/ch16-01-threads.html"
 in_topic:
   - "[[knowledge/entries/java-concurrency]]"
+realizes:
+  - "[[knowledge/entries/thread]]"
 ---
 # Java Thread
 

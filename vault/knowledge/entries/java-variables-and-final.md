@@ -10,6 +10,7 @@ sources:
   - "https://docs.oracle.com/javase/specs/jls/se27/html/jls-16.html"
 in_topic:
   - "[[knowledge/entries/java-types-and-values]]"
+  - "[[knowledge/entries/mutability]]"
 ---
 # Java Variables and Final
 

@@ -8,8 +8,10 @@ kind: artifact
 sources:
   - "https://docs.python.org/3.15/reference/datamodel.html#code-objects"
   - "https://docs.python.org/3.15/library/ast.html"
+  - "https://docs.python.org/3.15/library/inspect.html"
 in_topic:
   - "[[knowledge/entries/python-execution-model]]"
+  - "[[knowledge/entries/reflection]]"
 ---
 # Python Code Object
 

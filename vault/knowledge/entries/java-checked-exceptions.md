@@ -9,6 +9,8 @@ sources:
   - "https://docs.oracle.com/javase/specs/jls/se27/html/jls-11.html#jls-11.2"
 in_topic:
   - "[[knowledge/entries/java-exceptions-and-resources]]"
+  - "[[knowledge/entries/exception-handling]]"
+  - "[[knowledge/entries/static-typing]]"
 ---
 # Java Checked Exceptions
 

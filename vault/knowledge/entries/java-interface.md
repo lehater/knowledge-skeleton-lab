@@ -9,6 +9,8 @@ sources:
   - "https://docs.oracle.com/javase/specs/jls/se27/html/jls-9.html#jls-9.1"
 in_topic:
   - "[[knowledge/entries/java-classes-and-interfaces]]"
+specializes:
+  - "[[knowledge/entries/programming-interface]]"
 ---
 # Java Interface
 

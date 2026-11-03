@@ -9,6 +9,7 @@ sources:
   - "https://docs.oracle.com/en/java/javase/27/docs/api/java.base/java/lang/Object.html"
 in_topic:
   - "[[knowledge/entries/java-classes-and-interfaces]]"
+  - "[[knowledge/entries/object]]"
 ---
 # Java Object Equality and Hashing
 

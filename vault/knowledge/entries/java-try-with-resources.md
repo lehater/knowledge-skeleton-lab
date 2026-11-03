@@ -7,8 +7,11 @@ review_status: proposed
 kind: construct
 sources:
   - "https://docs.oracle.com/javase/specs/jls/se27/html/jls-14.html#jls-14.20.3"
+  - "https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines#Rr-raii"
 in_topic:
   - "[[knowledge/entries/java-exceptions-and-resources]]"
+realizes:
+  - "[[knowledge/entries/resource-management]]"
 ---
 # Java Try-with-Resources
 

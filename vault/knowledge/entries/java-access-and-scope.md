@@ -10,6 +10,7 @@ sources:
   - "https://docs.oracle.com/javase/specs/jls/se27/html/jls-6.html#jls-6.6"
 in_topic:
   - "[[knowledge/entries/java-packages-and-modules]]"
+  - "[[knowledge/entries/lexical-scope]]"
 ---
 # Java Access Control and Scope
 

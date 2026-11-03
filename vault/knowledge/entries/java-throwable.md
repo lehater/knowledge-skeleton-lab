@@ -9,6 +9,7 @@ sources:
   - "https://docs.oracle.com/javase/specs/jls/se27/html/jls-11.html#jls-11.1.1"
 in_topic:
   - "[[knowledge/entries/java-exceptions-and-resources]]"
+  - "[[knowledge/entries/exception]]"
 ---
 # Java Throwable Hierarchy
 

@@ -9,6 +9,8 @@ sources:
   - "https://docs.oracle.com/javase/specs/jls/se27/html/jls-8.html#jls-8.1"
 in_topic:
   - "[[knowledge/entries/java-classes-and-interfaces]]"
+specializes:
+  - "[[knowledge/entries/class]]"
 ---
 # Java Class
 

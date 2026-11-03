@@ -12,6 +12,7 @@ in_topic:
   - "[[knowledge/entries/python-classes-and-protocols]]"
 specializes:
   - "[[knowledge/entries/python-callable]]"
+  - "[[knowledge/entries/class]]"
 ---
 # Python Class
 

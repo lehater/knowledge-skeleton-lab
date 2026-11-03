@@ -8,8 +8,10 @@ kind: construct
 sources:
   - "https://docs.python.org/3.15/reference/compound_stmts.html#function-definitions"
   - "https://docs.python.org/3.15/reference/compound_stmts.html#class-definitions"
+  - "https://small.r7rs.org/attachment/r7rs.pdf"
 in_topic:
   - "[[knowledge/entries/python-functions-and-iteration]]"
+  - "[[knowledge/entries/metaprogramming]]"
 ---
 # Python Decorator
 

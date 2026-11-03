@@ -9,8 +9,11 @@ sources:
   - "https://docs.oracle.com/javase/specs/jls/se27/html/jls-4.html"
   - "https://docs.oracle.com/javase/specs/jls/se27/html/jls-5.html"
   - "https://docs.oracle.com/javase/specs/jls/se27/html/jls-18.html"
+  - "https://lucacardelli.name/Papers/OnUnderstanding.A4.pdf"
 in_topic:
   - "[[knowledge/entries/java]]"
+  - "[[knowledge/entries/generic-programming]]"
+  - "[[knowledge/entries/parametric-polymorphism]]"
 ---
 # Java Generics
 

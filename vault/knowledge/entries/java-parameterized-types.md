@@ -9,8 +9,10 @@ sources:
   - "https://docs.oracle.com/javase/specs/jls/se27/html/jls-4.html#jls-4.4"
   - "https://docs.oracle.com/javase/specs/jls/se27/html/jls-4.html#jls-4.5"
   - "https://docs.oracle.com/javase/specs/jls/se27/html/jls-8.html#jls-8.4.4"
+  - "https://lucacardelli.name/Papers/OnUnderstanding.A4.pdf"
 in_topic:
   - "[[knowledge/entries/java-generics]]"
+  - "[[knowledge/entries/parametric-polymorphism]]"
 ---
 # Java Parameterized Types and Bounds
 

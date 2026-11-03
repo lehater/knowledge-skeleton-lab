@@ -7,8 +7,10 @@ review_status: proposed
 kind: artifact
 sources:
   - "https://docs.python.org/3.15/library/ast.html"
+  - "https://small.r7rs.org/attachment/r7rs.pdf"
 in_topic:
   - "[[knowledge/entries/python-execution-model]]"
+  - "[[knowledge/entries/metaprogramming]]"
 ---
 # Python Abstract Syntax Tree
 

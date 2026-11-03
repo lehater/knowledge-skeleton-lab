@@ -10,6 +10,7 @@ sources:
   - "https://docs.oracle.com/javase/specs/jls/se27/html/jls-4.html#jls-4.12.2"
 in_topic:
   - "[[knowledge/entries/java-types-and-values]]"
+  - "[[knowledge/entries/object]]"
 ---
 # Java Reference Types and Null
 

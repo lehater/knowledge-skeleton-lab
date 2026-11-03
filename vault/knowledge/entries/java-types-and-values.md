@@ -11,6 +11,8 @@ sources:
   - "https://docs.oracle.com/javase/specs/jls/se27/html/jls-10.html"
 in_topic:
   - "[[knowledge/entries/java]]"
+  - "[[knowledge/entries/type-system]]"
+  - "[[knowledge/entries/static-typing]]"
 ---
 # Java Types and Values
 

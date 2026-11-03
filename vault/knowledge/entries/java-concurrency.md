@@ -11,6 +11,8 @@ sources:
   - "https://docs.oracle.com/en/java/javase/27/docs/api/java.base/java/util/concurrent/package-summary.html"
 in_topic:
   - "[[knowledge/entries/java]]"
+  - "[[knowledge/entries/concurrency]]"
+  - "[[knowledge/entries/concurrent-programming]]"
 ---
 # Java Concurrency
 

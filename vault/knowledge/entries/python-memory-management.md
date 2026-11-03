@@ -11,6 +11,8 @@ sources:
   - "https://docs.python.org/3.15/library/gc.html"
 in_topic:
   - "[[knowledge/entries/python]]"
+  - "[[knowledge/entries/automatic-memory-management]]"
+  - "[[knowledge/entries/garbage-collection]]"
 ---
 # Python Memory Management
 

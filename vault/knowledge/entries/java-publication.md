@@ -10,6 +10,8 @@ sources:
   - "https://docs.oracle.com/javase/specs/jls/se27/html/jls-17.html#jls-17.5"
 in_topic:
   - "[[knowledge/entries/java-concurrency]]"
+  - "[[knowledge/entries/synchronization]]"
+  - "[[knowledge/entries/memory-model]]"
 ---
 # Java Volatile and Final Publication
 

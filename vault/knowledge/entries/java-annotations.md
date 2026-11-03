@@ -8,8 +8,10 @@ kind: construct
 sources:
   - "https://docs.oracle.com/javase/specs/jls/se27/html/jls-9.html#jls-9.6"
   - "https://docs.oracle.com/javase/specs/jls/se27/html/jls-9.html#jls-9.7"
+  - "https://small.r7rs.org/attachment/r7rs.pdf"
 in_topic:
   - "[[knowledge/entries/java-platform-and-library]]"
+  - "[[knowledge/entries/metaprogramming]]"
 ---
 # Java Annotations
 

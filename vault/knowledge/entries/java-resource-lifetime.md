@@ -10,6 +10,7 @@ sources:
 in_topic:
   - "[[knowledge/entries/java-memory-and-lifetime]]"
   - "[[knowledge/entries/java-exceptions-and-resources]]"
+  - "[[knowledge/entries/resource-management]]"
 ---
 # Java External Resource Lifetime
 

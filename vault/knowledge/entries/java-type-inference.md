@@ -10,6 +10,8 @@ sources:
   - "https://docs.oracle.com/javase/specs/jls/se27/html/jls-14.html#jls-14.4"
 in_topic:
   - "[[knowledge/entries/java-generics]]"
+specializes:
+  - "[[knowledge/entries/type-inference]]"
 ---
 # Java Type Inference
 

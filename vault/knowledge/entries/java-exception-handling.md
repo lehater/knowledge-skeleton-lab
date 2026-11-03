@@ -9,6 +9,8 @@ sources:
   - "https://docs.oracle.com/javase/specs/jls/se27/html/jls-14.html#jls-14.20"
 in_topic:
   - "[[knowledge/entries/java-exceptions-and-resources]]"
+specializes:
+  - "[[knowledge/entries/exception-handling]]"
 ---
 # Java Exception Handling
 

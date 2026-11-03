@@ -13,6 +13,8 @@ sources:
   - "https://docs.python.org/3.15/library/concurrent.futures.html"
 in_topic:
   - "[[knowledge/entries/python]]"
+  - "[[knowledge/entries/concurrency]]"
+  - "[[knowledge/entries/concurrent-programming]]"
 ---
 # Python Concurrency
 
