@@ -7,10 +7,13 @@ review_status: proposed
 kind: technology
 sources:
   - "https://docs.python.org/3.15/library/asyncio.html"
+  - "https://doc.rust-lang.org/book/ch17-00-async-await.html"
 in_topic:
   - "[[knowledge/entries/python-concurrency]]"
 part_of:
   - "[[knowledge/entries/python-standard-library]]"
+realizes:
+  - "[[knowledge/entries/asynchronous-runtime]]"
 ---
 # Python asyncio
 

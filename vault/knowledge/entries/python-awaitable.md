@@ -10,6 +10,7 @@ sources:
   - "https://docs.python.org/3.15/library/asyncio-task.html#awaitables"
 in_topic:
   - "[[knowledge/entries/python-concurrency]]"
+  - "[[knowledge/entries/async-await]]"
 ---
 # Python Awaitable
 

@@ -7,8 +7,10 @@ review_status: proposed
 kind: mechanism
 sources:
   - "https://docs.python.org/3.15/reference/datamodel.html#metaclasses"
+  - "https://small.r7rs.org/attachment/r7rs.pdf"
 in_topic:
   - "[[knowledge/entries/python-classes-and-protocols]]"
+  - "[[knowledge/entries/metaprogramming]]"
 ---
 # Python Metaclass
 

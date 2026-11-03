@@ -15,6 +15,8 @@ realizes:
 in_topic:
   - "[[knowledge/entries/python-concurrency]]"
   - "[[knowledge/entries/python-functions-and-iteration]]"
+  - "[[knowledge/entries/coroutine-suspension]]"
+  - "[[knowledge/entries/async-await]]"
 specializes:
   - "[[knowledge/entries/python-awaitable]]"
 ---

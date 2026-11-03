@@ -9,6 +9,8 @@ sources:
   - "https://docs.python.org/3.15/reference/datamodel.html#special-method-names"
 in_topic:
   - "[[knowledge/entries/python-classes-and-protocols]]"
+  - "[[knowledge/entries/programming-interface]]"
+  - "[[knowledge/entries/polymorphism]]"
 ---
 # Python Special Methods
 

@@ -10,6 +10,8 @@ sources:
   - "https://docs.python.org/3.15/tutorial/errors.html"
 in_topic:
   - "[[knowledge/entries/python-exceptions-and-resources]]"
+specializes:
+  - "[[knowledge/entries/exception]]"
 ---
 # Python Exception
 

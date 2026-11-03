@@ -8,8 +8,11 @@ kind: mechanism
 sources:
   - "https://docs.python.org/3.15/reference/executionmodel.html#resolution-of-names"
   - "https://docs.python.org/3.15/reference/datamodel.html#user-defined-functions"
+  - "https://www.cs.tufts.edu/comp/150FP/archive/peter-landin/mechanical-eval.pdf"
 in_topic:
   - "[[knowledge/entries/python-functions-and-iteration]]"
+specializes:
+  - "[[knowledge/entries/closure]]"
 ---
 # Python Closure
 

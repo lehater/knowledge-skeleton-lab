@@ -4,7 +4,7 @@ type: knowledge
 name: "Asynchronous Programming"
 review_status: proposed
 kind: model
-lifecycle: skeleton
+lifecycle: enriched
 broader:
   - "[[knowledge/entries/concurrent-programming]]"
 sources:
@@ -12,3 +12,7 @@ sources:
   - "https://learn.microsoft.com/en-us/dotnet/csharp/asynchronous-programming/"
 ---
 # Asynchronous Programming
+
+Асинхронное программирование организует начало операций и получение их результатов как разделённые этапы. Пока операция ожидает завершения, программа может передать управление другой работе. Вход — операции, зависимости и события завершения; выход — продолжения, результаты или отказы по контракту.
+
+Callbacks, Future и async/await — разные способы выразить эту организацию. Она полезна при ожидании I/O, но не обещает CPU-параллелизма или отсутствия блокирующего кода. asyncio и Java executors/futures обслуживают разные варианты асинхронной работы.

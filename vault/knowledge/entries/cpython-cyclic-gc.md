@@ -11,6 +11,8 @@ in_topic:
   - "[[knowledge/entries/python-memory-management]]"
 part_of:
   - "[[knowledge/entries/cpython]]"
+realizes:
+  - "[[knowledge/entries/garbage-collection]]"
 ---
 # CPython Cyclic Garbage Collection
 

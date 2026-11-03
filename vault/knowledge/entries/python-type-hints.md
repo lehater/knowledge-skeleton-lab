@@ -8,9 +8,13 @@ kind: construct
 sources:
   - "https://docs.python.org/3.15/library/typing.html"
   - "https://docs.python.org/3.15/reference/executionmodel.html#annotation-scopes"
+  - "https://docs.python.org/3.15/library/typing.html#nominal-vs-structural-subtyping"
 in_topic:
   - "[[knowledge/entries/python-data-and-types]]"
   - "[[knowledge/entries/python-functions-and-iteration]]"
+  - "[[knowledge/entries/type-system]]"
+  - "[[knowledge/entries/static-typing]]"
+  - "[[knowledge/entries/nominal-typing]]"
 ---
 # Python Type Hints
 

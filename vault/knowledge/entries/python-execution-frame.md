@@ -8,8 +8,10 @@ kind: structure
 sources:
   - "https://docs.python.org/3.15/reference/executionmodel.html#structure-of-a-program"
   - "https://docs.python.org/3.15/reference/datamodel.html#frame-objects"
+  - "https://docs.python.org/3.15/library/inspect.html"
 in_topic:
   - "[[knowledge/entries/python-execution-model]]"
+  - "[[knowledge/entries/reflection]]"
 ---
 # Python Execution Frame
 

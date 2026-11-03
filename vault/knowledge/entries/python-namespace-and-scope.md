@@ -10,6 +10,7 @@ sources:
   - "https://docs.python.org/3.15/tutorial/classes.html#python-scopes-and-namespaces"
 in_topic:
   - "[[knowledge/entries/python-execution-model]]"
+  - "[[knowledge/entries/lexical-scope]]"
 ---
 # Python Namespace and Scope
 

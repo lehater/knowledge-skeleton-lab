@@ -9,6 +9,7 @@ sources:
   - "https://docs.python.org/3.15/library/multiprocessing.html"
 in_topic:
   - "[[knowledge/entries/python-concurrency]]"
+  - "[[knowledge/entries/parallelism]]"
 part_of:
   - "[[knowledge/entries/python-standard-library]]"
 ---

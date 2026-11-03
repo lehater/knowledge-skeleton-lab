@@ -15,6 +15,7 @@ manages:
   - "[[knowledge/entries/python-asyncio-task]]"
 in_topic:
   - "[[knowledge/entries/python-concurrency]]"
+  - "[[knowledge/entries/task-cancellation]]"
 specializes:
   - "[[knowledge/entries/python-async-context-manager]]"
 ---

@@ -9,8 +9,11 @@ sources:
   - "https://docs.python.org/3.15/reference/datamodel.html#objects-values-and-types"
   - "https://docs.python.org/3.15/builtins/stdtypes.html"
   - "https://docs.python.org/3.15/library/typing.html"
+  - "https://small.r7rs.org/attachment/r7rs.pdf"
 in_topic:
   - "[[knowledge/entries/python]]"
+  - "[[knowledge/entries/type-system]]"
+  - "[[knowledge/entries/dynamic-typing]]"
 ---
 # Python Data and Types
 

@@ -9,6 +9,8 @@ sources:
   - "https://docs.python.org/3.15/reference/datamodel.html#objects-values-and-types"
 in_topic:
   - "[[knowledge/entries/python-data-and-types]]"
+specializes:
+  - "[[knowledge/entries/object]]"
 ---
 # Python Object
 

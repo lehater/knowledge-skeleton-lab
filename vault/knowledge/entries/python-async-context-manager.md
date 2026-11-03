@@ -11,6 +11,7 @@ sources:
 in_topic:
   - "[[knowledge/entries/python-concurrency]]"
   - "[[knowledge/entries/python-exceptions-and-resources]]"
+  - "[[knowledge/entries/resource-management]]"
 ---
 # Python Async Context Manager
 

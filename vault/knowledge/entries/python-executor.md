@@ -9,6 +9,10 @@ sources:
   - "https://docs.python.org/3.15/library/concurrent.futures.html"
 in_topic:
   - "[[knowledge/entries/python-concurrency]]"
+  - "[[knowledge/entries/future]]"
+  - "[[knowledge/entries/asynchronous-programming]]"
+  - "[[knowledge/entries/task-scheduling]]"
+  - "[[knowledge/entries/task-cancellation]]"
 schedules:
   - "[[knowledge/entries/python-callable]]"
 ---

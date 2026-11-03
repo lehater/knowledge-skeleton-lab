@@ -12,6 +12,8 @@ sources:
   - "https://docs.python.org/3.15/library/dis.html"
 in_topic:
   - "[[knowledge/entries/python]]"
+specializes:
+  - "[[knowledge/entries/execution-model]]"
 ---
 # Python Execution Model
 

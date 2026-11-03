@@ -15,6 +15,9 @@ executes:
   - "[[knowledge/entries/python-coroutine-object]]"
 in_topic:
   - "[[knowledge/entries/python-concurrency]]"
+  - "[[knowledge/entries/cooperative-task-scheduling]]"
+  - "[[knowledge/entries/task-cancellation]]"
+  - "[[knowledge/entries/task-lifecycle]]"
 specializes:
   - "[[knowledge/entries/python-asyncio-future]]"
 ---
