@@ -9,6 +9,8 @@ sources:
   - "https://docs.python.org/3.15/library/gc.html"
 in_topic:
   - "[[knowledge/entries/python-memory-management]]"
+part_of:
+  - "[[knowledge/entries/cpython]]"
 ---
 # CPython Cyclic Garbage Collection
 

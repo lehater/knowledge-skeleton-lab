@@ -17,3 +17,5 @@ in_topic:
 Исключения передают сведения о невозможности продолжить обычное выполнение к подходящему обработчику. try/except выбирает обработчик, finally выполняет завершающие действия, а цепочки исключений сохраняют причину отказа. ExceptionGroup переносит несколько связанных отказов.
 
 Управление ресурсами организует корректные вход и выход из области через with и протокол context manager. Вход — операция и её контекст; выход — обычный результат, обработанное исключение или дальнейшее распространение ошибки после очистки. Освобождение файлов и других внешних ресурсов следует связывать с явным протоколом, а не со сроком работы сборщика мусора.
+
+Основные понятия: [[knowledge/entries/python-exception|Python Exception]], [[knowledge/entries/python-exception-handling|Python Exception Handling]], [[knowledge/entries/python-exception-group|Python ExceptionGroup]], [[knowledge/entries/python-context-manager|Python Context Manager]], [[knowledge/entries/python-traceback|Python Traceback]].

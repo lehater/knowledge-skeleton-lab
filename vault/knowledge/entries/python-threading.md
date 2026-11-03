@@ -10,6 +10,8 @@ sources:
   - "https://docs.python.org/3.15/howto/free-threading-python.html"
 in_topic:
   - "[[knowledge/entries/python-concurrency]]"
+part_of:
+  - "[[knowledge/entries/python-standard-library]]"
 ---
 # Python threading
 

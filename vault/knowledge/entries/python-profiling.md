@@ -9,6 +9,9 @@ sources:
   - "https://docs.python.org/3.15/library/profiling.html"
 in_topic:
   - "[[knowledge/entries/python-standard-library]]"
+  - "[[knowledge/entries/python-execution-model]]"
+part_of:
+  - "[[knowledge/entries/python-standard-library]]"
 ---
 # Python profiling
 

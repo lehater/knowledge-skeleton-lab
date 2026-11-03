@@ -10,6 +10,9 @@ sources:
   - "https://docs.python.org/3.15/tutorial/errors.html#raising-and-handling-multiple-unrelated-exceptions"
 in_topic:
   - "[[knowledge/entries/python-exceptions-and-resources]]"
+  - "[[knowledge/entries/python-concurrency]]"
+specializes:
+  - "[[knowledge/entries/python-exception]]"
 ---
 # Python ExceptionGroup
 

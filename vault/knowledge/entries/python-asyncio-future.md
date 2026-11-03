@@ -9,6 +9,10 @@ sources:
   - "https://docs.python.org/3.15/library/asyncio-future.html"
 in_topic:
   - "[[knowledge/entries/python-concurrency]]"
+realizes:
+  - "[[knowledge/entries/future]]"
+specializes:
+  - "[[knowledge/entries/python-awaitable]]"
 ---
 # Python asyncio.Future
 

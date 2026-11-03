@@ -10,6 +10,8 @@ sources:
   - "https://docs.python.org/3.15/reference/datamodel.html#basic-customization"
 in_topic:
   - "[[knowledge/entries/python-classes-and-protocols]]"
+specializes:
+  - "[[knowledge/entries/python-callable]]"
 ---
 # Python Class
 

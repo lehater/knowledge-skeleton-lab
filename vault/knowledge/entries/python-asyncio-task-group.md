@@ -15,6 +15,8 @@ manages:
   - "[[knowledge/entries/python-asyncio-task]]"
 in_topic:
   - "[[knowledge/entries/python-concurrency]]"
+specializes:
+  - "[[knowledge/entries/python-async-context-manager]]"
 ---
 # Python asyncio.TaskGroup
 

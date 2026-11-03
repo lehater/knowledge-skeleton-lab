@@ -10,6 +10,8 @@ sources:
   - "https://docs.python.org/3.15/reference/datamodel.html#objects-values-and-types"
 in_topic:
   - "[[knowledge/entries/python-memory-management]]"
+part_of:
+  - "[[knowledge/entries/cpython]]"
 ---
 # CPython Reference Counting
 

@@ -10,6 +10,8 @@ sources:
   - "https://docs.python.org/3.15/c-api/"
 in_topic:
   - "[[knowledge/entries/python-implementations-and-integration]]"
+specializes:
+  - "[[knowledge/entries/python-module]]"
 ---
 # Python Native Extension Module
 

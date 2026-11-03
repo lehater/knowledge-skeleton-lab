@@ -9,6 +9,7 @@ sources:
   - "https://docs.python.org/3.15/howto/descriptor.html"
 in_topic:
   - "[[knowledge/entries/python-classes-and-protocols]]"
+  - "[[knowledge/entries/python-functions-and-iteration]]"
 ---
 # Python Descriptor
 

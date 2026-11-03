@@ -10,6 +10,10 @@ sources:
   - "https://docs.python.org/3.15/library/importlib.html#importlib.abc.Loader"
 in_topic:
   - "[[knowledge/entries/python-modules-and-import]]"
+part_of:
+  - "[[knowledge/entries/python-import-system]]"
+executes:
+  - "[[knowledge/entries/python-module]]"
 ---
 # Python Import Loader
 

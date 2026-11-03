@@ -9,6 +9,8 @@ sources:
   - "https://docs.python.org/3.15/library/pathlib.html"
 in_topic:
   - "[[knowledge/entries/python-standard-library]]"
+part_of:
+  - "[[knowledge/entries/python-standard-library]]"
 ---
 # Python pathlib
 

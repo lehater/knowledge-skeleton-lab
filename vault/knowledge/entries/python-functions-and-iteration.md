@@ -17,3 +17,5 @@ in_topic:
 Функции отделяют повторно используемое вычисление от места вызова; параметры связываются с переданными объектами, результат возвращается через return или исключение. Функции являются объектами: их можно передавать, сохранять, замыкать и преобразовывать декораторами.
 
 Итерация задаёт последовательное получение значений через протокол iterator. Генераторы сохраняют состояние между выдачами значений и упрощают ленивое вычисление. Эти механизмы описывают организацию вычисления; asyncio использует отдельные coroutine objects и задачи поверх языковых средств приостановки.
+
+Основные понятия: [[knowledge/entries/python-function|Python Function]], [[knowledge/entries/python-argument-binding|Python Argument Binding]], [[knowledge/entries/python-closure|Python Closure]], [[knowledge/entries/python-decorator|Python Decorator]], [[knowledge/entries/python-iterator|Python Iterator]], [[knowledge/entries/python-generator|Python Generator]], [[knowledge/entries/python-callable|Python Callable]].

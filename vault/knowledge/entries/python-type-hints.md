@@ -10,6 +10,7 @@ sources:
   - "https://docs.python.org/3.15/reference/executionmodel.html#annotation-scopes"
 in_topic:
   - "[[knowledge/entries/python-data-and-types]]"
+  - "[[knowledge/entries/python-functions-and-iteration]]"
 ---
 # Python Type Hints
 

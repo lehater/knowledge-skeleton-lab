@@ -10,6 +10,8 @@ sources:
   - "https://docs.python.org/3.15/library/importlib.html#importlib.abc.MetaPathFinder"
 in_topic:
   - "[[knowledge/entries/python-modules-and-import]]"
+part_of:
+  - "[[knowledge/entries/python-import-system]]"
 ---
 # Python Import Finder
 

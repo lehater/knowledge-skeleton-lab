@@ -10,6 +10,8 @@ sources:
   - "https://docs.python.org/3.15/reference/compound_stmts.html#the-with-statement"
 in_topic:
   - "[[knowledge/entries/python-standard-library]]"
+part_of:
+  - "[[knowledge/entries/python-standard-library]]"
 ---
 # Python I/O Streams
 

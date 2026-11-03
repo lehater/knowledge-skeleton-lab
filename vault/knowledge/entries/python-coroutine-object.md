@@ -14,6 +14,9 @@ realizes:
   - "[[knowledge/entries/coroutine]]"
 in_topic:
   - "[[knowledge/entries/python-concurrency]]"
+  - "[[knowledge/entries/python-functions-and-iteration]]"
+specializes:
+  - "[[knowledge/entries/python-awaitable]]"
 ---
 # Python Coroutine Object
 

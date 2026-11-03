@@ -17,3 +17,5 @@ in_topic:
 Модули задают именованные пространства организации кода; пакеты организуют пространство имён модулей. Импорт соединяет поиск, загрузку и связывание имён, используя кэш sys.modules, module spec, finders и loaders.
 
 Вход — имя модуля и контекст поиска; результат — доступ к объекту модуля или импортированным именам либо исключение. Обычная первичная загрузка исполняет код модуля, повторный импорт обычно использует кэш. В Python 3.15 явный lazy import позволяет отложить загрузку до использования имени. Import package отличается от устанавливаемого distribution package.
+
+Основные понятия: [[knowledge/entries/python-module|Python Module]], [[knowledge/entries/python-package|Python Import Package]], [[knowledge/entries/python-import-system|Python Import System]], [[knowledge/entries/python-import-finder|Python Import Finder]], [[knowledge/entries/python-import-loader|Python Import Loader]].

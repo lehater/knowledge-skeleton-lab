@@ -9,6 +9,8 @@ sources:
   - "https://docs.python.org/3.15/library/concurrent.futures.html"
 in_topic:
   - "[[knowledge/entries/python-concurrency]]"
+schedules:
+  - "[[knowledge/entries/python-callable]]"
 ---
 # Python concurrent.futures.Executor
 

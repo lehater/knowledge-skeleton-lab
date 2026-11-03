@@ -10,6 +10,9 @@ sources:
   - "https://docs.python.org/3.15/reference/expressions.html#yield-expressions"
 in_topic:
   - "[[knowledge/entries/python-functions-and-iteration]]"
+  - "[[knowledge/entries/python-execution-model]]"
+specializes:
+  - "[[knowledge/entries/python-iterator]]"
 ---
 # Python Generator
 

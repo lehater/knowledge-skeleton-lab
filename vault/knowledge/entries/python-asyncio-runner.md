@@ -9,6 +9,8 @@ sources:
   - "https://docs.python.org/3.15/library/asyncio-runner.html"
 in_topic:
   - "[[knowledge/entries/python-concurrency]]"
+manages:
+  - "[[knowledge/entries/python-asyncio-event-loop]]"
 ---
 # Python asyncio.Runner
 

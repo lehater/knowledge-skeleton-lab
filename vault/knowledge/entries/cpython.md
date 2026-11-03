@@ -12,6 +12,11 @@ sources:
   - "https://docs.python.org/3.15/howto/free-threading-python.html"
 in_topic:
   - "[[knowledge/entries/python-implementations-and-integration]]"
+realizes:
+  - "[[knowledge/entries/python]]"
+executes:
+  - "[[knowledge/entries/python-code-object]]"
+  - "[[knowledge/entries/python-code-block]]"
 ---
 # CPython
 

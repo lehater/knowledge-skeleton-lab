@@ -10,6 +10,7 @@ sources:
   - "https://docs.python.org/3.15/whatsnew/3.15.html#pep-810-explicit-lazy-imports"
 in_topic:
   - "[[knowledge/entries/python-modules-and-import]]"
+  - "[[knowledge/entries/python-execution-model]]"
 ---
 # Python Import System
 

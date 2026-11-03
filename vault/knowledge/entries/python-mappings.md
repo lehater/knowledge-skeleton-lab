@@ -6,7 +6,7 @@ lifecycle: enriched
 review_status: proposed
 kind: construct
 sources:
-  - "https://docs.python.org/3.15/builtins/stdtypes.html#mapping-types-dict"
+  - "https://docs.python.org/3.15/builtins/stdtypes.html#mapping-types-dict-frozendict"
   - "https://docs.python.org/3.15/whatsnew/3.15.html#pep-814-add-frozendict-built-in-type"
 in_topic:
   - "[[knowledge/entries/python-data-and-types]]"

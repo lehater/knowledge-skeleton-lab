@@ -17,3 +17,5 @@ in_topic:
 Модель данных определяет объекты через идентичность, тип и значение; тип задаёт поддерживаемые операции. Имена ссылаются на объекты, поэтому несколько имён могут обозначать один изменяемый объект. Динамическая типизация означает, что тип принадлежит объекту, а допустимость операции проверяется при выполнении.
 
 Встроенные числа, последовательности, отображения и множества дают основные формы данных. Аннотации, обобщённые типы и Protocol описывают контракты для статического анализа; они не заменяют runtime-семантику. Поведение пользовательских классов раскрывается в объектных протоколах.
+
+Основные понятия: [[knowledge/entries/python-object|Python Object]], [[knowledge/entries/python-mutability|Python Mutability and Aliasing]], [[knowledge/entries/python-numeric-types|Python Numeric Types]], [[knowledge/entries/python-sequences|Python Sequences]], [[knowledge/entries/python-mappings|Python Mappings]], [[knowledge/entries/python-sets|Python Sets]], [[knowledge/entries/python-type-hints|Python Type Hints]], [[knowledge/entries/python-generics-and-protocols|Python Generics and Typing Protocols]].

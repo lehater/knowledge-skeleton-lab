@@ -7,7 +7,7 @@ review_status: proposed
 kind: practice
 sources:
   - "https://docs.python.org/3.15/extending/embedding.html"
-  - "https://docs.python.org/3.15/c-api/init.html"
+  - "https://docs.python.org/3.15/c-api/interp-lifecycle.html"
 in_topic:
   - "[[knowledge/entries/python-implementations-and-integration]]"
 ---

@@ -10,6 +10,7 @@ sources:
   - "https://docs.python.org/3.15/reference/compound_stmts.html#the-async-with-statement"
 in_topic:
   - "[[knowledge/entries/python-concurrency]]"
+  - "[[knowledge/entries/python-exceptions-and-resources]]"
 ---
 # Python Async Context Manager
 

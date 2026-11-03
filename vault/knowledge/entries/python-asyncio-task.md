@@ -15,6 +15,8 @@ executes:
   - "[[knowledge/entries/python-coroutine-object]]"
 in_topic:
   - "[[knowledge/entries/python-concurrency]]"
+specializes:
+  - "[[knowledge/entries/python-asyncio-future]]"
 ---
 # Python asyncio.Task
 

@@ -9,6 +9,10 @@ sources:
   - "https://docs.python.org/3.15/library/concurrent.futures.html#processpoolexecutor"
 in_topic:
   - "[[knowledge/entries/python-concurrency]]"
+specializes:
+  - "[[knowledge/entries/python-executor]]"
+executes:
+  - "[[knowledge/entries/python-callable]]"
 ---
 # Python ProcessPoolExecutor
 

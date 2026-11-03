@@ -6,7 +6,6 @@ lifecycle: enriched
 review_status: proposed
 kind: mechanism
 sources:
-  - "https://docs.python.org/3.15/c-api/init.html#thread-state-and-the-global-interpreter-lock"
   - "https://docs.python.org/3.15/howto/free-threading-python.html"
   - "https://docs.python.org/3.15/c-api/threads.html"
 in_topic:

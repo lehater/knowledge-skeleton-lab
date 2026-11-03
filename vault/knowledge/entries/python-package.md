@@ -10,6 +10,8 @@ sources:
   - "https://docs.python.org/3.15/tutorial/modules.html#packages"
 in_topic:
   - "[[knowledge/entries/python-modules-and-import]]"
+specializes:
+  - "[[knowledge/entries/python-module]]"
 ---
 # Python Import Package
 

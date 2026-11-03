@@ -9,6 +9,10 @@ sources:
   - "https://docs.python.org/3.15/library/concurrent.futures.html#interpreterpoolexecutor"
 in_topic:
   - "[[knowledge/entries/python-concurrency]]"
+specializes:
+  - "[[knowledge/entries/python-thread-pool-executor]]"
+executes:
+  - "[[knowledge/entries/python-callable]]"
 ---
 # Python InterpreterPoolExecutor
 

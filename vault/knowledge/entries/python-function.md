@@ -10,6 +10,8 @@ sources:
   - "https://docs.python.org/3.15/reference/compound_stmts.html#function-definitions"
 in_topic:
   - "[[knowledge/entries/python-functions-and-iteration]]"
+specializes:
+  - "[[knowledge/entries/python-callable]]"
 ---
 # Python Function
 
