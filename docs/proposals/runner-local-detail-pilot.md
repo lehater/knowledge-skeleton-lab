@@ -87,9 +87,12 @@ python -m unittest discover -s experiments/runner-policy -p 'test_*.py' -v
 - `node tools/validate.mjs` — **PASS**, 236 Knowledge / 228 YAML-рёбер, как в базовом `main`.
 - `node --test tools/validate.test.mjs` — **PASS**, 12/12.
 - `git diff --check` — **PASS**.
+- **SDK Runner policy experiment — PASS (2/2):** [GitHub Actions run #41599371383](https://github.com/lehater/knowledge-skeleton-lab/actions/runs/41599371383), SDK `0.24.0`, Python `3.12`. A: 2 обращения к модели, 1 вызов функции, `function_call_output` с `call_id=call_1` передан в модель, итог `It is sunny in Tokyo.`. B: 1 обращение к модели, 1 вызов функции, итог `Tokyo: sunny`. `model.assert_complete()` прошёл в обоих тестах.
+- **Читательская проверка по четырём вопросам — NOT_RUN**: нужен независимый читатель; успешные SDK-прогоны не доказывают понятность изложения.
+
 - Разбор JSON Canvas, уникальность идентификаторов, существование файлов и заголовков — **PASS**.
 - Все три линии Canvas соответствуют YAML по паре узлов, предикату и направлению — **PASS**.
-- Frontmatter Runner, включая UUID и отношения, полностью совпадает с базой — **PASS**.
+- UUID и YAML-отношения Runner сохранены, список `sources` расширен ссылками на политику и тестирование SDK — **PASS**.
 - Временный маркер в разделе интерфейса прочитан через файловую ссылку карточки; Canvas не менялся, исходная заметка восстановлена — **PASS на уровне файлов**. Обновление карточки в приложении не проверено.
 - Временное изменение текста сценария оставило Mermaid неизменным: **подтверждена необходимость ручного сопровождения**. Изменение отброшено.
 
