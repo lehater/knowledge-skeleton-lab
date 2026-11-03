@@ -1,0 +1,27 @@
+name: Runner policy experiment
+
+on:
+  pull_request:
+    paths:
+      - "experiments/runner-policy/**"
+      - "docs/proposals/runner-local-detail-pilot.md"
+      - "vault/knowledge/entries/openai-agents-sdk-runner.md"
+      - ".github/workflows/runner-policy-pilot.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  runner-policies:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install pinned Agents SDK
+        run: python -m pip install "openai-agents==0.24.0"
+      - name: Verify two policies without LLM API calls
+        run: python -m unittest discover -s experiments/runner-policy -p "test_*.py" -v
