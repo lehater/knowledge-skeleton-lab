@@ -2,7 +2,7 @@
 id: 01a197aa-8736-705e-9686-1644281f4695
 type: knowledge
 name: "Tool Call"
-kind: construct
+kind: data_structure
 lifecycle: enriched
 review_status: proposed
 in_topic:

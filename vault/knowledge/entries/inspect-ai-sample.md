@@ -4,7 +4,7 @@ type: knowledge
 name: "Inspect AI Sample"
 lifecycle: enriched
 review_status: proposed
-kind: structure
+kind: program_construct
 in_topic:
   - "[[knowledge/entries/inspect-ai-dataset]]"
 sources:

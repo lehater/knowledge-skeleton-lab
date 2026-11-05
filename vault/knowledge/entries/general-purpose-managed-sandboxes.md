@@ -2,6 +2,7 @@
 id: 01a196ec-2a78-79ac-92fd-ee9815708387
 type: knowledge
 name: "General-Purpose Managed Sandboxes"
+kind: resource
 lifecycle: enriched
 review_status: proposed
 in_topic:

@@ -2,6 +2,7 @@
 id: 01a196ec-2a78-71a0-a09b-3ee31eaffbc2
 type: knowledge
 name: "Cost Tracking and Optimization"
+kind: topic
 lifecycle: enriched
 review_status: proposed
 in_topic:

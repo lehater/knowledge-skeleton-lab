@@ -4,7 +4,7 @@ type: knowledge
 name: "Inspect AI EvalLog"
 lifecycle: enriched
 review_status: proposed
-kind: artifact
+kind: program_construct
 in_topic:
   - "[[knowledge/entries/controlled-execution-and-trace-capture]]"
 sources:
@@ -12,6 +12,8 @@ sources:
 ---
 # Inspect AI EvalLog
 
-EvalLog — запись оценочного исполнения Inspect: task/model specification, solver plan, aggregate results, usage, ошибки и samples с входом, выходом, target и score. Поле status отделяет завершённый запуск от ошибочного. `read_eval_log` и чтение отдельных samples дают программный доступ.
+Inspect AI EvalLog — API-тип `inspect_ai.log.EvalLog`, представляющий данные оценочного запуска и предоставляющий программный доступ к ним.
 
-История messages и events позволяет исследовать попытку; крупное содержимое может храниться как attachments и требовать разрешения ссылок. EvalLog — артефакт оценки, отличный от общего распределённого span и от сохранённой памяти выполняемого агента.
+Тип `EvalLog` содержит данные оценочного исполнения Inspect: task/model specification, solver plan, aggregate results, usage, ошибки и samples с входом, выходом, target и score. Поле status отделяет завершённый запуск от ошибочного. `read_eval_log` и чтение отдельных samples дают программный доступ.
+
+История messages и events позволяет исследовать попытку; крупное содержимое может храниться как attachments и требовать разрешения ссылок. Сериализованный `.eval`/`.json`-файл является отдельным артефактом; `EvalLog` — тип объекта API, а не файл, span или память агента.

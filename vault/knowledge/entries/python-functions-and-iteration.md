@@ -4,7 +4,7 @@ type: knowledge
 name: "Python Functions and Iteration"
 lifecycle: enriched
 review_status: proposed
-kind: model
+kind: topic
 sources:
   - "https://docs.python.org/3.15/tutorial/controlflow.html#defining-functions"
   - "https://docs.python.org/3.15/tutorial/classes.html#iterators"

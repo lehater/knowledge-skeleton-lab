@@ -2,7 +2,7 @@
 id: 01a197c2-3249-767a-879e-c86d409328b1
 type: knowledge
 name: "MCP Tool Listing (tools/list)"
-kind: mechanism
+kind: program_construct
 lifecycle: enriched
 review_status: proposed
 in_topic:

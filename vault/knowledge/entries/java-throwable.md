@@ -13,4 +13,6 @@ in_topic:
 ---
 # Java Throwable Hierarchy
 
+Java Throwable Hierarchy — модель иерархии классов исключений Java, различающая Throwable, Exception, Error и unchecked-исключения.
+
 Исключения представлены объектами Throwable: Exception и Error задают разные ветви. Throw создаёт передачу управления к подходящему обработчику, runtime также сигнализирует нарушения ограничений. RuntimeException и Error относятся к unchecked; классификация не определяет автоматически возможность восстановления приложения.

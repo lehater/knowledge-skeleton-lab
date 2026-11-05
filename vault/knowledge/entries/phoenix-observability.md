@@ -2,6 +2,7 @@
 id: 01a197fa-81b9-77a4-922c-0cc20d292f9f
 type: knowledge
 name: "Phoenix Observability"
+kind: software
 lifecycle: enriched
 review_status: proposed
 in_topic:

@@ -4,7 +4,7 @@ type: knowledge
 name: "Java Inheritance and Subtyping"
 lifecycle: enriched
 review_status: proposed
-kind: mechanism
+kind: topic
 sources:
   - "https://docs.oracle.com/javase/specs/jls/se27/html/jls-8.html#jls-8.2"
   - "https://docs.oracle.com/javase/specs/jls/se27/html/jls-9.html#jls-9.1.3"

@@ -4,13 +4,15 @@ type: knowledge
 name: "LangSmith Agent Evaluation Levels"
 lifecycle: enriched
 review_status: proposed
-kind: mechanism
+kind: model
 in_topic:
   - "[[knowledge/entries/multi-level-judgement-and-failure-attribution]]"
 sources:
   - "https://docs.langchain.com/langsmith/evaluate-complex-agent"
 ---
 # LangSmith Agent Evaluation Levels
+
+LangSmith Agent Evaluation Levels — модель уровней оценивания агента: ответ, траектория, шаг.
 
 В руководстве LangSmith различаются final response, trajectory и single step evaluation. Первое проверяет ответ на запрос, второе — путь инструментальных вызовов, третье — выбранное действие в заданном контексте. Для локальной проверки можно подать конкретное состояние напрямую компоненту, вместо повторения всего сценария.
 

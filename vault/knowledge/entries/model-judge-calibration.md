@@ -4,7 +4,7 @@ type: knowledge
 name: "Model Judge Calibration"
 lifecycle: enriched
 review_status: proposed
-kind: practice
+kind: method
 in_topic:
   - "[[knowledge/entries/multi-level-judgement-and-failure-attribution]]"
 sources:

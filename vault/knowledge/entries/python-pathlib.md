@@ -4,7 +4,7 @@ type: knowledge
 name: "Python pathlib"
 lifecycle: enriched
 review_status: proposed
-kind: technology
+kind: software
 sources:
   - "https://docs.python.org/3.15/library/pathlib.html"
 in_topic:

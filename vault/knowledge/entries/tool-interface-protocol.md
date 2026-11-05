@@ -2,6 +2,7 @@
 id: 01a196ec-2a78-731e-87af-1760a57218b3
 type: knowledge
 name: "Tool Interface & Protocol"
+kind: topic
 lifecycle: enriched
 review_status: proposed
 in_topic:

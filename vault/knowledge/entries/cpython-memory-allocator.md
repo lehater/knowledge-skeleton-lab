@@ -4,7 +4,7 @@ type: knowledge
 name: "CPython Memory Allocator"
 lifecycle: enriched
 review_status: proposed
-kind: mechanism
+kind: component
 sources:
   - "https://docs.python.org/3.15/c-api/memory.html"
 in_topic:
@@ -13,6 +13,8 @@ part_of:
   - "[[knowledge/entries/cpython]]"
 ---
 # CPython Memory Allocator
+
+CPython Memory Allocator — менеджер/аллокатор памяти CPython как ответственная подсистема.
 
 Менеджер памяти CPython размещает объекты и внутренние данные в private heap, используя домены и аллокаторы для разных задач. Вход — запрос выделения, изменения или освобождения блока; выход — память либо ошибка выделения. Выбор аллокатора зависит от сборки и размера/назначения данных.
 

@@ -4,7 +4,7 @@ type: knowledge
 name: "Class"
 lifecycle: enriched
 review_status: proposed
-kind: construct
+kind: program_construct
 sources:
   - "https://docs.oracle.com/javase/tutorial/java/concepts/class.html"
   - "https://docs.python.org/3.15/tutorial/classes.html"

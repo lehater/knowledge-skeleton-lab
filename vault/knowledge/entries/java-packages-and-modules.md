@@ -4,7 +4,7 @@ type: knowledge
 name: "Java Packages and Modules"
 lifecycle: enriched
 review_status: proposed
-kind: model
+kind: topic
 sources:
   - "https://docs.oracle.com/javase/specs/jls/se27/html/jls-6.html"
   - "https://docs.oracle.com/javase/specs/jls/se27/html/jls-7.html"

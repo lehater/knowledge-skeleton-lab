@@ -4,7 +4,7 @@ type: knowledge
 name: "Java I/O and Files"
 lifecycle: enriched
 review_status: proposed
-kind: technology
+kind: software
 sources:
   - "https://docs.oracle.com/en/java/javase/27/docs/api/java.base/java/io/package-summary.html"
   - "https://docs.oracle.com/en/java/javase/27/docs/api/java.base/java/nio/file/package-summary.html"

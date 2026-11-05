@@ -4,7 +4,7 @@ type: knowledge
 name: "Java Interface"
 lifecycle: enriched
 review_status: proposed
-kind: construct
+kind: program_construct
 sources:
   - "https://docs.oracle.com/javase/specs/jls/se27/html/jls-9.html#jls-9.1"
 in_topic:

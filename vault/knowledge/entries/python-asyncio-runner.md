@@ -4,7 +4,7 @@ type: knowledge
 name: "Python asyncio.Runner"
 lifecycle: enriched
 review_status: proposed
-kind: construct
+kind: program_construct
 sources:
   - "https://docs.python.org/3.15/library/asyncio-runner.html"
 in_topic:

@@ -4,7 +4,7 @@ type: knowledge
 name: "Service Level Objective"
 lifecycle: enriched
 review_status: proposed
-kind: model
+kind: goal
 in_topic:
   - "[[knowledge/entries/reliability-engineering]]"
 sources:

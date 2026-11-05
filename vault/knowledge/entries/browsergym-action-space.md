@@ -2,6 +2,7 @@
 id: 01a197da-28d1-7776-b7be-50fe5f11e196
 type: knowledge
 name: "BrowserGym Action Space"
+kind: interface
 lifecycle: enriched
 review_status: proposed
 part_of:

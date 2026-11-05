@@ -3,7 +3,7 @@ id: 01a18e44-0955-7e3e-a1a7-cc5a831419bc
 type: knowledge
 name: "Concurrency"
 review_status: proposed
-kind: model
+kind: property
 lifecycle: enriched
 in_topic:
   - "[[knowledge/entries/concurrent-programming]]"

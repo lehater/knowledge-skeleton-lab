@@ -16,6 +16,8 @@ in_topic:
 ---
 # Java Types and Values
 
+Java Types and Values — типовая модель значений Java и правил их совместимости.
+
 Статические типы ограничивают значения переменных и применимые операции. Раздел включает примитивные и ссылочные значения, массивы и преобразования. Вход — объявления и выражения; выход — проверки совместимости и типизированные операции. Тип переменной и runtime-класс объекта различаются.
 
 Основные понятия: [[knowledge/entries/java-primitive-types|Java Primitive Types]], [[knowledge/entries/java-reference-types|Java Reference Types and Null]], [[knowledge/entries/java-variables-and-final|Java Variables and Final]], [[knowledge/entries/java-arrays|Java Arrays]], [[knowledge/entries/java-conversions-and-boxing|Java Conversions and Boxing]].

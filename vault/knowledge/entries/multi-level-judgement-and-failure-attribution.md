@@ -2,6 +2,7 @@
 id: 01a196ec-2a78-7ddf-85f2-dc5ae93ccf3f
 type: knowledge
 name: "Multi-Level Judgement and Failure Attribution"
+kind: topic
 lifecycle: enriched
 review_status: proposed
 in_topic:

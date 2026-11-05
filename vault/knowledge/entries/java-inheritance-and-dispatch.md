@@ -4,7 +4,7 @@ type: knowledge
 name: "Java Inheritance and Dispatch"
 lifecycle: enriched
 review_status: proposed
-kind: model
+kind: topic
 sources:
   - "https://docs.oracle.com/javase/specs/jls/se27/html/jls-8.html"
   - "https://docs.oracle.com/javase/specs/jls/se27/html/jls-15.html"

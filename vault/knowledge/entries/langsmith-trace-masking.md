@@ -2,6 +2,7 @@
 id: 01a197fa-8139-7c2e-84f1-b05439af531b
 type: knowledge
 name: "LangSmith Trace Masking"
+kind: mechanism
 lifecycle: enriched
 review_status: proposed
 part_of:

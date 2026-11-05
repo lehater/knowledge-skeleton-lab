@@ -2,6 +2,7 @@
 id: 01a197da-04b4-7f3f-a06f-005bcf5d231a
 type: knowledge
 name: "Modal Sandbox Outbound Access Control"
+kind: mechanism
 lifecycle: enriched
 review_status: proposed
 in_topic:

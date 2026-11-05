@@ -2,6 +2,7 @@
 id: 01a197da-0392-7f29-8aa9-de9795b5dcf9
 type: knowledge
 name: "E2B Code Interpreter"
+kind: software
 lifecycle: enriched
 review_status: proposed
 in_topic:

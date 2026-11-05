@@ -4,7 +4,7 @@ type: knowledge
 name: "Java Parameterized Types and Bounds"
 lifecycle: enriched
 review_status: proposed
-kind: construct
+kind: program_construct
 sources:
   - "https://docs.oracle.com/javase/specs/jls/se27/html/jls-4.html#jls-4.4"
   - "https://docs.oracle.com/javase/specs/jls/se27/html/jls-4.html#jls-4.5"

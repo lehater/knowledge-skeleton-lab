@@ -4,7 +4,7 @@ type: knowledge
 name: "OpenTelemetry Event"
 lifecycle: enriched
 review_status: proposed
-kind: structure
+kind: data_structure
 specializes:
   - "[[knowledge/entries/opentelemetry-log-record]]"
 sources:

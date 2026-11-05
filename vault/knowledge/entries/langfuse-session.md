@@ -2,6 +2,7 @@
 id: 01a197fa-7f8c-7f34-8f63-e04ea02931b6
 type: knowledge
 name: "Langfuse Session"
+kind: data_structure
 lifecycle: enriched
 review_status: proposed
 in_topic:

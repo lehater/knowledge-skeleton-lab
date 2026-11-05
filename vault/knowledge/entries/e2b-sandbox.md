@@ -2,6 +2,7 @@
 id: 01a197da-0359-7a5a-97b0-3f37e3a288ce
 type: knowledge
 name: "E2B Sandbox"
+kind: resource
 lifecycle: enriched
 review_status: proposed
 in_topic:

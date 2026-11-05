@@ -3,7 +3,7 @@ id: 01a18e44-0a36-714a-a7d9-926a642daac2
 type: knowledge
 name: "Async/await"
 review_status: proposed
-kind: construct
+kind: program_construct
 lifecycle: enriched
 sources:
   - "https://learn.microsoft.com/en-us/dotnet/csharp/asynchronous-programming/"

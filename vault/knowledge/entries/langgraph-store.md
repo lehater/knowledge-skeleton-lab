@@ -2,7 +2,7 @@
 id: 01a197d2-2236-74b6-bf33-93e57295b290
 type: knowledge
 name: "LangGraph Store"
-kind: construct
+kind: interface
 lifecycle: enriched
 review_status: proposed
 in_topic:

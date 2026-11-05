@@ -4,7 +4,7 @@ type: knowledge
 name: "Java Executors and Futures"
 lifecycle: enriched
 review_status: proposed
-kind: mechanism
+kind: topic
 sources:
   - "https://docs.oracle.com/en/java/javase/27/docs/api/java.base/java/util/concurrent/package-summary.html"
   - "https://docs.oracle.com/en/java/javase/27/docs/api/java.base/java/util/concurrent/ExecutorService.html"

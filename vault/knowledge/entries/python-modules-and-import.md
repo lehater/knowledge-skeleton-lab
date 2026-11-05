@@ -4,7 +4,7 @@ type: knowledge
 name: "Python Modules and Import"
 lifecycle: enriched
 review_status: proposed
-kind: model
+kind: topic
 sources:
   - "https://docs.python.org/3.15/tutorial/modules.html"
   - "https://docs.python.org/3.15/reference/import.html"

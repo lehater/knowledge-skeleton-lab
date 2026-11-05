@@ -4,7 +4,7 @@ type: knowledge
 name: "Hypothesis-Driven Troubleshooting"
 lifecycle: enriched
 review_status: proposed
-kind: practice
+kind: method
 in_topic:
   - "[[knowledge/entries/reliability-engineering]]"
 sources:

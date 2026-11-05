@@ -4,7 +4,7 @@ type: knowledge
 name: "Python Numeric Types"
 lifecycle: enriched
 review_status: proposed
-kind: construct
+kind: program_construct
 sources:
   - "https://docs.python.org/3.15/builtins/stdtypes.html#numeric-types-int-float-complex"
 in_topic:

@@ -4,7 +4,7 @@ type: knowledge
 name: "Python Decorator"
 lifecycle: enriched
 review_status: proposed
-kind: construct
+kind: program_construct
 sources:
   - "https://docs.python.org/3.15/reference/compound_stmts.html#function-definitions"
   - "https://docs.python.org/3.15/reference/compound_stmts.html#class-definitions"

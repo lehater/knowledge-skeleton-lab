@@ -4,7 +4,7 @@ type: knowledge
 name: "Alertmanager Routing Tree"
 lifecycle: enriched
 review_status: proposed
-kind: structure
+kind: data_structure
 part_of:
   - "[[knowledge/entries/alertmanager-configuration]]"
 sources:

@@ -4,7 +4,7 @@ type: knowledge
 name: "Python Context Manager"
 lifecycle: enriched
 review_status: proposed
-kind: construct
+kind: program_construct
 sources:
   - "https://docs.python.org/3.15/reference/datamodel.html#with-statement-context-managers"
   - "https://docs.python.org/3.15/reference/compound_stmts.html#the-with-statement"

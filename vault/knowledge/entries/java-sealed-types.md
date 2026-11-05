@@ -4,7 +4,7 @@ type: knowledge
 name: "Java Abstract Final and Sealed Types"
 lifecycle: enriched
 review_status: proposed
-kind: construct
+kind: program_construct
 sources:
   - "https://docs.oracle.com/javase/specs/jls/se27/html/jls-8.html#jls-8.1.1"
   - "https://docs.oracle.com/javase/specs/jls/se27/html/jls-9.html#jls-9.1.1"

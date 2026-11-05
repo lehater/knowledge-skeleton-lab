@@ -2,6 +2,7 @@
 id: 01a196ec-2a78-7aad-9874-0d71be78c12f
 type: knowledge
 name: "Mid-Term Session State and Cross-Run Persistence"
+kind: topic
 lifecycle: enriched
 review_status: proposed
 in_topic:

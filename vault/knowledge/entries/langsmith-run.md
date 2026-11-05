@@ -2,6 +2,7 @@
 id: 01a197fa-80bc-78f5-a7ae-0a99697efbac
 type: knowledge
 name: "LangSmith Run"
+kind: data_structure
 lifecycle: enriched
 review_status: proposed
 in_topic:

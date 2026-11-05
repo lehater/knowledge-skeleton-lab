@@ -4,7 +4,7 @@ type: knowledge
 name: "Python"
 lifecycle: enriched
 review_status: proposed
-kind: technology
+kind: language
 sources:
   - "https://docs.python.org/3.15/tutorial/"
   - "https://docs.python.org/3.15/reference/"

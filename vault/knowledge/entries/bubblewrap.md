@@ -4,7 +4,7 @@ type: knowledge
 name: "Bubblewrap"
 lifecycle: enriched
 review_status: proposed
-kind: technology
+kind: software
 aliases:
   - "bwrap"
 in_topic:

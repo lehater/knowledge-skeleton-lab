@@ -4,13 +4,15 @@ type: knowledge
 name: "CPython Limited API and Stable ABI"
 lifecycle: enriched
 review_status: proposed
-kind: construct
+kind: topic
 sources:
   - "https://docs.python.org/3.15/c-api/stable.html"
 in_topic:
   - "[[knowledge/entries/python-implementations-and-integration]]"
 ---
 # CPython Limited API and Stable ABI
+
+CPython Limited API and Stable ABI — обзор связи Limited C API и Stable ABI CPython.
 
 Limited API ограничивает доступный C API, а Stable ABI позволяет скомпилированному расширению работать с совместимыми последующими версиями CPython без перекомпиляции. Вход — расширение, собранное против выбранного ABI; выход — двоично совместимый модуль в пределах этого контракта.
 

@@ -4,7 +4,7 @@ type: knowledge
 name: "Java Memory and Lifetime"
 lifecycle: enriched
 review_status: proposed
-kind: model
+kind: topic
 sources:
   - "https://docs.oracle.com/javase/specs/jls/se27/html/jls-12.html"
   - "https://docs.oracle.com/javase/specs/jvms/se27/html/jvms-2.html"

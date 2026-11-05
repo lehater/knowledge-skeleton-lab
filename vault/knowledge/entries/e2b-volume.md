@@ -4,7 +4,7 @@ type: knowledge
 name: "E2B Volume"
 lifecycle: enriched
 review_status: proposed
-kind: technology
+kind: resource
 in_topic:
   - "[[knowledge/entries/e2b-sandbox]]"
 sources:

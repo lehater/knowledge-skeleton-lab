@@ -4,7 +4,7 @@ type: knowledge
 name: "Python Mutability and Aliasing"
 lifecycle: enriched
 review_status: proposed
-kind: property
+kind: topic
 sources:
   - "https://docs.python.org/3.15/reference/datamodel.html#objects-values-and-types"
   - "https://docs.python.org/3.15/tutorial/classes.html#a-word-about-names-and-objects"

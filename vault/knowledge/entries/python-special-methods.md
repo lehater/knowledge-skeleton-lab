@@ -4,7 +4,7 @@ type: knowledge
 name: "Python Special Methods"
 lifecycle: enriched
 review_status: proposed
-kind: mechanism
+kind: program_construct
 sources:
   - "https://docs.python.org/3.15/reference/datamodel.html#special-method-names"
 in_topic:

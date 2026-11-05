@@ -2,6 +2,7 @@
 id: 01a197da-291b-7bae-bc38-3e7d97392fea
 type: knowledge
 name: "WebArena"
+kind: software
 lifecycle: enriched
 review_status: proposed
 in_topic:

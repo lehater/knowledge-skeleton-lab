@@ -4,13 +4,15 @@ type: knowledge
 name: "Python Traceback"
 lifecycle: enriched
 review_status: proposed
-kind: artifact
+kind: program_construct
 sources:
   - "https://docs.python.org/3.15/reference/datamodel.html#traceback-objects"
 in_topic:
   - "[[knowledge/entries/python-exceptions-and-resources]]"
 ---
 # Python Traceback
+
+Python Traceback — формальный runtime-тип traceback object Python.
 
 Traceback представляет путь распространения исключения через execution frames с положениями в коде. При раскрутке стека добавляются связанные traceback objects; исключение предоставляет их через __traceback__. Это вход для диагностики причины и места отказа.
 

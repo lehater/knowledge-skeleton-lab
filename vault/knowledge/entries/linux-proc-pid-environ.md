@@ -2,6 +2,7 @@
 id: 01a197e4-f6ed-7a55-af77-8ab13e4a0bdb
 type: knowledge
 name: "Linux /proc/pid/environ"
+kind: interface
 lifecycle: enriched
 review_status: proposed
 sources:

@@ -2,6 +2,7 @@
 id: 01a196ec-2a78-7deb-a70e-648cd3c6ba65
 type: knowledge
 name: "Agent-Specific Operations Platforms"
+kind: software
 lifecycle: enriched
 review_status: proposed
 in_topic:

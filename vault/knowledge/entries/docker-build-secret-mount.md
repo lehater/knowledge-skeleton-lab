@@ -2,6 +2,7 @@
 id: 01a197e4-f772-7660-98a7-b6f3263c05d9
 type: knowledge
 name: "Docker Build Secret Mount"
+kind: mechanism
 lifecycle: enriched
 review_status: proposed
 in_topic:

@@ -4,7 +4,7 @@ type: knowledge
 name: "Python Execution Frame"
 lifecycle: enriched
 review_status: proposed
-kind: structure
+kind: program_construct
 sources:
   - "https://docs.python.org/3.15/reference/executionmodel.html#structure-of-a-program"
   - "https://docs.python.org/3.15/reference/datamodel.html#frame-objects"
@@ -14,6 +14,8 @@ in_topic:
   - "[[knowledge/entries/reflection]]"
 ---
 # Python Execution Frame
+
+Python Execution Frame — формальный runtime-тип frame object Python.
 
 Frame содержит контекст конкретного выполнения блока: исполняемый code object, пространства имён и сведения о продолжении. Он позволяет интерпретатору продолжать вычисление, а отладчику и traceback — наблюдать его состояние.
 

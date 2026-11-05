@@ -4,7 +4,7 @@ type: knowledge
 name: "Java"
 lifecycle: enriched
 review_status: proposed
-kind: technology
+kind: language
 sources:
   - "https://docs.oracle.com/javase/specs/jls/se27/html/jls-1.html"
   - "https://docs.oracle.com/javase/specs/jls/se27/html/index.html"

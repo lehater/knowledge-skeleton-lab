@@ -4,7 +4,7 @@ type: knowledge
 name: "OpenTelemetry"
 lifecycle: enriched
 review_status: proposed
-kind: technology
+kind: software
 aliases:
   - "OTel"
 in_topic:

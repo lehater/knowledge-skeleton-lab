@@ -2,6 +2,7 @@
 id: 01a196ec-2a78-7244-a41e-5413331e95fd
 type: knowledge
 name: "Permission Models and Identity Management"
+kind: topic
 lifecycle: enriched
 review_status: proposed
 in_topic:

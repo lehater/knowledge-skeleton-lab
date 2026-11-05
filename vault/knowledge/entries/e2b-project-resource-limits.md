@@ -4,7 +4,7 @@ type: knowledge
 name: "E2B Project Resource Limits"
 lifecycle: enriched
 review_status: proposed
-kind: mechanism
+kind: constraint
 in_topic:
   - "[[knowledge/entries/e2b-sandbox]]"
 sources:

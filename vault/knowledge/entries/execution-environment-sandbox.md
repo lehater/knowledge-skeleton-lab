@@ -2,6 +2,7 @@
 id: 01a196ec-2a78-79d8-8c62-b34a5e1b0a24
 type: knowledge
 name: "Execution Environment & Sandbox"
+kind: topic
 lifecycle: enriched
 review_status: proposed
 in_topic:

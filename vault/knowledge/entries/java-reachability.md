@@ -4,7 +4,7 @@ type: knowledge
 name: "Java Reachability and Reference Objects"
 lifecycle: enriched
 review_status: proposed
-kind: mechanism
+kind: topic
 sources:
   - "https://docs.oracle.com/en/java/javase/27/docs/api/java.base/java/lang/ref/package-summary.html"
 in_topic:

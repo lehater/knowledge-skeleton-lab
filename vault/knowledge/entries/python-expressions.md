@@ -4,7 +4,7 @@ type: knowledge
 name: "Python Expressions"
 lifecycle: enriched
 review_status: proposed
-kind: construct
+kind: program_construct
 sources:
   - "https://docs.python.org/3.15/reference/expressions.html"
 in_topic:

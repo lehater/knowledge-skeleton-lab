@@ -4,7 +4,7 @@ type: knowledge
 name: "Java Arbitrary-Precision Numbers"
 lifecycle: enriched
 review_status: proposed
-kind: model
+kind: topic
 sources:
   - "https://docs.oracle.com/en/java/javase/27/docs/api/java.base/java/math/package-summary.html"
 in_topic:

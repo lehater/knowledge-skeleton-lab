@@ -4,7 +4,7 @@ type: knowledge
 name: "Python Sets"
 lifecycle: enriched
 review_status: proposed
-kind: construct
+kind: program_construct
 sources:
   - "https://docs.python.org/3.15/builtins/stdtypes.html#set-types-set-frozenset"
 in_topic:

@@ -2,7 +2,7 @@
 id: 01a197c2-3249-7409-b57e-b6dc0df6e494
 type: knowledge
 name: "MCP Tool Definition"
-kind: construct
+kind: data_structure
 lifecycle: enriched
 review_status: proposed
 in_topic:

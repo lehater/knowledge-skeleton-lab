@@ -4,7 +4,7 @@ type: knowledge
 name: "OpenTelemetry Collector Processor"
 lifecycle: enriched
 review_status: proposed
-kind: mechanism
+kind: component
 part_of:
   - "[[knowledge/entries/opentelemetry-collector-pipeline]]"
 sources:

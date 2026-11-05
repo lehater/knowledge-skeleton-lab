@@ -4,7 +4,7 @@ type: knowledge
 name: "Inspect AI Scoring Policy"
 lifecycle: enriched
 review_status: proposed
-kind: mechanism
+kind: specification
 in_topic:
   - "[[knowledge/entries/multi-level-judgement-and-failure-attribution]]"
   - "[[knowledge/entries/inspect-ai-scorer]]"
@@ -12,6 +12,8 @@ sources:
   - "https://inspect.aisi.org.uk/scoring-policy.html"
 ---
 # Inspect AI Scoring Policy
+
+Inspect AI Scoring Policy — правила различения scored verdict, ошибки исполнения и unscored результата.
 
 Политика Inspect отделяет вердикт о проверяемой модели от неисправности оценивания. Неверный ответ или нарушение требуемого формата остаётся scored verdict. Exception записывается в `sample.error`; `Score.unscored()` сохраняет причину без численного вердикта. `None` означает отсутствие записи этого scorer.
 

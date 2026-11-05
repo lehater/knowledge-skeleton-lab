@@ -2,7 +2,7 @@
 id: 01a197c2-324a-7e42-b124-a586d64be6a1
 type: knowledge
 name: "MCP Tool Annotations"
-kind: construct
+kind: data_structure
 lifecycle: enriched
 review_status: proposed
 part_of:

@@ -2,6 +2,7 @@
 id: 01a196ec-2a78-7d96-8d3a-82dd8d6782dd
 type: knowledge
 name: "Declarative Constitutions"
+kind: specification
 lifecycle: enriched
 review_status: proposed
 in_topic:
@@ -12,6 +13,8 @@ sources:
   - "https://code.claude.com/docs/en/permissions"
 ---
 # Declarative Constitutions
+
+Declarative Constitutions — декларативно заданные правила допустимого поведения.
 
 Декларативная конституция выражает принципы допустимого поведения отдельно от пошаговой логики задачи. Её назначение — сделать правила явными и доступными для применения и изменения. Нужно различать принципы, формирующие поведение модели, и исполняемую конфигурацию runtime.
 

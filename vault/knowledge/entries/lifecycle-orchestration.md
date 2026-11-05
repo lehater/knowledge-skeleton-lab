@@ -2,6 +2,7 @@
 id: 01a196ec-2a78-7487-ad21-699de4d89249
 type: knowledge
 name: "Lifecycle & Orchestration"
+kind: topic
 lifecycle: enriched
 review_status: proposed
 in_topic:

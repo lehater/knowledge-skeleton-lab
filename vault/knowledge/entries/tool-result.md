@@ -2,7 +2,7 @@
 id: 01a197aa-877b-74d9-b65d-9e639ecc2e9a
 type: knowledge
 name: "Tool Result"
-kind: construct
+kind: data_structure
 lifecycle: enriched
 review_status: proposed
 in_topic:

@@ -4,7 +4,7 @@ type: knowledge
 name: "Python Code Object"
 lifecycle: enriched
 review_status: proposed
-kind: artifact
+kind: program_construct
 sources:
   - "https://docs.python.org/3.15/reference/datamodel.html#code-objects"
   - "https://docs.python.org/3.15/library/ast.html"
@@ -14,6 +14,8 @@ in_topic:
   - "[[knowledge/entries/reflection]]"
 ---
 # Python Code Object
+
+Python Code Object — формальный runtime-тип code object Python.
 
 Code object представляет скомпилированный исполняемый код и метаданные: имена, константы и сведения о параметрах/строках. compile может сформировать его из исходного кода или AST. Функция хранит ссылку на code object вместе с globals, defaults и closure.
 

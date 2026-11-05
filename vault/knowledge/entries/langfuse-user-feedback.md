@@ -2,6 +2,7 @@
 id: 01a197fa-8045-7efb-92c2-2538617bcef5
 type: knowledge
 name: "Langfuse User Feedback"
+kind: mechanism
 lifecycle: enriched
 review_status: proposed
 part_of:

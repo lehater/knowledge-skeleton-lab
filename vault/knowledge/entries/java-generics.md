@@ -4,7 +4,7 @@ type: knowledge
 name: "Java Generics"
 lifecycle: enriched
 review_status: proposed
-kind: model
+kind: mechanism
 sources:
   - "https://docs.oracle.com/javase/specs/jls/se27/html/jls-4.html"
   - "https://docs.oracle.com/javase/specs/jls/se27/html/jls-5.html"

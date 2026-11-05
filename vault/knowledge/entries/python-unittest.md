@@ -4,7 +4,7 @@ type: knowledge
 name: "Python unittest"
 lifecycle: enriched
 review_status: proposed
-kind: technology
+kind: software
 sources:
   - "https://docs.python.org/3.15/library/unittest.html"
 in_topic:

@@ -6,7 +6,7 @@ lifecycle: enriched
 review_status: proposed
 in_topic:
   - "[[knowledge/entries/tracing-and-monitoring-platforms]]"
-kind: technology
+kind: software
 executes:
   - "[[knowledge/entries/prometheus-alerting-rule]]"
 sources:

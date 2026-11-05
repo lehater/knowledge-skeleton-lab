@@ -4,7 +4,7 @@ type: knowledge
 name: "Docker Volume"
 lifecycle: enriched
 review_status: proposed
-kind: technology
+kind: resource
 in_topic:
   - "[[knowledge/entries/execution-environment-sandbox]]"
 sources:

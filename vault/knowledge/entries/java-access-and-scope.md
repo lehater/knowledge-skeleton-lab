@@ -4,7 +4,7 @@ type: knowledge
 name: "Java Access Control and Scope"
 lifecycle: enriched
 review_status: proposed
-kind: mechanism
+kind: topic
 sources:
   - "https://docs.oracle.com/javase/specs/jls/se27/html/jls-6.html#jls-6.3"
   - "https://docs.oracle.com/javase/specs/jls/se27/html/jls-6.html#jls-6.6"

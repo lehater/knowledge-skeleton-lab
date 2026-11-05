@@ -4,14 +4,13 @@ type: knowledge
 name: "Java Platform Services"
 lifecycle: enriched
 review_status: proposed
-kind: technology
+kind: topic
 sources:
   - "https://docs.oracle.com/en/java/javase/27/docs/api/index.html"
   - "https://docs.oracle.com/en/java/javase/27/docs/api/java.sql/java/sql/package-summary.html"
-part_of:
-  - "[[knowledge/entries/java-se]]"
 in_topic:
   - "[[knowledge/entries/java-platform-and-library]]"
+  - "[[knowledge/entries/java-se]]"
 ---
 # Java Platform Services
 

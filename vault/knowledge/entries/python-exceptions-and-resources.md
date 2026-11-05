@@ -4,7 +4,7 @@ type: knowledge
 name: "Python Exceptions and Resource Handling"
 lifecycle: enriched
 review_status: proposed
-kind: model
+kind: topic
 sources:
   - "https://docs.python.org/3.15/tutorial/errors.html"
   - "https://docs.python.org/3.15/reference/compound_stmts.html#the-try-statement"

@@ -4,7 +4,7 @@ type: knowledge
 name: "Python Iterator"
 lifecycle: enriched
 review_status: proposed
-kind: construct
+kind: program_construct
 sources:
   - "https://docs.python.org/3.15/tutorial/classes.html#iterators"
   - "https://docs.python.org/3.15/builtins/stdtypes.html#iterator-types"

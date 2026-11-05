@@ -2,7 +2,7 @@
 id: 01a195fd-0b9f-7504-a633-cd9a9e313d46
 type: knowledge
 name: "Long-running Agent Harness"
-kind: mechanism
+kind: component
 lifecycle: enriched
 review_status: proposed
 specializes:
@@ -11,6 +11,8 @@ sources:
   - "https://www.anthropic.com/research/effective-harnesses-for-long-running-agents"
 ---
 # Long-running Agent Harness
+
+Long-running Agent Harness — harness для координации длительной работы через несколько сеансов.
 
 Long-running Agent Harness организует продвижение по задаче через множество сеансов с разными контекстными окнами.
 

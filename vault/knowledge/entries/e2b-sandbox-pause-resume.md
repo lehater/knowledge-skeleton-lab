@@ -2,6 +2,7 @@
 id: 01a197da-040f-770e-bb02-d4cd23ca8229
 type: knowledge
 name: "E2B Sandbox Pause and Resume"
+kind: mechanism
 lifecycle: enriched
 review_status: proposed
 in_topic:

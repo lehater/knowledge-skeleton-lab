@@ -2,6 +2,7 @@
 id: 01a197e4-f7ae-70e5-b6b5-691241f492ed
 type: knowledge
 name: "Docker Swarm Secret"
+kind: resource
 lifecycle: enriched
 review_status: proposed
 in_topic:

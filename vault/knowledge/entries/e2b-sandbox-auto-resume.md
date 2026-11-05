@@ -2,6 +2,7 @@
 id: 01a197e5-4949-7bb2-8cf9-0b5f7bb9253f
 type: knowledge
 name: "E2B Sandbox Auto-Resume"
+kind: mechanism
 lifecycle: enriched
 review_status: proposed
 in_topic:

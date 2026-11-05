@@ -4,7 +4,7 @@ type: knowledge
 name: "Python Sequences"
 lifecycle: enriched
 review_status: proposed
-kind: construct
+kind: program_construct
 sources:
   - "https://docs.python.org/3.15/builtins/stdtypes.html#sequence-types-list-tuple-range"
   - "https://docs.python.org/3.15/builtins/stdtypes.html#text-sequence-type-str"

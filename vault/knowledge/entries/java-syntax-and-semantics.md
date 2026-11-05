@@ -4,7 +4,7 @@ type: knowledge
 name: "Java Syntax and Semantics"
 lifecycle: enriched
 review_status: proposed
-kind: model
+kind: topic
 sources:
   - "https://docs.oracle.com/javase/specs/jls/se27/html/jls-3.html"
   - "https://docs.oracle.com/javase/specs/jls/se27/html/jls-14.html"

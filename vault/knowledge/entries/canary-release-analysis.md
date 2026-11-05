@@ -4,7 +4,7 @@ type: knowledge
 name: "Canary Release Analysis"
 lifecycle: enriched
 review_status: proposed
-kind: practice
+kind: method
 in_topic:
   - "[[knowledge/entries/reliability-engineering]]"
   - "[[knowledge/entries/continuous-regression-and-deployment-feedback]]"

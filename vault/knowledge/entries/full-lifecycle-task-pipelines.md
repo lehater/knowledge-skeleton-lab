@@ -2,6 +2,7 @@
 id: 01a196ec-2a78-724a-af9f-1d9d5a2bc1c4
 type: knowledge
 name: "Full Lifecycle Task Pipelines"
+kind: process
 lifecycle: enriched
 review_status: proposed
 in_topic:

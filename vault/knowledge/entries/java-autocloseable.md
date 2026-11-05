@@ -4,7 +4,7 @@ type: knowledge
 name: "Java AutoCloseable"
 lifecycle: enriched
 review_status: proposed
-kind: construct
+kind: program_construct
 sources:
   - "https://docs.oracle.com/en/java/javase/27/docs/api/java.base/java/lang/AutoCloseable.html"
 in_topic:

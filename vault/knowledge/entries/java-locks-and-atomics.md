@@ -4,7 +4,7 @@ type: knowledge
 name: "Java Locks and Atomics"
 lifecycle: enriched
 review_status: proposed
-kind: mechanism
+kind: topic
 sources:
   - "https://docs.oracle.com/en/java/javase/27/docs/api/java.base/java/util/concurrent/locks/package-summary.html"
   - "https://docs.oracle.com/en/java/javase/27/docs/api/java.base/java/util/concurrent/atomic/package-summary.html"

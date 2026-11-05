@@ -4,7 +4,7 @@ type: knowledge
 name: "Python Class"
 lifecycle: enriched
 review_status: proposed
-kind: construct
+kind: program_construct
 sources:
   - "https://docs.python.org/3.15/tutorial/classes.html"
   - "https://docs.python.org/3.15/reference/datamodel.html#basic-customization"

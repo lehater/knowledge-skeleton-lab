@@ -2,6 +2,7 @@
 id: 01a197da-2a11-76f6-9682-c36d24225c1d
 type: knowledge
 name: "Claude Computer Use Tool"
+kind: interface
 lifecycle: enriched
 review_status: proposed
 in_topic:

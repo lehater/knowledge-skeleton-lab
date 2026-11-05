@@ -2,6 +2,7 @@
 id: 01a197da-29c4-793e-a9af-28afc4bc56fd
 type: knowledge
 name: "OSWorld Task Configuration"
+kind: artifact
 lifecycle: enriched
 review_status: proposed
 part_of:

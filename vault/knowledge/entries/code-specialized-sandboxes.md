@@ -2,6 +2,7 @@
 id: 01a196ec-2a78-7211-9c6b-32798694b0ff
 type: knowledge
 name: "Code-Specialized Sandboxes"
+kind: resource
 lifecycle: enriched
 review_status: proposed
 in_topic:

@@ -4,7 +4,7 @@ type: knowledge
 name: "Python Mappings"
 lifecycle: enriched
 review_status: proposed
-kind: construct
+kind: program_construct
 sources:
   - "https://docs.python.org/3.15/builtins/stdtypes.html#mapping-types-dict-frozendict"
   - "https://docs.python.org/3.15/whatsnew/3.15.html#pep-814-add-frozendict-built-in-type"

@@ -4,7 +4,7 @@ type: knowledge
 name: "Java Import Declarations"
 lifecycle: enriched
 review_status: proposed
-kind: construct
+kind: program_construct
 sources:
   - "https://docs.oracle.com/javase/specs/jls/se27/html/jls-7.html#jls-7.5"
   - "https://docs.oracle.com/javase/specs/jls/se27/html/jls-12.html#jls-12.4.1"

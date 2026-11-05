@@ -4,7 +4,7 @@ type: knowledge
 name: "Java Lambda Expressions"
 lifecycle: enriched
 review_status: proposed
-kind: construct
+kind: program_construct
 sources:
   - "https://docs.oracle.com/javase/specs/jls/se27/html/jls-15.html#jls-15.27"
   - "https://www.cs.tufts.edu/comp/150FP/archive/peter-landin/mechanical-eval.pdf"

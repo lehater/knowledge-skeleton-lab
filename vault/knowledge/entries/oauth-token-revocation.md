@@ -2,6 +2,7 @@
 id: 01a197e4-f8a7-7702-a4bb-70aceddb9eb4
 type: knowledge
 name: "OAuth 2.0 Token Revocation"
+kind: mechanism
 lifecycle: enriched
 review_status: proposed
 in_topic:

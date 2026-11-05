@@ -2,6 +2,7 @@
 id: 01a197fa-d8c3-7cd3-bdd4-2540355a42c9
 type: knowledge
 name: "OpenTelemetry GenAI Agent Spans"
+kind: data_structure
 lifecycle: enriched
 review_status: proposed
 in_topic:

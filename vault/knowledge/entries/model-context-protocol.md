@@ -2,7 +2,7 @@
 id: 01a197c2-3248-7f96-844a-82a5d1d539fe
 type: knowledge
 name: "Model Context Protocol (MCP)"
-kind: technology
+kind: protocol
 lifecycle: enriched
 review_status: proposed
 in_topic:

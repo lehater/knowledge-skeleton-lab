@@ -2,6 +2,7 @@
 id: 01a196ec-2a78-77bd-9bef-353724233651
 type: knowledge
 name: "Context & Memory Management"
+kind: topic
 lifecycle: enriched
 review_status: proposed
 in_topic:

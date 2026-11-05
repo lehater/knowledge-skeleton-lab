@@ -2,6 +2,7 @@
 id: 01a197da-0534-7495-9423-ad8413593b54
 type: knowledge
 name: "Deep Agents LocalShellBackend"
+kind: program_construct
 lifecycle: enriched
 review_status: proposed
 in_topic:

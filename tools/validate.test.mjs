@@ -124,3 +124,31 @@ test("reject stray Canvas or other non-Knowledge file in entries", () => {
     assert.ok(validateVault(f.dir).issues.some(s => s.includes("unexpected file in Knowledge entries")));
   } finally { f.clean(); }
 });
+
+test("all 27 reference kinds are accepted and legacy kinds rejected", () => {
+  const candidateKinds = ["topic","model","principle","property","constraint","requirement","goal","metric","practice","method","algorithm","process","solution_pattern","mechanism","program_construct","data_structure","software","language","component","resource","interface","protocol","specification","artifact","role","event","problem"];
+  const legacyKinds = ["construct", "structure", "technology", "pattern", "result"];
+  for (const [expected, kindsToTest] of [[true, candidateKinds], [false, legacyKinds]]) {
+    for (const kind of kindsToTest) {
+      const f = fixture();
+      try {
+        f.write("knowledge/entries/a.md", note(1, "A", "kind: " + kind));
+        const result = validateVault(f.dir);
+        assert.equal(result.ok, expected, kind + " / " + result.issues.join("; "));
+      } finally { f.clean(); }
+    }
+  }
+});
+
+test("kind remains optional and does not constrain typed relation endpoints", () => {
+  const f = fixture();
+  try {
+    f.write("knowledge/entries/a.md", note(1, "A", 'kind: software\nrealizes:\n  - "[[knowledge/entries/b]]"'));
+    f.write("knowledge/entries/b.md", note(2, "B", "kind: language"));
+    f.write("knowledge/entries/c.md", note(3, "C", 'kind: topic\nin_topic:\n  - "[[knowledge/entries/b]]"'));
+    f.write("knowledge/entries/d.md", note(4, "D"));
+    const r = validateVault(f.dir);
+    assert.equal(r.ok, true, r.issues.join("; "));
+    assert.deepEqual(r.counts, {knowledge: 4, links: 2});
+  } finally { f.clean(); }
+});

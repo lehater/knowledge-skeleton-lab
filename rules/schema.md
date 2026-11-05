@@ -14,7 +14,7 @@
 
 Необязательные поля:
 - `aliases`: альтернативные имена **того же** референта;
-- `kind`: `artifact | construct | mechanism | model | pattern | practice | problem | property | result | structure | technology`;
+- `kind`: одно необязательное значение из [kinds.md](kinds.md) (27 значений, определения и границы обязательны при выборе);
 - связи: `in_topic`, `broader`, `specializes`, `part_of`, `realizes`, `schedules`, `executes`, `manages` (см. [relations.md](relations.md)).
 
 Каждая связь — список quoted wikilink вида `"[[knowledge/entries/slug]]"` (от `vault/`, без `.md`). Обратные ссылки вычисляются.

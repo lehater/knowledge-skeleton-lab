@@ -4,7 +4,7 @@ type: knowledge
 name: "Inspect AI Scorer"
 lifecycle: enriched
 review_status: proposed
-kind: mechanism
+kind: program_construct
 in_topic:
   - "[[knowledge/entries/inspect-ai-task]]"
 sources:

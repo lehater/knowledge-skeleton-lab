@@ -4,7 +4,7 @@ type: knowledge
 name: "Python Exception"
 lifecycle: enriched
 review_status: proposed
-kind: construct
+kind: program_construct
 sources:
   - "https://docs.python.org/3.15/builtins/exceptions.html"
   - "https://docs.python.org/3.15/tutorial/errors.html"

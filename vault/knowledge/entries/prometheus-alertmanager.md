@@ -4,7 +4,7 @@ type: knowledge
 name: "Prometheus Alertmanager"
 lifecycle: enriched
 review_status: proposed
-kind: technology
+kind: software
 in_topic:
   - "[[knowledge/entries/reliability-engineering]]"
 sources:

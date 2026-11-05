@@ -4,7 +4,7 @@ type: knowledge
 name: "Service Level Indicator"
 lifecycle: enriched
 review_status: proposed
-kind: model
+kind: metric
 in_topic:
   - "[[knowledge/entries/reliability-engineering]]"
 sources:

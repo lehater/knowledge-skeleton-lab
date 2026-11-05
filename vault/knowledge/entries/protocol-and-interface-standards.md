@@ -2,6 +2,7 @@
 id: 01a196ec-2a78-7a27-9b34-e8cf943319bd
 type: knowledge
 name: "Protocol and Interface Standards"
+kind: topic
 lifecycle: enriched
 review_status: proposed
 in_topic:

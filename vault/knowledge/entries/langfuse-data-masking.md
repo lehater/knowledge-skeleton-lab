@@ -2,6 +2,7 @@
 id: 01a197fa-7fce-7425-a7b3-1aaaf9933a16
 type: knowledge
 name: "Langfuse Data Masking"
+kind: mechanism
 lifecycle: enriched
 review_status: proposed
 part_of:

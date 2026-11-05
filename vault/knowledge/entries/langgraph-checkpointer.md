@@ -2,7 +2,7 @@
 id: 01a197d2-2235-766c-a053-ef19d876d063
 type: knowledge
 name: "LangGraph Checkpointer"
-kind: construct
+kind: component
 lifecycle: enriched
 review_status: proposed
 in_topic:
@@ -12,6 +12,8 @@ sources:
   - "https://docs.langchain.com/oss/python/langgraph/persistence"
 ---
 # LangGraph Checkpointer
+
+LangGraph Checkpointer — checkpointer как ответственная подсистема сохранения состояния thread.
 
 LangGraph Checkpointer — компонент сохранения состояния графа в виде **checkpoints** для отдельного `thread_id`.
 

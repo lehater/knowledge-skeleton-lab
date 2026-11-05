@@ -2,6 +2,7 @@
 id: 01a197fa-d900-7d0d-9512-4dbfe06e90eb
 type: knowledge
 name: "OpenTelemetry GenAI Inference Span"
+kind: data_structure
 lifecycle: enriched
 review_status: proposed
 specializes:

@@ -2,6 +2,7 @@
 id: 01a197fa-d888-7917-a1f0-c2d0d5623e43
 type: knowledge
 name: "OpenTelemetry GenAI Semantic Conventions"
+kind: specification
 lifecycle: enriched
 review_status: proposed
 in_topic:

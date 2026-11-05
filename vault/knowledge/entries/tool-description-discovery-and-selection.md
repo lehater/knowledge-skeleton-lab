@@ -2,6 +2,7 @@
 id: 01a196ec-2a78-7d15-bda4-e2bec72d67a0
 type: knowledge
 name: "Tool Description, Discovery, and Selection"
+kind: topic
 lifecycle: enriched
 review_status: proposed
 in_topic:

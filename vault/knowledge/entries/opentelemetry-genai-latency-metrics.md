@@ -2,6 +2,7 @@
 id: 01a197fa-d9c2-72cc-953e-413e83cd99b9
 type: knowledge
 name: "OpenTelemetry GenAI Latency Metrics"
+kind: metric
 lifecycle: enriched
 review_status: proposed
 in_topic:

@@ -4,7 +4,7 @@ type: knowledge
 name: "Java String"
 lifecycle: enriched
 review_status: proposed
-kind: model
+kind: program_construct
 sources:
   - "https://docs.oracle.com/en/java/javase/27/docs/api/java.base/java/lang/String.html"
 in_topic:

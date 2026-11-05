@@ -4,7 +4,7 @@ type: knowledge
 name: "OpenTelemetry Trace"
 lifecycle: enriched
 review_status: proposed
-kind: structure
+kind: data_structure
 in_topic:
   - "[[knowledge/entries/opentelemetry]]"
 sources:

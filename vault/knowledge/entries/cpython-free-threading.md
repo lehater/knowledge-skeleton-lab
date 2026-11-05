@@ -4,7 +4,7 @@ type: knowledge
 name: "CPython Free Threading"
 lifecycle: enriched
 review_status: proposed
-kind: mechanism
+kind: property
 sources:
   - "https://docs.python.org/3.15/howto/free-threading-python.html"
 in_topic:
@@ -12,6 +12,8 @@ in_topic:
   - "[[knowledge/entries/parallelism]]"
 ---
 # CPython Free Threading
+
+CPython Free Threading — возможность CPython исполнять Python-код без глобального GIL.
 
 Free-threaded сборка CPython позволяет исполнять Python-код несколькими потоками параллельно при отключённом GIL. Она доступна начиная с 3.13 и меняет механизмы защиты объектов и управления ссылками; выигрыш зависит от характера нагрузки.
 

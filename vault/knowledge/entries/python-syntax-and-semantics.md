@@ -4,7 +4,7 @@ type: knowledge
 name: "Python Syntax and Semantics"
 lifecycle: enriched
 review_status: proposed
-kind: model
+kind: topic
 sources:
   - "https://docs.python.org/3.15/reference/lexical_analysis.html"
   - "https://docs.python.org/3.15/reference/expressions.html"

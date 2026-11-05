@@ -2,6 +2,7 @@
 id: 01a196ec-2a78-7b95-bf33-8c1299d83b10
 type: knowledge
 name: "Browser Evaluation Environments"
+kind: component
 lifecycle: enriched
 review_status: proposed
 in_topic:

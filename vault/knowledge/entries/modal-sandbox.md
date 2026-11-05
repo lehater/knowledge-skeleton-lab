@@ -2,6 +2,7 @@
 id: 01a197da-0445-7c99-9b29-58321a19e444
 type: knowledge
 name: "Modal Sandbox"
+kind: resource
 lifecycle: enriched
 review_status: proposed
 in_topic:

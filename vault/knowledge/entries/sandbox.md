@@ -2,6 +2,7 @@
 id: 01a197d9-e226-73bf-af20-8051480a8d87
 type: knowledge
 name: "Sandbox"
+kind: resource
 lifecycle: enriched
 review_status: proposed
 sources:

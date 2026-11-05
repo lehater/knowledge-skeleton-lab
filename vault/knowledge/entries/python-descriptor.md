@@ -4,7 +4,7 @@ type: knowledge
 name: "Python Descriptor"
 lifecycle: enriched
 review_status: proposed
-kind: mechanism
+kind: program_construct
 sources:
   - "https://docs.python.org/3.15/howto/descriptor.html"
 in_topic:
