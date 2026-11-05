@@ -12,7 +12,7 @@ sources:
 ---
 # MCP Tool Output Schema
 
-MCP Tool Output Schema — jSON Schema структурированного результата инструмента.
+MCP Tool Output Schema — JSON Schema структурированного результата инструмента.
 
 `outputSchema` — необязательное поле определения MCP-инструмента, описывающее структуру результата `structuredContent` в JSON Schema.
 

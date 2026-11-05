@@ -7,7 +7,7 @@ review_status: proposed
 kind: protocol
 aliases:
   - "OTLP"
-part_of:
+in_topic:
   - "[[knowledge/entries/opentelemetry]]"
 sources:
   - "https://opentelemetry.io/docs/specs/otlp/"

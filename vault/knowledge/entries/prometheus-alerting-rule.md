@@ -5,7 +5,7 @@ name: "Prometheus Alerting Rule"
 lifecycle: enriched
 review_status: proposed
 kind: specification
-part_of:
+in_topic:
   - "[[knowledge/entries/prometheus]]"
 sources:
   - "https://prometheus.io/docs/prometheus/latest/configuration/alerting_rules/"

@@ -9,12 +9,11 @@ sources:
   - "https://docs.python.org/3/library/asyncio-task.html"
   - "https://docs.python.org/3.15/library/asyncio-task.html#task-object"
   - "https://docs.python.org/3.15/library/asyncio-task.html#eager-task-factory"
-realizes:
-  - "[[knowledge/entries/asynchronous-task]]"
 executes:
   - "[[knowledge/entries/python-coroutine-object]]"
 in_topic:
   - "[[knowledge/entries/python-concurrency]]"
+  - "[[knowledge/entries/asynchronous-task]]"
   - "[[knowledge/entries/cooperative-task-scheduling]]"
   - "[[knowledge/entries/task-cancellation]]"
   - "[[knowledge/entries/task-lifecycle]]"

@@ -10,7 +10,6 @@ sources:
   - "https://isocpp.github.io/CppCoreGuidelines/CppCoreGuidelines#Rr-raii"
 in_topic:
   - "[[knowledge/entries/java-exceptions-and-resources]]"
-realizes:
   - "[[knowledge/entries/resource-management]]"
 ---
 # Java Try-with-Resources

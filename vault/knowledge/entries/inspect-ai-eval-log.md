@@ -12,8 +12,8 @@ sources:
 ---
 # Inspect AI EvalLog
 
-Inspect AI EvalLog — aPI-тип EvalLog, задающий структуру журнала Inspect.
+Inspect AI EvalLog — API-тип `inspect_ai.log.EvalLog`, представляющий данные оценочного запуска и предоставляющий программный доступ к ним.
 
-EvalLog — запись оценочного исполнения Inspect: task/model specification, solver plan, aggregate results, usage, ошибки и samples с входом, выходом, target и score. Поле status отделяет завершённый запуск от ошибочного. `read_eval_log` и чтение отдельных samples дают программный доступ.
+Тип `EvalLog` содержит данные оценочного исполнения Inspect: task/model specification, solver plan, aggregate results, usage, ошибки и samples с входом, выходом, target и score. Поле status отделяет завершённый запуск от ошибочного. `read_eval_log` и чтение отдельных samples дают программный доступ.
 
-История messages и events позволяет исследовать попытку; крупное содержимое может храниться как attachments и требовать разрешения ссылок. EvalLog — артефакт оценки, отличный от общего распределённого span и от сохранённой памяти выполняемого агента.
+История messages и events позволяет исследовать попытку; крупное содержимое может храниться как attachments и требовать разрешения ссылок. Сериализованный `.eval`/`.json`-файл является отдельным артефактом; `EvalLog` — тип объекта API, а не файл, span или память агента.

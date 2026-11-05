@@ -10,7 +10,6 @@ sources:
   - "https://doc.rust-lang.org/book/ch16-01-threads.html"
 in_topic:
   - "[[knowledge/entries/java-concurrency]]"
-realizes:
   - "[[knowledge/entries/thread]]"
 ---
 # Java Thread

@@ -5,7 +5,7 @@ name: "LangSmith Feedback"
 kind: data_structure
 lifecycle: enriched
 review_status: proposed
-part_of:
+in_topic:
   - "[[knowledge/entries/langsmith-observability]]"
 sources:
   - "https://docs.langchain.com/langsmith/feedback-data-format"

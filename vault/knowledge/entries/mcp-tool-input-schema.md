@@ -12,7 +12,7 @@ sources:
 ---
 # MCP Tool Input Schema
 
-MCP Tool Input Schema — jSON Schema допустимых аргументов tools/call.
+MCP Tool Input Schema — JSON Schema допустимых аргументов tools/call.
 
 `inputSchema` — обязательное поле определения MCP-инструмента с JSON Schema входных параметров вызова. Схема задаёт допустимую структуру `arguments` запроса `tools/call`.
 
