@@ -77,6 +77,21 @@ test('P1: runtime responsibility chain can be queried', () => {
   assert.equal(nodes.get('python-asyncio-task').kind, 'program_construct');
 });
 
+test('P1: API handle versus abstract running activity remains only thematic', () => {
+  const pairs = [
+    ['java-thread', 'thread'],
+    ['python-asyncio-task', 'asynchronous-task']
+  ];
+  for (const [handle, work] of pairs) {
+    assert.equal(nodes.get(handle).kind, 'program_construct');
+    assert.equal(nodes.get(work).kind, 'process');
+    assert.ok(has(handle, 'in_topic', work));
+    assert.ok(!has(handle, 'realizes', work));
+    assert.ok(!has(handle, 'specializes', work));
+  }
+  // Candidate recurring semantic question: which API construct represents a unit of execution?
+});
+
 test('P1: Collector static roles are insufficient to determine a configured data path', () => {
   for (const role of ['receiver', 'processor', 'exporter']) {
     assert.ok(has('opentelemetry-collector-' + role, 'part_of', 'opentelemetry-collector-pipeline'));
