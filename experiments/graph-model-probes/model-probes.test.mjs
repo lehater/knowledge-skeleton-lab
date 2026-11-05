@@ -45,6 +45,20 @@ test('P0: actual corpus and predicate distribution', () => {
   assert.equal(Object.values(totals).reduce((a, b) => a + b, 0), 638);
   console.log('PREDICATE_CENSUS ' + JSON.stringify(totals));
   console.log('IN_TOPIC_SHARE ' + (100 * totals.in_topic / 638).toFixed(1) + '%');
+  const targetsByKind = {};
+  const targetFrequency = new Map();
+  const examples = [];
+  for (const [source, {links}] of nodes) for (const target of links.in_topic ?? []) {
+    const targetKind = nodes.get(target)?.kind ?? '(missing)';
+    targetsByKind[targetKind] = (targetsByKind[targetKind] ?? 0) + 1;
+    targetFrequency.set(target, (targetFrequency.get(target) ?? 0) + 1);
+    if (targetKind !== 'topic' && examples.length < 15)
+      examples.push({ source, target, targetKind });
+  }
+  console.log('IN_TOPIC_TARGET_KINDS ' + JSON.stringify(targetsByKind));
+  console.log('TOP_IN_TOPIC_TARGETS ' + JSON.stringify([...targetFrequency].sort((a,b)=>b[1]-a[1]).slice(0,12)));
+  console.log('NON_TOPIC_TARGET_EXAMPLES ' + JSON.stringify(examples));
+
 });
 
 test('P1: taxonomy, subtype, composition and realization stay distinct', () => {
