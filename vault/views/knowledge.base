@@ -22,3 +22,23 @@ views:
       - file.name
       - in_topic
       - kind
+  - type: table
+    name: Components (kind)
+    filters:
+      - 'kind == "component"'
+    order:
+      - name
+      - kind
+      - in_topic
+      - part_of
+      - realizes
+  - type: table
+    name: Mechanisms (kind)
+    filters:
+      - 'kind == "mechanism"'
+    order:
+      - name
+      - kind
+      - in_topic
+      - executes
+      - manages
