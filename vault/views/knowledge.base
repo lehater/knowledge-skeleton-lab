@@ -17,7 +17,8 @@ views:
   - type: table
     name: Proposed knowledge
     filters:
-      - 'review_status == "proposed"'
+      and:
+        - 'review_status == "proposed"'
     order:
       - file.name
       - in_topic
@@ -25,7 +26,8 @@ views:
   - type: table
     name: Components (kind)
     filters:
-      - 'kind == "component"'
+      and:
+        - 'kind == "component"'
     order:
       - name
       - kind
@@ -35,7 +37,8 @@ views:
   - type: table
     name: Mechanisms (kind)
     filters:
-      - 'kind == "mechanism"'
+      and:
+        - 'kind == "mechanism"'
     order:
       - name
       - kind
