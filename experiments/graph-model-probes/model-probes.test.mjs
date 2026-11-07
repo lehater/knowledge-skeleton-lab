@@ -134,3 +134,136 @@ test('P1: syntactically valid but semantically false composition passes static v
     // Intentionally false claim. Static validation does not determine semantic truth.
   } finally { rmSync(tmp, { recursive: true, force: true }); }
 });
+
+
+// Follow-up on 2026-11-07: semantic query probes on 15 actual corpus relations.
+// Synthetic scenarios are documentary oracles, not Collector/SDK/runtime executions.
+
+const FOLLOWUP_CASES = [
+  ['java-thread', 'in_topic', 'thread'],
+  ['python-asyncio-task', 'in_topic', 'asynchronous-task'],
+  ['concurrency', 'in_topic', 'concurrent-programming'],
+  ['java-concurrency', 'in_topic', 'concurrency'],
+  ['java-interface', 'specializes', 'programming-interface'],
+  ['mcp-tool-input-schema', 'part_of', 'mcp-tool-definition'],
+  ['opentelemetry-collector-receiver', 'part_of', 'opentelemetry-collector-pipeline'],
+  ['opentelemetry-collector-processor', 'part_of', 'opentelemetry-collector-pipeline'],
+  ['opentelemetry-collector-exporter', 'part_of', 'opentelemetry-collector-pipeline'],
+  ['opentelemetry-collector', 'executes', 'opentelemetry-collector-pipeline'],
+  ['python-asyncio-event-loop', 'schedules', 'python-asyncio-task'],
+  ['python-asyncio-task', 'executes', 'python-coroutine-object'],
+  ['python-asyncio-task-group', 'manages', 'python-asyncio-task'],
+  ['openai-agents-sdk-runner', 'realizes', 'single-agent-inner-loop'],
+  ['tool-result', 'in_topic', 'single-agent-inner-loop']
+];
+const incoming = (predicate, target) => [...nodes].filter(([_, node]) =>
+  (node.links[predicate] ?? []).includes(target)).map(([slug]) => slug).sort();
+
+test('F1: fifteen selected graph facts exist in main-derived corpus', () => {
+  assert.equal(FOLLOWUP_CASES.length, 15);
+  for (const [source, predicate, target] of FOLLOWUP_CASES) {
+    assert.ok(nodes.has(source) && nodes.has(target), source + ' -> ' + target);
+    assert.ok(has(source, predicate, target), source + ' ' + predicate + ' ' + target);
+  }
+});
+
+test('F2: structural and operational queries are different, each answerable', () => {
+  assert.ok(incoming('part_of', 'opentelemetry-collector-pipeline')
+    .includes('opentelemetry-collector-processor'));
+  assert.ok(incoming('executes', 'opentelemetry-collector-pipeline')
+    .includes('opentelemetry-collector'));
+  assert.ok(incoming('realizes', 'single-agent-inner-loop')
+    .includes('openai-agents-sdk-runner'));
+  assert.ok(incoming('manages', 'python-asyncio-task')
+    .includes('python-asyncio-task-group'));
+  assert.ok(!has('openai-agents-sdk-runner', 'executes', 'single-agent-inner-loop'));
+  assert.ok(!has('opentelemetry-collector', 'realizes', 'opentelemetry-collector-pipeline'));
+});
+
+test('F3: thematic practice/property edges do not assert is-a or realization', () => {
+  assert.equal(nodes.get('concurrency').kind, 'property');
+  assert.equal(nodes.get('concurrent-programming').kind, 'practice');
+  assert.equal(nodes.get('java-concurrency').kind, 'topic');
+  assert.ok(has('concurrency', 'in_topic', 'concurrent-programming'));
+  assert.ok(has('java-concurrency', 'in_topic', 'concurrency'));
+  assert.ok(!has('concurrency', 'specializes', 'concurrent-programming'));
+  assert.ok(!has('java-concurrency', 'realizes', 'concurrency'));
+});
+
+test('F4: a result handle is not necessarily an independently executing task', () => {
+  assert.equal(nodes.get('java-thread').kind, 'program_construct');
+  assert.equal(nodes.get('thread').kind, 'process');
+  assert.equal(nodes.get('python-asyncio-task').kind, 'program_construct');
+  assert.equal(nodes.get('asynchronous-task').kind, 'process');
+  assert.ok(has('python-asyncio-task', 'executes', 'python-coroutine-object'));
+  assert.ok(has('python-asyncio-future', 'realizes', 'future'));
+  assert.ok(!has('python-asyncio-future', 'executes', 'python-coroutine-object'));
+  assert.ok(!has('java-thread', 'realizes', 'thread'));
+  // A proposed "represents_execution" must exclude mere pending-result holders.
+});
+
+test('F5: pipeline composition cannot answer required role versus optional role', () => {
+  const roles = ['receiver', 'processor', 'exporter'];
+  for (const role of roles)
+    assert.ok(has('opentelemetry-collector-' + role, 'part_of', 'opentelemetry-collector-pipeline'));
+  // Oracle restricted to the documented normal active receiver->exporter pipeline.
+  const valid = c => c.receivers.length >= 1 && c.exporters.length >= 1;
+  const minimal = { receivers: ['otlp'], processors: [], exporters: ['debug'] };
+  const withProcessor = { ...minimal, processors: ['batch'] };
+  assert.equal(valid(minimal), true);
+  assert.equal(valid(withProcessor), true);
+  assert.equal(valid({ ...minimal, receivers: [] }), false);
+  assert.equal(valid({ ...minimal, exporters: [] }), false);
+  assert.deepEqual(roles, roles); // role schema is invariant under these scenarios
+  assert.notDeepEqual(minimal.processors, withProcessor.processors);
+});
+
+test('F6: a type-level part_of edge does not determine instance identity or multiplicity', () => {
+  const sameTypeProjection = ['receiver:part_of:pipeline', 'processor:part_of:pipeline'];
+  const shared = [{ pipeline: 'traces/1', receiver: 'otlp/shared', processor: 'batch/1' },
+                  { pipeline: 'traces/2', receiver: 'otlp/shared', processor: 'batch/2' }];
+  const separate = [{ pipeline: 'traces/1', receiver: 'otlp/1', processor: 'batch/1' },
+                    { pipeline: 'traces/2', receiver: 'otlp/2', processor: 'batch/2' }];
+  assert.deepEqual(sameTypeProjection, sameTypeProjection);
+  assert.notDeepEqual(shared.map(p => p.receiver), separate.map(p => p.receiver));
+  assert.equal(new Set(shared.map(p => p.receiver)).size, 1);
+  assert.equal(new Set(separate.map(p => p.receiver)).size, 2);
+  assert.equal(new Set(shared.map(p => p.processor)).size, 2);
+});
+
+test('F7: mandatory MCP input schema and optional output schema are both part_of', () => {
+  assert.ok(has('mcp-tool-input-schema', 'part_of', 'mcp-tool-definition'));
+  assert.ok(has('mcp-tool-output-schema', 'part_of', 'mcp-tool-definition'));
+  // Contract oracle: inputSchema required; outputSchema optional (MCP 2026-07-28).
+  const validToolDefinition = def => Boolean(def.name && def.inputSchema);
+  assert.equal(validToolDefinition({ name: 'search', inputSchema: { type: 'object' } }), true);
+  assert.equal(validToolDefinition({ name: 'search', inputSchema: { type: 'object' }, outputSchema: { type: 'object' } }), true);
+  assert.equal(validToolDefinition({ name: 'search', outputSchema: { type: 'object' } }), false);
+  // "requires_role" would wrongly classify the schema as a functional actor.
+  assert.ok(!RELATIONS.includes('requires_role'));
+});
+
+test('F8: tool-result type does not encode request/response correlation or route', () => {
+  assert.ok(has('tool-call', 'in_topic', 'single-agent-inner-loop'));
+  assert.ok(has('tool-result', 'in_topic', 'single-agent-inner-loop'));
+  const first = [{ callId: 1, resultId: 1 }, { callId: 2, resultId: 2 }];
+  const second = [{ callId: 1, resultId: 2 }, { callId: 2, resultId: 1 }];
+  const correlates = pairs => pairs.every(p => p.callId === p.resultId);
+  assert.equal(correlates(first), true);
+  assert.equal(correlates(second), false);
+  // OpenAI Agents SDK can feed the result back to model or finish after a tool.
+  const routes = { continue: ['tool', 'model'], stop: ['tool', 'final'] };
+  assert.notDeepEqual(routes.continue, routes.stop);
+  assert.deepEqual(nodes.get('tool-call').links.in_topic, nodes.get('tool-result').links.in_topic);
+});
+
+test('F9: type relations cannot guarantee a running instance', () => {
+  // Oracle: Java Thread can exist before start; an eager asyncio Task may complete
+  // without a subsequent queue turn. Neither invalidates a type-level function.
+  const javaThreadInstances = [{ state: 'NEW', running: false }, { state: 'RUNNABLE', running: true }];
+  assert.equal(javaThreadInstances.some(t => !t.running), true);
+  assert.ok(has('java-thread', 'in_topic', 'thread'));
+  const asyncioRuns = [{ eager: false, queued: true }, { eager: true, queued: false }];
+  assert.equal(asyncioRuns.some(t => !t.queued), true);
+  assert.ok(has('python-asyncio-event-loop', 'schedules', 'python-asyncio-task'));
+});
