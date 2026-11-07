@@ -1,0 +1,226 @@
+{
+  "metadata": {
+    "kind": "illustrative-competency-poc",
+    "version": 1,
+    "knowledgeBaseline": "4814addbc6313e427faa9d3ab768f2f79d197667",
+    "status": "synthetic example, not a certified occupational taxonomy or personal assessment",
+    "scope": "A team designing and implementing asynchronous backend services",
+    "levelScale": {
+      "1": "perform with guidance",
+      "2": "apply independently",
+      "3": "lead decisions and review others"
+    },
+    "sourceGuidance": [
+      "https://sfia-online.org/en/tools-and-resources/using-sfia/practical-guidance/building-sfia-based-skills-profiles",
+      "https://sfia-online.org/en/sfia-9/skills",
+      "https://www.onetcenter.org/content.html"
+    ],
+    "caveat": "Local 1-3 scale is illustrative; it is NOT SFIA 1-7 or evidence of actual proficiency. Competency-to-Knowledge links mean learning support, not logically necessary or sufficient mastery."
+  },
+  "roles": [
+    {
+      "id": "software-architect",
+      "name": "Software Architect (asynchronous backend)",
+      "purpose": "Choose service boundaries, interface contracts and reliability trade-offs for an asynchronous backend system.",
+      "requirements": [
+        {
+          "competency": "design-async-contracts",
+          "importance": "essential",
+          "level": 3
+        },
+        {
+          "competency": "reason-about-concurrency",
+          "importance": "essential",
+          "level": 3
+        },
+        {
+          "competency": "assess-reliability",
+          "importance": "essential",
+          "level": 2
+        },
+        {
+          "competency": "evaluate-design-options",
+          "importance": "essential",
+          "level": 3
+        }
+      ]
+    },
+    {
+      "id": "backend-engineer",
+      "name": "Backend Engineer (asynchronous services)",
+      "purpose": "Implement and verify service behavior and integration contracts in an asynchronous backend.",
+      "requirements": [
+        {
+          "competency": "design-async-contracts",
+          "importance": "essential",
+          "level": 2
+        },
+        {
+          "competency": "reason-about-concurrency",
+          "importance": "essential",
+          "level": 2
+        },
+        {
+          "competency": "assess-reliability",
+          "importance": "optional",
+          "level": 2
+        },
+        {
+          "competency": "implement-async-components",
+          "importance": "essential",
+          "level": 3
+        }
+      ]
+    }
+  ],
+  "competencies": [
+    {
+      "id": "design-async-contracts",
+      "name": "Specify and validate asynchronous service interfaces",
+      "sfiaAnalogy": [
+        "SWDN",
+        "DESN"
+      ],
+      "action": "Specify request, result and failure semantics for an asynchronous interface.",
+      "observableOutput": "Interface contract and contract test cases",
+      "assessment": "Given a service scenario, produce a reviewable interface contract including failure and cancellation behavior.",
+      "knowledge": [
+        {
+          "slug": "programming-interface",
+          "uuid": "01a1a1c4-1045-7f1d-8976-eb564e537253",
+          "relation": "supports_learning"
+        },
+        {
+          "slug": "asynchronous-programming",
+          "uuid": "01a18e44-09af-7b7b-9588-dec954be27d3",
+          "relation": "supports_learning"
+        },
+        {
+          "slug": "future",
+          "uuid": "01a18e44-0a64-75c8-8969-caebc0fb2551",
+          "relation": "supports_learning"
+        }
+      ]
+    },
+    {
+      "id": "reason-about-concurrency",
+      "name": "Explain concurrency and select execution mechanisms",
+      "sfiaAnalogy": [
+        "SWDN"
+      ],
+      "action": "Compare concurrent execution mechanisms and their constraints.",
+      "observableOutput": "Execution model rationale with failure cases",
+      "assessment": "Explain how scheduling, cancellation and lifetime affect a concrete concurrent workload.",
+      "knowledge": [
+        {
+          "slug": "concurrency",
+          "uuid": "01a18e44-0955-7e3e-a1a7-cc5a831419bc",
+          "relation": "supports_learning"
+        },
+        {
+          "slug": "event-loop",
+          "uuid": "01a18e44-0ac1-798d-aed3-ca5f8c8a6e26",
+          "relation": "supports_learning"
+        },
+        {
+          "slug": "structured-concurrency",
+          "uuid": "01a18e44-0bcd-7042-8ce4-09af51846677",
+          "relation": "supports_learning"
+        }
+      ]
+    },
+    {
+      "id": "assess-reliability",
+      "name": "Assess reliability constraints and operational trade-offs",
+      "sfiaAnalogy": [
+        "SLEN",
+        "ARCH"
+      ],
+      "action": "Evaluate operational limits and design mitigation choices for service overload and outages.",
+      "observableOutput": "Reliability risk and mitigation note",
+      "assessment": "Given an SLO and overload scenario, identify observable failure modes and justify one mitigation.",
+      "knowledge": [
+        {
+          "slug": "reliability-engineering",
+          "uuid": "01a196ec-2a78-7622-a737-32534d60a078",
+          "relation": "supports_learning"
+        },
+        {
+          "slug": "error-budget",
+          "uuid": "01a197fa-3e2e-7aa8-afe4-63c19ffade4f",
+          "relation": "supports_learning"
+        },
+        {
+          "slug": "backpressure",
+          "uuid": "01a18e44-0c27-755f-a88c-fd42266ef6a0",
+          "relation": "supports_learning"
+        }
+      ]
+    },
+    {
+      "id": "evaluate-design-options",
+      "name": "Evaluate architecture alternatives against constraints",
+      "sfiaAnalogy": [
+        "ARCH"
+      ],
+      "action": "Compare interface and component design alternatives against stated constraints.",
+      "observableOutput": "Architecture decision with consequences and rejected alternatives",
+      "assessment": "For a specific change, document options and trade-offs with validation criteria.",
+      "knowledge": [
+        {
+          "slug": "data-abstraction",
+          "uuid": "01a1a27a-49fc-7e49-853f-ed2876561713",
+          "relation": "supports_learning"
+        },
+        {
+          "slug": "programming-interface",
+          "uuid": "01a1a1c4-1045-7f1d-8976-eb564e537253",
+          "relation": "supports_learning"
+        },
+        {
+          "slug": "reliability-engineering",
+          "uuid": "01a196ec-2a78-7622-a737-32534d60a078",
+          "relation": "supports_learning"
+        }
+      ]
+    },
+    {
+      "id": "implement-async-components",
+      "name": "Implement and test asynchronous service components",
+      "sfiaAnalogy": [
+        "PROG",
+        "SWDN"
+      ],
+      "action": "Implement bounded asynchronous work with explicit resource and failure handling.",
+      "observableOutput": "Running component with tests for backpressure and cancellation",
+      "assessment": "Implement a small async worker with tests covering error and resource cleanup paths.",
+      "knowledge": [
+        {
+          "slug": "asynchronous-programming",
+          "uuid": "01a18e44-09af-7b7b-9588-dec954be27d3",
+          "relation": "supports_learning"
+        },
+        {
+          "slug": "event-loop",
+          "uuid": "01a18e44-0ac1-798d-aed3-ca5f8c8a6e26",
+          "relation": "supports_learning"
+        },
+        {
+          "slug": "future",
+          "uuid": "01a18e44-0a64-75c8-8969-caebc0fb2551",
+          "relation": "supports_learning"
+        },
+        {
+          "slug": "backpressure",
+          "uuid": "01a18e44-0c27-755f-a88c-fd42266ef6a0",
+          "relation": "supports_learning"
+        },
+        {
+          "slug": "resource-management",
+          "uuid": "01a1a1c4-1497-784e-aba9-2cbf2479902f",
+          "relation": "supports_learning"
+        }
+      ]
+    }
+  ]
+}

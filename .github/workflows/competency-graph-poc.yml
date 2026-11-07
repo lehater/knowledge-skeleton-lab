@@ -1,0 +1,18 @@
+name: Competency graph PoC (research)
+on:
+  pull_request:
+    paths:
+      - 'experiments/competency-graph-poc/**'
+      - '.github/workflows/competency-graph-poc.yml'
+jobs:
+  validate-poc:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - name: Run role-competency-Knowledge queries and tests
+        run: |
+          node experiments/competency-graph-poc/queries.mjs
+          node --test experiments/competency-graph-poc/competency-map.test.mjs
