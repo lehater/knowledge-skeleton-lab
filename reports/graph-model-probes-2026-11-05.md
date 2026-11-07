@@ -98,3 +98,110 @@ node --test experiments/graph-model-probes/model-probes.test.mjs
 3. Существует устойчивый предметный факт между Knowledge, его нужен находить фильтром и стандартные отношения искажают смысл → **обоснование узкого нового предиката**.
 
 **Вердикт эксперимента:** текущая модель пригодна для узкой канонической типовой сети и честно показывает ряд инженерных связей; её «полнота» в смысле всей функциональной архитектуры не подтверждена. Приоритет следующей итерации — проверить повторяемую семантическую потерю в конкретных `in_topic`, прежде чем что-либо менять в `main`.
+
+
+---
+
+## 7. Независимая предметная проверка 15 отношений — 2026-11-07
+
+**Статус:** продолжение исследования, не нормативная миграция. **Каноническая база:** main SHA 4814addbc6313e427faa9d3ab768f2f79d197667, совпадает с base PR #38 на дату исследования. GitHub tree main содержит 439 карточек; существующий воспроизводимый census-test на этом же снимке даёт 638 связей, включая 514 in_topic (80,6%). В этой итерации полный корпус не скачивался повторно: числа подтверждены совпадением SHA и ранее исполненным тестом, а не новым независимым пересчётом всех YAML.
+
+### 7.1. Отбор, референты и статусы
+
+Взяты **ровно 15 существующих в main рёбер**. Отбор целевой по риску: construct/process (2), свойство/практика/обзор (2), программный интерфейс (1), поле протокольного контракта (1), компонент/обязательная роль/маршрут Collector (4), механизм/исполнение/управление (3), реализация цикла (1), ответ инструмента (1). Для каждого фактические пары и kind проверены непосредственно в карточках. Все пары дополнительно утверждаются тестом F1. Синтетические объекты **не добавлялись** в Vault.
+
+Единица оценки: «source (kind) — фактический predicate — target (kind) — конкретный инженерный запрос». Рёбра могут быть семантически верны, но недостаточны **для другого, более узкого запроса**. Это query-gap, а не автоматически ложная связь.
+
+- SUPPORTED: ответ на указанный вопрос выводится из существующих рёбер.
+- CONTENT_ONLY: факт находится в содержимом карточки/контракте; необходимость отдельного межузлового запроса пока не доказана.
+- VIEW_DEPENDENT: ответ зависит от конфигурации, экземпляра или сценария.
+- GAP: указанный вопрос в текущей типовой проекции YAML неразрешим; новый предикат **не следует** из одного этого статуса.
+- INCORRECT: зафиксировано конкретное утверждение, противоречащее первоисточнику; отмечаем, в каком носителе ошибка.
+
+### 7.2. Матрица реальных связей и первоисточников
+
+| ID | Source (kind) → predicate → target (kind) | Проверяемый инженерный запрос, потеря семантики и ближайшее решение | Авторитетный первоисточник | Статус |
+|---|---|---|---|---|
+| S01 | Java Thread (program_construct) → in_topic → Thread (process) | «Какие API-конструкции представляют поток исполнения?» Тематический контекст есть, типовое соответствие не выводится. specializes смешивает класс и деятельность; realizes возможно лишь после предметного доказательства значения абстракции. | [Oracle Java Thread 27](https://docs.oracle.com/en/java/javase/27/docs/api/java.base/java/lang/Thread.html) | GAP |
+| S02 | Python asyncio.Task (program_construct) → in_topic → Asynchronous Task (process) | «Какие конструкции представляют управляемую async-работу?» Task одновременно исполняет coroutine и содержит Future-like state. Не объявлять без проверки единый смысл represents/realizes/executes. | [Python asyncio.Task](https://docs.python.org/3.15/library/asyncio-task.html#task-object) | GAP |
+| S03 | Concurrency (property) → in_topic → Concurrent Programming (practice) | «Какая практика работает со свойством конкурентности?» Описано текстом обоих Knowledge; property не разновидность practice и практика не автоматически реализация property. | [Rust async/concurrency](https://doc.rust-lang.org/book/ch17-00-async-await.html), [Kotlin coroutines](https://kotlinlang.org/docs/coroutines-basics.html) | CONTENT_ONLY |
+| S04 | Java Concurrency (topic) → in_topic → Concurrency (property) | «Какое общее свойство рассматривает языковой обзор?» Текущий тематический фильтр отвечает на вопрос. Языковая тема не является подтипом свойства. | [JLS 27, Threads and Locks](https://docs.oracle.com/javase/specs/jls/se27/html/jls-17.html) | SUPPORTED |
+| S05 | Java Interface (program_construct) → specializes → Programming Interface (interface) | «Какая разновидность программного интерфейса имеется в Java?» Поддержано при чтении Java Interface как *номинальной формы интерфейса*, не как одного экземпляра объявления. Не выводить отсюда, какие классы его реализуют. | [JLS 27, Interfaces](https://docs.oracle.com/javase/specs/jls/se27/html/jls-9.html), [Python typing.Protocol](https://docs.python.org/3.15/library/typing.html#typing.Protocol) | SUPPORTED |
+| S06 | MCP Tool Input Schema (specification) → part_of → MCP Tool Definition (data_structure) | «Какое поле обязательно?» InputSchema обязателен, OutputSchema опционален, хотя оба имеют part_of с Definition. Требование к полю — не функциональная роль requires_role. | [MCP Tools 2026-07-28](https://modelcontextprotocol.io/specification/2026-07-28/server/tools) | CONTENT_ONLY |
+| S07 | OpenTelemetry Collector Receiver (component) → part_of → Collector Pipeline (component) | «Какие роли обязательны для работающего pipeline?» Receiver обязателен в обычной модели, но part_of не выражает минимальную кратность. | [Collector Architecture](https://opentelemetry.io/docs/collector/architecture/) | GAP |
+| S08 | OpenTelemetry Collector Processor (component) → part_of → Collector Pipeline (component) | «Куда попадёт принятая телеметрия?» В A после receiver идёт processor, в B сразу exporter; processor опционален. Типовое отношение не задаёт маршрут. | [Collector Configuration](https://opentelemetry.io/docs/collector/configuration/) | VIEW_DEPENDENT |
+| S09 | OpenTelemetry Collector Exporter (component) → part_of → Collector Pipeline (component) | «Какая выходная роль обязательна?» Exporter обязателен в обычной модели, но одинаковый part_of есть и у необязательного Processor. | [Collector Architecture](https://opentelemetry.io/docs/collector/architecture/) | GAP |
+| S10 | OpenTelemetry Collector (software) → executes → Collector Pipeline (component) | «Кто обеспечивает исполнение Pipeline?» Граф отвечает. Дополнительное Pipeline → part_of → Collector — иной вопрос (состав). | [Collector Architecture](https://opentelemetry.io/docs/collector/architecture/) | SUPPORTED |
+| S11 | Python asyncio Event Loop (mechanism) → schedules → Python asyncio.Task (program_construct) | «Кто организует планирование Task?» Ответ есть. Eager Task может завершиться синхронно: нельзя обещать постановку каждого экземпляра в очередь. | [Python asyncio Task](https://docs.python.org/3.15/library/asyncio-task.html#task-object), [Eager](https://docs.python.org/3.15/library/asyncio-task.html#eager-task-factory) | SUPPORTED |
+| S12 | Python asyncio.Task (program_construct) → executes → Python Coroutine Object (program_construct) | «Кто выполняет coroutine?» Ответ есть. Создание coroutine object само по себе ничего не планирует; не каждая coroutine требует отдельной Task. | [Python asyncio Task](https://docs.python.org/3.15/library/asyncio-task.html#task-object) | SUPPORTED |
+| S13 | Python asyncio.TaskGroup (program_construct) → manages → Python asyncio.Task (program_construct) | «Кто управляет жизненным циклом созданных задач?» Ответ есть. Группа может быть пустой и не управляет чужими Task. | [Python TaskGroup](https://docs.python.org/3.15/library/asyncio-task.html#task-groups) | SUPPORTED |
+| S14 | OpenAI Agents SDK Runner (program_construct) → realizes → Single-Agent Inner Loop (process) | «Какая конструкция реализует агентный цикл?» Ответ есть. Это важный контрпример поспешному тезису «construct → process всегда требует нового предиката». | [Agents SDK Runner](https://openai.github.io/openai-agents-python/running_agents/) | SUPPORTED |
+| S15 | Tool Result (data_structure) → in_topic → Single-Agent Inner Loop (process) | «Какой тип результата соответствует Tool Call?» Нет связи типов Result → Call, но она есть в источниках и описании. **Отдельно подтверждён дефект текста:** обещан следующий LLM-turn даже при stop_on_first_tool. | [MCP Tools](https://modelcontextprotocol.io/specification/2026-07-28/server/tools), [SDK tool use behavior](https://openai.github.io/openai-agents-python/agents/#tool-use-behavior) | INCORRECT (текст), вторичный query-GAP |
+
+**Распределение 15 статусов:** SUPPORTED **7**, CONTENT_ONLY **2**, VIEW_DEPENDENT **1**, GAP **4**, INCORRECT **1**. **Доказанных неверных YAML-рёбер: 0.** Не доказана и предметная истинность всех 638 рёбер. Низкий/высокий процент in_topic не использован как критерий ложности.
+
+### 7.3. Позитивные и негативные проверки
+
+В существующий [исполняемый эксперимент](../../experiments/graph-model-probes/model-probes.test.mjs) добавлены девять тестов F1–F9 к семи исходным. Они используют реальные рёбра, а для условий исполнения — маленькие синтетические миры с явно фиксированным oracle из документации.
+
+| Тест | Позитивный случай / ожидаемое | Негативный случай / ожидаемое | Что проверяет |
+|---|---|---|---|
+| F1 | Все 15 реальных троек присутствуют | Удаление или подмена ребра приводит к FAIL | Привязка к фактическому графу |
+| F2 | incoming(executes, Pipeline) находит Collector; incoming(realizes, Inner Loop) находит Runner | Подмена executes↔realizes для этих пар отсутствует | Неэквивалентность функций/реализаций |
+| F3 | Concurrency: property; Concurrent Programming: practice; Java Concurrency: topic | specializes(property, practice) и realizes(topic, property) отсутствуют | Два смысла, схлопываемых тематической близостью |
+| F4 | Task executes Coroutine; Future представляет eventual result | Future не исполняет coroutine и Java Thread не связана realizes автоматически | Исполнение ≠ handle/результат; допустимость нового слова не доказана |
+| F5 | Receiver+Exporter с Processor и без Processor валидны | Нет Receiver либо Exporter → инвалидный обычный активный Pipeline | part_of ≠ обязательная роль |
+| F6 | Receiver instance может быть общим для двух pipelines | Два других receiver instances дают иной instance-граф при той же типовой проекции | Тип ≠ конкретный экземпляр |
+| F7 | Tool Definition с inputSchema, с/без outputSchema валидно | Только outputSchema без inputSchema невалидно | part_of ≠ required field |
+| F8 | Совпадающие request/result IDs правильно сопоставляются | Переставленные result IDs неверны; stop и continue имеют разные маршруты | Типовый контракт ≠ корреляция/поведение |
+| F9 | Java Thread может быть запущен; обычная Task может попасть в очередь | Java Thread может быть NEW; eager Task может завершиться без очереди | Нельзя переносить типовое отношение на все экземпляры |
+
+Тесты F5–F9 проверяют **документальные контрпримеры, а не исполнение внешнего runtime**. Валидатор по-прежнему не доказывает семантическую истинность предикатов. Реальные Java, Python, Collector и Agents SDK здесь не запускались; GUI Obsidian не проверялся.
+
+### 7.4. Реальная ошибка E1 и три класса пробелов
+
+**E1, P1 — фактически неверное безусловное утверждение в содержимом.** Карточка [Tool Result](../../vault/knowledge/entries/tool-result.md) начинается с утверждения, что результат вызова «возвращаемый в контекст следующего обращения модели». Это некорректно как инвариант: [Agents SDK](https://openai.github.io/openai-agents-python/agents/#tool-use-behavior) документирует run_llm_again и stop_on_first_tool; во втором случае ответ инструмента используется как итог **без следующего LLM-вызова**. При будущей отдельной правке предлагается текст:
+
+> Tool Result — результат исполнения вызова инструмента. По контракту протокола и политике выполнения приложение может передать его модели для следующего шага либо использовать для завершения исполнения. Сам факт получения результата не гарантирует новый вызов модели.
+
+Нормативная модель и фактическое YAML-ребро здесь не ошибочны; текст исправляется **существующей моделью**. Изменять Vault в этом исследовании нельзя, поэтому правка предложена, но не внесена.
+
+**G1 — конструкция ↔ исполняемая работа (S01/S02).** Два реальных языка, но нет гарантии одной точной семантики: Java Thread прежде всего представляет управляемый поток; asyncio.Task выполняет coroutine и хранит результат. Имеющиеся realizes и executes уже дают два независимых выразительных способа (S12/S14). Проверка «подойдёт ли realizes после уточнения референта» предшествует изобретению represents_execution. Отрицательный пример: asyncio.Future имеет результат без собственного выполнения coroutine. Инстанс Java Thread до start не подтверждает факт *идущего* исполнения.
+
+**G2 — обязательность роли в работающем механизме (S07/S09).** Collector даёт две необходимые роли **одного** механизма. Processor опционален. InputSchema обязательно в MCP Tool Definition, но это **поле спецификации**, не функциональная роль. PR #32 независимо проверял Inspect AI Task и Temporal Replay: обобщение там дало бы иной смысл. Второй независимый положительный **механизм** для requires_role не получен. В текущей итерации достаточно описания Pipeline; инстансную кратность и путь оставить конфигурации.
+
+**G3 — соответствие типа ответа и запроса (S15, вторичный пробел).** Tool Result и Tool Call относятся к одному контракту; MCP и OpenAI/Claude SDK дают протокольные примеры. Однако в графе это те же две обобщённые карточки, не две независимые предметные пары. Типовое responds_to, даже появившись, не восстановит фактические request/result IDs и условный путь следующего turn. Польза повторяемого межузлового поиска по нескольким *разным* парам не доказана.
+
+**Подтверждённые вопросы, которые YAML не решает:** «Найти все API-конструкции, представляющие работу», «Найти обязательные функциональные роли», «Найти тип ответа по типу запроса». Это **три query-gap класса, пять наблюдений в 15 случаях** (S01/S02/S07/S09 и вторичный S15). Считать их пятью ошибками графа или требованием добавить три предиката нельзя.
+
+### 7.5. Решение по шести критериям нового предиката
+
+| Критерий | G1 construct/execution | G2 required role | G3 response type |
+|---|---|---|---|
+| 1. Однозначная независимая семантика | **Не доказана**; represents/realizes/executes пересекаются по разным референтам | Определима в строго заданном scope | Определима для типов протокольных сообщений |
+| 2. Авторитетный первоисточник | Да, Oracle + Python | Да, OpenTelemetry | Да, MCP + SDK |
+| 3. ≥2 независимых положительных примера | Два языка, **не тождественное утверждение** | **Нет**, обе роли — один Pipeline | Два протокола, но **одна обобщённая пара Knowledge** |
+| 4. Отрицательные границы | Future без исполнения | Optional Processor, optional outputSchema | Protocol error, отсутствие tool call |
+| 5. Устойчивость в заявленном scope | Типовое — возможно; не все экземпляры | Да, нормальный активный Pipeline; не конкретные instances | Типовой ответ — да, инстансная корреляция — нет |
+| 6. Полезный повторяемый запрос, не решаемый текущими 8 | Не доказан; сначала проверить realizes | Не доказан на двух механизмах | Не доказан на двух самостоятельных парах |
+| **Вывод** | **Не добавлять** | **Не добавлять** | **Не добавлять** |
+
+### 7.6. Классы инженерных вопросов и приоритеты
+
+**Уже поддерживаются:** тематический поиск, is-a при определённом референте, типовой состав, реализация абстрактного цикла, ответственные за исполнение Pipeline, планирование Task, выполнение Coroutine и управление жизненным циклом Tasks. Ответ выводится из YAML без интерпретации локальной конфигурации.
+
+**Содержатся в тексте/отдельном view:** отличие property от practice, обязательность полей и ролей, последовательность processors, совместное использование runtime instances, correlation IDs, политика продолжения/завершения Runner.
+
+**Не поддерживаются как масштабируемый межузловой YAML-фильтр:** три вопроса G1–G3. Это ограничение текущих запросов, а не доказательство универсальной недостаточности метамодели.
+
+**P0:** критических новых ошибок модели не обнаружено. Сохранить запрет на перенос типовых рёбер в инстансы и не вводить flows_to или depends_on по соседству компонентов.
+
+**P1:** исправить E1 отдельным содержательным PR, не меняя kind и предикаты. Перед обсуждением G1 проверить реальный запрос и возможность использовать существующие realizes/executes с точными референтами.
+
+**P2:** обязательность ролей и типы ответов пока оставить в карточках/представлениях; вернуться к предикатам только после двух независимых механизмов и пользовательского запросного теста. Для маршрутов использовать конфигурацию, не канонический типовой граф.
+
+**P3:** GUI-испытание K-Plex/Bases делать при подтверждённой потребности в конкретном фильтре; GUI-тест не подтверждает онтологическую истинность ребра.
+
+**Общий вывод.** Для исследованных типовых отношений модель **достаточна**. В одном тексте найдено безусловное неверное утверждение; ни одного доказанно ложного YAML-ребра из 15. Запросные потери реальны, но необходимый для нормативной миграции набор из шести критериев не выполнен ни для одного кандидата. **Метамодель пока не расширять.** Полнота графа для всех инженерных задач не доказана.
+
+**Граница:** исходные карточки, UUID, YAML, rules, kind, schema, ADR и main не изменены. Прогон Collector/Agents SDK и GUI Obsidian — NOT_RUN. Синтетические сценарии не входят в Vault; готовность CI оценивается по HEAD данного Draft PR.
