@@ -283,7 +283,7 @@ test('F10: in_topic to Thread returns topic neighbors, not proven realizations',
   assert.ok(!has('python-threading', 'realizes', 'thread'));
 });
 
-test('F11: existing realizes can express two candidate construct-to-process facts', () => {
+test('F11: realizes can index hypothetically asserted realizations, not representations', () => {
   // Conditional source-backed hypotheses, NOT new YAML edges.
   const candidates = [
     { source: 'java-thread', target: 'thread' },
@@ -301,7 +301,9 @@ test('F11: existing realizes can express two candidate construct-to-process fact
   assert.ok(realizers('thread').includes('java-thread'));
   assert.ok(realizers('asynchronous-task').includes('python-asyncio-task'));
   assert.ok(incoming('realizes', 'single-agent-inner-loop').includes('openai-agents-sdk-runner'));
-  // This is expressibility under a hypothetical review-approved annotation.
+  // A query mechanically returns the inserted "realizes" facts. This does NOT
+  // show that representing an execution entails implementing its abstraction,
+  // or that the candidate edges satisfy the normative predicate definition.
 });
 
 test('F12: kind-only/type-only heuristics do not justify realizing execution', () => {
@@ -313,4 +315,25 @@ test('F12: kind-only/type-only heuristics do not justify realizing execution', (
   assert.ok(!has('python-asyncio-task', 'realizes', 'python-coroutine-object'));
   // "executes a coroutine" and "realizes an abstract asynchronous task"
   // are distinct questions, and should not be added automatically together.
+});
+
+
+test('F13: representing, realizing, and executing are independently typed claims', () => {
+  // Synthetic logical countermodel, no new Knowledge and no claim about a
+  // specific runtime. A handle may represent an execution without implementing
+  // its execution mechanism; an engine may implement work without offering
+  // the corresponding public handle.
+  const world = [
+    { name: 'handle-only', represents: true, realizes: false, executes: false },
+    { name: 'engine-only', represents: false, realizes: true, executes: true },
+    { name: 'combined-task', represents: true, realizes: true, executes: true }
+  ];
+  const query = predicate => world.filter(x => x[predicate]).map(x => x.name);
+  assert.deepEqual(query('represents'), ['handle-only', 'combined-task']);
+  assert.deepEqual(query('realizes'), ['engine-only', 'combined-task']);
+  assert.deepEqual(query('executes'), ['engine-only', 'combined-task']);
+  assert.notDeepEqual(query('represents'), query('realizes'));
+  assert.equal(RELATIONS.includes('represents'), false);
+  // Existing realizes indexes realizers, not every public representation;
+  // real usefulness of a separate represents predicate is still unproven.
 });
