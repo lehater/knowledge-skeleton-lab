@@ -1,0 +1,15 @@
+name: Graph model probes (research)
+on:
+  pull_request:
+    paths:
+      - 'experiments/graph-model-probes/**'
+      - '.github/workflows/graph-model-probes.yml'
+jobs:
+  probe:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+      - run: node --test experiments/graph-model-probes/model-probes.test.mjs
