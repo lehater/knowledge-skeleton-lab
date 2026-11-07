@@ -269,3 +269,48 @@ test('F9: type relations cannot guarantee a running instance', () => {
   assert.equal(asyncioRuns.some(t => !t.queued), true);
   assert.ok(has('python-asyncio-event-loop', 'schedules', 'python-asyncio-task'));
 });
+
+
+// 2026-11-07 decision probe G1: hypothetical overlay is NOT a proposal to edit vault YAML.
+// Tests establish query expressibility, not factual approval of either candidate edge.
+test('F10: in_topic to Thread returns topic neighbors, not proven realizations', () => {
+  const thematic = incoming('in_topic', 'thread');
+  assert.ok(thematic.includes('java-thread'));
+  assert.ok(thematic.includes('python-threading'));
+  assert.equal(nodes.get('java-thread').kind, 'program_construct');
+  assert.equal(nodes.get('python-threading').kind, 'software');
+  // Python threading is a module for constructing/managing threads, not a thread.
+  assert.ok(!has('python-threading', 'realizes', 'thread'));
+});
+
+test('F11: existing realizes can express two candidate construct-to-process facts', () => {
+  // Conditional source-backed hypotheses, NOT new YAML edges.
+  const candidates = [
+    { source: 'java-thread', target: 'thread' },
+    { source: 'python-asyncio-task', target: 'asynchronous-task' }
+  ];
+  for (const {source,target} of candidates) {
+    assert.equal(nodes.get(source).kind, 'program_construct');
+    assert.equal(nodes.get(target).kind, 'process');
+    assert.ok(!has(source, 'realizes', target)); // current graph cannot answer via realizes
+  }
+  const realizers = target => [
+    ...incoming('realizes', target),
+    ...candidates.filter(x => x.target === target).map(x => x.source)
+  ].sort();
+  assert.ok(realizers('thread').includes('java-thread'));
+  assert.ok(realizers('asynchronous-task').includes('python-asyncio-task'));
+  assert.ok(incoming('realizes', 'single-agent-inner-loop').includes('openai-agents-sdk-runner'));
+  // This is expressibility under a hypothetical review-approved annotation.
+});
+
+test('F12: kind-only/type-only heuristics do not justify realizing execution', () => {
+  assert.equal(nodes.get('python-asyncio-future').kind, 'program_construct');
+  assert.ok(has('python-asyncio-future', 'realizes', 'future'));
+  assert.ok(!has('python-asyncio-future', 'realizes', 'asynchronous-task'));
+  assert.ok(!has('python-threading', 'realizes', 'thread'));
+  assert.ok(has('python-asyncio-task', 'executes', 'python-coroutine-object'));
+  assert.ok(!has('python-asyncio-task', 'realizes', 'python-coroutine-object'));
+  // "executes a coroutine" and "realizes an abstract asynchronous task"
+  // are distinct questions, and should not be added automatically together.
+});
