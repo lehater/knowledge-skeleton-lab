@@ -214,17 +214,19 @@ test('F5: pipeline composition cannot answer required role versus optional role'
   assert.equal(valid(withProcessor), true);
   assert.equal(valid({ ...minimal, receivers: [] }), false);
   assert.equal(valid({ ...minimal, exporters: [] }), false);
-  assert.deepEqual(roles, roles); // role schema is invariant under these scenarios
+  const typeProjection = () => roles.filter(role => has('opentelemetry-collector-' + role, 'part_of', 'opentelemetry-collector-pipeline'));
+  assert.deepEqual(typeProjection(minimal), typeProjection(withProcessor));
   assert.notDeepEqual(minimal.processors, withProcessor.processors);
 });
 
 test('F6: a type-level part_of edge does not determine instance identity or multiplicity', () => {
-  const sameTypeProjection = ['receiver:part_of:pipeline', 'processor:part_of:pipeline'];
   const shared = [{ pipeline: 'traces/1', receiver: 'otlp/shared', processor: 'batch/1' },
                   { pipeline: 'traces/2', receiver: 'otlp/shared', processor: 'batch/2' }];
   const separate = [{ pipeline: 'traces/1', receiver: 'otlp/1', processor: 'batch/1' },
                     { pipeline: 'traces/2', receiver: 'otlp/2', processor: 'batch/2' }];
-  assert.deepEqual(sameTypeProjection, sameTypeProjection);
+  const typeProjection = entries => [...new Set(entries.flatMap(p => Object.keys(p)
+    .filter(k => k !== 'pipeline').map(k => k + ':part_of:pipeline')))].sort();
+  assert.deepEqual(typeProjection(shared), typeProjection(separate));
   assert.notDeepEqual(shared.map(p => p.receiver), separate.map(p => p.receiver));
   assert.equal(new Set(shared.map(p => p.receiver)).size, 1);
   assert.equal(new Set(separate.map(p => p.receiver)).size, 2);
