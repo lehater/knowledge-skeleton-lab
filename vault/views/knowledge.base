@@ -14,11 +14,14 @@ views:
       - review_status
       - in_topic
       - broader
+    sort:
+      - property: kind
+        direction: DESC
   - type: table
     name: Proposed knowledge
     filters:
       and:
-        - 'review_status == "proposed"'
+        - review_status == "proposed"
     order:
       - file.name
       - in_topic
@@ -27,7 +30,7 @@ views:
     name: Components (kind)
     filters:
       and:
-        - 'kind == "component"'
+        - kind == "component"
     order:
       - name
       - kind
@@ -38,7 +41,7 @@ views:
     name: Mechanisms (kind)
     filters:
       and:
-        - 'kind == "mechanism"'
+        - kind == "mechanism"
     order:
       - name
       - kind
